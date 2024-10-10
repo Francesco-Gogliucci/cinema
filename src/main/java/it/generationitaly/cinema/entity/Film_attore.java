@@ -1,0 +1,56 @@
+package it.generationitaly.cinema.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+
+public class Film_attore {
+
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @Column(name = "id", nullable = false)
+	    private Long id;
+	 
+	@ManyToOne
+	@JoinColumn(name = "film_id", nullable = false)
+	 private Film film;
+	
+	@OneToMany
+	@JoinColumn(name = "attore_id", nullable = false)
+	 private Attore attore;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Film getFilm() {
+		return film;
+	}
+
+	public void setFilm(Film film) {
+		this.film = film;
+	}
+
+	public Attore getAttore() {
+		return attore;
+	}
+
+	public void setAttore(Attore attore) {
+		this.attore = attore;
+	}
+
+	@Override
+	public String toString() {
+		return "Film_attore [id=" + id + ", film=" + film + ", attore=" + attore + "]";
+	}
+	
+	
+}
