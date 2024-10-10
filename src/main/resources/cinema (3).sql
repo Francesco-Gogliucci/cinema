@@ -7,6 +7,7 @@ CREATE TABLE attore (
     nome VARCHAR(45) NOT NULL,
     cognome VARCHAR(45) NOT NULL,
     data_nascita DATE NOT NULL,
+    foto VARCHAR(3000) NOT NULL,
     biografia VARCHAR(3000) NOT NULL,
     PRIMARY KEY (id)
 );
