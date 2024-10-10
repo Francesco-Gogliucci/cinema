@@ -11,9 +11,9 @@ import jakarta.persistence.OneToMany;
 public class Film_attore {
 
 	 @Id
-	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    @Column(name = "id", nullable = false)
-	    private Long id;
+	 @GeneratedValue(strategy = GenerationType.IDENTITY)
+	 @Column(name = "id", nullable = false)
+	 private Long id;
 	 
 	@ManyToOne
 	@JoinColumn(name = "film_id", nullable = false)
