@@ -1,0 +1,13 @@
+/target/
+
+/.classpath
+
+/.project
+
+/.settings/
+
+/.mvn/
+
+/src/main/resources/META-INF/
+
+/bin/
