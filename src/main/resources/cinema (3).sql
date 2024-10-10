@@ -22,7 +22,6 @@ CREATE TABLE utente (
 CREATE TABLE categoria (
     id BIGINT NOT NULL AUTO_INCREMENT,
     genere VARCHAR(45) NOT NULL,
-    foto VARCHAR(3000) NOT NULL,
     PRIMARY KEY (id),
     UNIQUE(genere)
 );
