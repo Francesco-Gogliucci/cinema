@@ -103,3 +103,26 @@ CREATE TABLE film_attore (
         UNIQUE(film_id, attore_id)
 );
 
+INSERT INTO categoria VALUES('1','Azione');
+
+INSERT INTO categoria VALUES('2','Avventura');
+
+INSERT INTO categoria VALUES('3','Drammatico');
+
+INSERT INTO categoria VALUES('4','Commedia');
+
+INSERT INTO categoria VALUES('5','Horror');
+
+INSERT INTO categoria VALUES('6','Fantascienza');
+
+INSERT INTO categoria VALUES('7','Fantasy');
+
+INSERT INTO categoria VALUES('8','Thriller');
+
+INSERT INTO categoria VALUES('9','Romantico');
+
+INSERT INTO categoria VALUES('10','Animazione');
+
+INSERT INTO categoria VALUES('11','Documentario');
+
+INSERT INTO categoria VALUES('12','Musical');
