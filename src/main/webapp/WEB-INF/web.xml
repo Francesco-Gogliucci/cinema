@@ -11,9 +11,20 @@
 		<servlet-name>FilmServlet</servlet-name>
 		<servlet-class>it.generationitaly.cinema.controller.FilmServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<description>
+		</description>
+		<display-name>ElencoFilmServlet</display-name>
+		<servlet-name>ElencoFilmServlet</servlet-name>
+		<servlet-class>it.generationitaly.cinema.controller.ElencoFilmServlet</servlet-class>
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>FilmServlet</servlet-name>
 		<url-pattern>/dettagliFilm</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ElencoFilmServlet</servlet-name>
+		<url-pattern>/elencofilm</url-pattern>
 	</servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
