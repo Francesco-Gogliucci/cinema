@@ -7,7 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -23,9 +22,12 @@ public class FilmAttore {
 	@JoinColumn(name = "film_id", nullable = false)
 	private Film film;
 
-	@OneToMany
+	@ManyToOne
 	@JoinColumn(name = "attore_id", nullable = false)
 	private Attore attore;
+
+	public FilmAttore() {
+	}
 
 	public Long getId() {
 		return id;
@@ -53,7 +55,7 @@ public class FilmAttore {
 
 	@Override
 	public String toString() {
-		return "Film_attore [id=" + id + ", film=" + film + ", attore=" + attore + "]";
+		return "FilmAttore [id=" + id + ", film=" + film.getTitolo() + ", attore=" + attore.getNome() + " "
+				+ attore.getCognome() + "]";
 	}
-
 }

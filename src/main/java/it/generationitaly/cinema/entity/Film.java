@@ -1,6 +1,7 @@
 package it.generationitaly.cinema.entity;
 
 import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -41,10 +42,7 @@ public class Film {
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
-    @Column(name = "produzione", length = 45, nullable = false)  
-    private String produzione;
-
-    @Column(name = "budget", nullable = false) 
+    @Column(name = "budget_produzione", nullable = false) 
     private int budget;
 
     public Film() {
@@ -107,14 +105,6 @@ public class Film {
         this.categoria = categoria;
     }
 
-    public String getProduzione() {
-        return produzione;
-    }
-
-    public void setProduzione(String produzione) {
-        this.produzione = produzione;
-    }
-
     public int getBudget() {
         return budget;
     }
@@ -127,6 +117,6 @@ public class Film {
     public String toString() {
         return "Film [id=" + id + ", titolo=" + titolo + ", trama=" + trama + ", locandina=" + locandina
                 + ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria
-                + ", produzione=" + produzione + ", budget=" + budget + "]";
+                + ", budget=" + budget + "]";
     }
 }
