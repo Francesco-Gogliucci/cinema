@@ -30,6 +30,7 @@ public class AttoreServlet extends HttpServlet {
 		
 		Attore attore = attoreRepository.findById(id);
 		
+		// aggiunta lista film
 		List<Film> listFilmByAttore = attoreRepository.findListFilmByAttore(nome, cognome);
 		
 		request.setAttribute("attore", attore);
