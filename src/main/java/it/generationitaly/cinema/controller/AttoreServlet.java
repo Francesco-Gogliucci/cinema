@@ -1,7 +1,6 @@
 package it.generationitaly.cinema.controller;
 
 import java.io.IOException;
-import java.util.List;
 
 import it.generationitaly.cinema.entity.Attore;
 import it.generationitaly.cinema.repository.impl.AttoreRepositoryImpl;
@@ -12,22 +11,23 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/elencoAttori")
-public class ElencoAttoriServlet extends HttpServlet {
+/**
+ * Servlet implementation class AttoreServlet
+ */
+@WebServlet("/dettagliAttore")
+public class AttoreServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	private AttoreRepositoryImpl attoreRepository = new AttoreRepositoryImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		List<Attore> elencoAttori = attoreRepository.findAll();
-
-		request.setAttribute("elencoAttori", elencoAttori);
-		// inserire la pagina jsp corretta per la visualizzazione della lista degli
-		// attori
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencoAttori.jsp");
+		long id = Long.parseLong(request.getParameter("id"));
+		Attore attore = attoreRepository.findById(id);
+		request.setAttribute("attore", attore);
+		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
+		// attore
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("attore.jps");
 		requestDispatcher.forward(request, response);
 	}
 
