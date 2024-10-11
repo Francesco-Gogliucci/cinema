@@ -16,116 +16,117 @@ import jakarta.persistence.TemporalType;
 @Table(name = "film")
 public class Film {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id", nullable = false)
-	private Long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
+    private Long id;
 
-	@Column(name = "titolo", length = 45, nullable = false)
-	private String titolo;
+    @Column(name = "titolo", length = 45, nullable = false)
+    private String titolo;
 
-	@Column(name = "trama", length = 45, nullable = false)
-	private String trama;
+    @Column(name = "trama", length = 45, nullable = false)
+    private String trama;
 
-	@Column(name = "locandina", length = 300, nullable = false)
-	private String locandina;
+    @Column(name = "locandina", length = 300, nullable = false)
+    private String locandina;
 
-	@Temporal(TemporalType.DATE)
-	@Column(name = "data_uscita", nullable = false)
-	private Date dataUscita;
+    @Temporal(TemporalType.DATE)
+    @Column(name = "data_uscita", nullable = false)
+    private Date dataUscita;
 
-	@Column(name = "durata", nullable = false)
-	private int durata;
+    @Column(name = "durata", nullable = false)
+    private int durata;
 
-	@ManyToOne
-	@JoinColumn(name = "categoria_id", nullable = false)
-	private Categoria categoria;
+    @ManyToOne
+    @JoinColumn(name = "categoria_id", nullable = false)
+    private Categoria categoria;
 
-	@Column(name = "casa_produzione", length = 45, nullable = false)
-	private String casaProduzione;
+    @Column(name = "produzione", length = 45, nullable = false)  // Produzione è ora una stringa
+    private String produzione;
 
-	@Column(name = "budget_produzione", nullable = false)
-	private int budgetProduzione;
+    @Column(name = "budget", nullable = false)  // Budget è ora un intero
+    private int budget;
 
-	public Film() {
-	}
+    public Film() {
+    }
 
-	public Long getId() {
-		return id;
-	}
+    // Getter e setter
+    public Long getId() {
+        return id;
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public String getTitolo() {
-		return titolo;
-	}
+    public String getTitolo() {
+        return titolo;
+    }
 
-	public void setTitolo(String titolo) {
-		this.titolo = titolo;
-	}
+    public void setTitolo(String titolo) {
+        this.titolo = titolo;
+    }
 
-	public String getTrama() {
-		return trama;
-	}
+    public String getTrama() {
+        return trama;
+    }
 
-	public void setTrama(String trama) {
-		this.trama = trama;
-	}
+    public void setTrama(String trama) {
+        this.trama = trama;
+    }
 
-	public String getLocandina() {
-		return locandina;
-	}
+    public String getLocandina() {
+        return locandina;
+    }
 
-	public void setLocandina(String locandina) {
-		this.locandina = locandina;
-	}
+    public void setLocandina(String locandina) {
+        this.locandina = locandina;
+    }
 
-	public Date getDataUscita() {
-		return dataUscita;
-	}
+    public Date getDataUscita() {
+        return dataUscita;
+    }
 
-	public void setDataUscita(Date dataUscita) {
-		this.dataUscita = dataUscita;
-	}
+    public void setDataUscita(Date dataUscita) {
+        this.dataUscita = dataUscita;
+    }
 
-	public int getDurata() {
-		return durata;
-	}
+    public int getDurata() {
+        return durata;
+    }
 
-	public void setDurata(int durata) {
-		this.durata = durata;
-	}
+    public void setDurata(int durata) {
+        this.durata = durata;
+    }
 
-	public Categoria getCategoria() {
-		return categoria;
-	}
+    public Categoria getCategoria() {
+        return categoria;
+    }
 
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
 
-	public String getCasaProduzione() {
-		return casaProduzione;
-	}
+    public String getProduzione() {
+        return produzione;
+    }
 
-	public void setCasaProduzione(String casaProduzione) {
-		this.casaProduzione = casaProduzione;
-	}
+    public void setProduzione(String produzione) {
+        this.produzione = produzione;
+    }
 
-	public int getBudgetProduzione() {
-		return budgetProduzione;
-	}
+    public int getBudget() {
+        return budget;
+    }
 
-	public void setBudgetProduzione(int budgetProduzione) {
-		this.budgetProduzione = budgetProduzione;
-	}
+    public void setBudget(int budget) {
+        this.budget = budget;
+    }
 
-	@Override
-	public String toString() {
-		return "Film [id=" + id + ", titolo=" + titolo + ", trama=" + trama + ", locandina=" + locandina
-				+ ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria + ", casaProduzione="
-				+ casaProduzione + ", budgetProduzione=" + budgetProduzione + "]";
-	}
+    @Override
+    public String toString() {
+        return "Film [id=" + id + ", titolo=" + titolo + ", trama=" + trama + ", locandina=" + locandina
+                + ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria
+                + ", produzione=" + produzione + ", budget=" + budget + "]";
+    }
 }
