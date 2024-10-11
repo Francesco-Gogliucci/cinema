@@ -7,5 +7,5 @@ import it.generationitaly.cinema.entity.Film;
 
 public interface AttoreRepository extends JpaRepository<Attore, Long> {
 	
-	List<Film> findListFilmByAttore(String nome, String cognome);
+	List<Film> findListFilmByAttore(long id);
 }

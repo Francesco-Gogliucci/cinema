@@ -15,7 +15,7 @@ public class AttoreRepositoryImpl extends JpaRepositoryImpl<Attore, Long> implem
 	}
 
 	@Override
-	public List<Film> findListFilmByAttore(String nome, String cognome) {
+	public List<Film> findListFilmByAttore(long id) {
 		List<Film> listAttoreFilm = null;
 		EntityManager em = null;
 		EntityTransaction tx = null;
@@ -23,9 +23,8 @@ public class AttoreRepositoryImpl extends JpaRepositoryImpl<Attore, Long> implem
 			em = emf.createEntityManager();
 			tx = em.getTransaction();
 			tx.begin();
-			TypedQuery<Film> query = em.createQuery("SELECT f FROM FilmAttore fa JOIN fa.film f JOIN fa.attore a WHERE a.nome = :nome AND a.cognome = :cognome", Film.class);
-			query.setParameter("nome", nome);
-			query.setParameter("cognome", cognome);
+			TypedQuery<Film> query = em.createQuery("SELECT f FROM FilmAttore fa JOIN fa.film f JOIN fa.attore a WHERE a.id = :id", Film.class);
+			query.setParameter("id", id);
 			listAttoreFilm = query.getResultList();
 			tx.commit();
 		} catch (Exception e) {

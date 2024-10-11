@@ -25,13 +25,11 @@ public class AttoreServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		long id = Long.parseLong(request.getParameter("id"));
-		String nome = request.getParameter("nome");
-		String cognome = request.getParameter("cognome");
 		
 		Attore attore = attoreRepository.findById(id);
 		
 		// aggiunta lista film
-		List<Film> listFilmByAttore = attoreRepository.findListFilmByAttore(nome, cognome);
+		List<Film> listFilmByAttore = attoreRepository.findListFilmByAttore(id);
 		
 		request.setAttribute("attore", attore);
 		request.setAttribute("listaFilmAttore", listFilmByAttore);
