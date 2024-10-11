@@ -13,7 +13,6 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 		super(Utente.class);
 	}
 
-
 	@Override
 	public Utente findByUsername(String username) {
 		Utente utente = null;
@@ -40,5 +39,28 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 		return utente;
 	}
 
+	@Override
+	public boolean existsByUsername(String username) {
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try {
+			em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			TypedQuery<Long> query = em.createQuery("SELECT COUNT(u) FROM Utente u WHERE u.username = :username",
+					Long.class);
+			query.setParameter("username", username);
+			Long count = query.getSingleResult();
+			tx.commit();
+			return count > 0; // Restituisce true se l'username esiste
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			if (tx != null && tx.isActive())
+				tx.rollback();
+			return false; // In caso di errore, restituisce false
+		} finally {
+			if (em != null)
+				em.close();
+		}
+	}
 }
-
