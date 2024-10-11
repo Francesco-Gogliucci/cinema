@@ -22,15 +22,28 @@
     border: none;
 }
 
-.card-locandina{
-	border-color:transparent;
-	height: 100%; width:200px;
-	background-color: transparent;
-}
-
 .custom-bg {
     background-color: rgb(26, 45, 63);
 }
 
+.testo-pargraph{
+	color: white;
+}
 
+.testo-titoli{
+	color: rgb(238, 226, 58);
+}
+
+.headline-background {
+  
+  	background-size: cover; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 160px;
+
+
+	background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0, 0) 100%), url(./img-ref/kubrick-2001-fotoXK.jpg);
+
+}
 

@@ -16,7 +16,7 @@
 </head>
 
 
-<body class="body-scuro">
+<body class="custom-bg">
 <%@ include file="nav.jsp"%>
 <!-- class containere e riga -->
 <div class="container text-center">
