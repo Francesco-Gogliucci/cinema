@@ -1,6 +1,5 @@
 package it.generationitaly.cinema.repository.impl;
 
-
 import java.util.List;
 
 import it.generationitaly.cinema.entity.Film;
@@ -14,8 +13,6 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 	public FilmRepositoryImpl() {
 		super(Film.class);
 	}
-	
-
 
 	@Override
 	public List<Film> ricercaFilmByCategoriaId(Long id) {
@@ -29,6 +26,34 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 			tx.begin();
 			TypedQuery<Film> query = em.createQuery(jpql, Film.class);
 			query.setParameter("id", id);
+			film = query.getResultList();
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+		} finally {
+			if (em != null) {
+				em.close();
+			}
+		}
+		return film;
+	}
+
+	@Override
+	public List<Film> ricercaFilmByAnno(String anno) {
+		int annoUscita = Integer.parseInt(anno);
+		List<Film> film = null;
+		String jpql = "SELECT f FROM Film f WHERE FUNCTION ('YEAR',f.dataUscita)  = :annoUscita ";
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		try {
+			em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			TypedQuery<Film> query = em.createQuery(jpql, Film.class);
+			query.setParameter("annoUscita", annoUscita);
 			film = query.getResultList();
 			tx.commit();
 		} catch (Exception e) {
