@@ -15,6 +15,9 @@ CREATE TABLE attore (
 CREATE TABLE utente (
     id BIGINT NOT NULL AUTO_INCREMENT,
     email VARCHAR(45) NOT NULL UNIQUE,
+    nome VARCHAR(45) NOT NULL,
+    cognome VARCHAR(45) NOT NULL,
+    data_nascita DATE NOT NULL,
     username VARCHAR(45) NOT NULL,
     password VARCHAR(45) NOT NULL,
     PRIMARY KEY (id)
