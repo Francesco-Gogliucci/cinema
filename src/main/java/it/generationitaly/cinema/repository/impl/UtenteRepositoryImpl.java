@@ -2,6 +2,7 @@ package it.generationitaly.cinema.repository.impl;
 
 import java.util.List;
 
+import it.generationitaly.cinema.entity.Film;
 import it.generationitaly.cinema.entity.Utente;
 import it.generationitaly.cinema.repository.UtenteRepository;
 import jakarta.persistence.EntityManager;
@@ -62,5 +63,11 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 			if (em != null)
 				em.close();
 		}
+	}
+
+	@Override
+	public List<Film> findPreferitiByUtenteId(Long utenteId) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
