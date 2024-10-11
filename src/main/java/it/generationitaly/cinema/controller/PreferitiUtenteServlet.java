@@ -16,31 +16,28 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 public class PreferitiUtenteServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    private UtenteRepository utenteRepository = new UtenteRepositoryImpl();
-    private PreferitiRepository preferitiRepository = new PreferitiRepositoryImpl(); // Crea l'istanza del repository Preferiti
+	private UtenteRepository utenteRepository = new UtenteRepositoryImpl();
+	private PreferitiRepository preferitiRepository = new PreferitiRepositoryImpl();
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        
-        // Recupera l'utente dalla sessione
-        HttpSession session = request.getSession();
-        Utente utente = (Utente) session.getAttribute("utente");
-        
-        // Se l'utente è loggato, recupera i preferiti
-        if (utente != null) {
-            Long utenteId = utente.getId();
-            List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId); // Usa preferitiRepository
-            
-            // Aggiungi la lista dei preferiti come attributo della richiesta
-            request.setAttribute("preferiti", preferiti);
-            
-            // Inoltra alla pagina JSP che mostrerà i preferiti
-            request.getRequestDispatcher("mostraPreferiti.jsp").forward(request, response);
-        } else {
-            // Se l'utente non è loggato, reindirizza alla pagina di login
-            response.sendRedirect("login.jsp");
-        }
-    }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		HttpSession session = request.getSession();
+		Utente utente = (Utente) session.getAttribute("utente");
+
+		if (utente != null) {
+			Long utenteId = utente.getId();
+			List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId); // Usa
+																								// preferitiRepository
+
+			request.setAttribute("preferiti", preferiti);
+
+			request.getRequestDispatcher("mostraPreferiti.jsp").forward(request, response);
+		} else {
+
+			response.sendRedirect("login.jsp");
+		}
+	}
 }
