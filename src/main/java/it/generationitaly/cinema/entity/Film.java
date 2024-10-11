@@ -22,13 +22,13 @@ public class Film {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "titolo", length = 45, nullable = false)
+    @Column(name = "titolo", length = 100, nullable = false)
     private String titolo;
 
-    @Column(name = "trama", length = 45, nullable = false)
+    @Column(name = "trama", length = 3000, nullable = false)
     private String trama;
 
-    @Column(name = "locandina", length = 300, nullable = false)
+    @Column(name = "locandina", length = 3000, nullable = false)
     private String locandina;
 
     @Temporal(TemporalType.DATE)
