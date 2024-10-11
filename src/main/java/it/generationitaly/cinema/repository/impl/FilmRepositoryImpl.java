@@ -1,5 +1,6 @@
 package it.generationitaly.cinema.repository.impl;
 
+
 import java.util.List;
 
 import it.generationitaly.cinema.entity.Film;
@@ -13,6 +14,8 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 	public FilmRepositoryImpl() {
 		super(Film.class);
 	}
+	
+
 
 	@Override
 	public List<Film> ricercaFilmByCategoriaId(Long id) {
