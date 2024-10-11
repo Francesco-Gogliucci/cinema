@@ -41,9 +41,11 @@ public class Film {
 	@JoinColumn(name = "categoria_id", nullable = false)
 	private Categoria categoria;
 
-	@ManyToOne
-	@JoinColumn(name = "produzione_id", nullable = false)
-	private Produzione produzione;
+	@Column(name = "casa_produzione", length = 45, nullable = false)
+	private String casaProduzione;
+
+	@Column(name = "budget_produzione", nullable = false)
+	private int budgetProduzione;
 
 	public Film() {
 	}
@@ -104,18 +106,26 @@ public class Film {
 		this.categoria = categoria;
 	}
 
-	public Produzione getProduzione() {
-		return produzione;
+	public String getCasaProduzione() {
+		return casaProduzione;
 	}
 
-	public void setProduzione(Produzione produzione) {
-		this.produzione = produzione;
+	public void setCasaProduzione(String casaProduzione) {
+		this.casaProduzione = casaProduzione;
+	}
+
+	public int getBudgetProduzione() {
+		return budgetProduzione;
+	}
+
+	public void setBudgetProduzione(int budgetProduzione) {
+		this.budgetProduzione = budgetProduzione;
 	}
 
 	@Override
 	public String toString() {
 		return "Film [id=" + id + ", titolo=" + titolo + ", trama=" + trama + ", locandina=" + locandina
-				+ ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria + ", produzione="
-				+ produzione + "]";
+				+ ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria + ", casaProduzione="
+				+ casaProduzione + ", budgetProduzione=" + budgetProduzione + "]";
 	}
 }
