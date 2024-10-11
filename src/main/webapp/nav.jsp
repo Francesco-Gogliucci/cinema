@@ -8,6 +8,7 @@
      rel="stylesheet" 
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
     crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
   </head>
  <nav class="navbar navbar-expand-lg" style="background-color: rgb(101, 131, 161);">
   	<div class="container-fluid">
@@ -47,9 +48,9 @@
 			 </ul>
 		     <form class="d-flex" role="search" style="margin-bottom: 5px;" >
             <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" style="border-radius: 20px;">
-           <button class="btn btn-sm w-20 py-1" style="background-color: rgb(238, 226, 58); border-radius: 20px;" type="submit">Cerca</button>
-           <button class="btn ms-3 me-2 " type="button" style="background-color: rgb(238, 226, 58); border-radius: 20px" >Accedi</button>
-       <button class="btn" type="button" style="background-color: rgb(70, 70, 70); border-radius: 20px; color: white;">Registrati</button>
+           <button class="btn  btn-sm btn-giallo" type="submit">Cerca</button>
+          <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
+       <button class="btn btn-sm btn-nero" type="button">Registrati</button>
             </form>
 		    </div>
 		  </div>
