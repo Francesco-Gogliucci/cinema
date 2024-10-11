@@ -14,18 +14,18 @@ import jakarta.persistence.Table;
 @Table(name = "film_attore")
 public class FilmAttore {
 
-	 @Id
-	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 @Column(name = "id", nullable = false)
-	 private Long id;
-	 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
+	private Long id;
+
 	@ManyToOne
 	@JoinColumn(name = "film_id", nullable = false)
-	 private Film film;
-	
+	private Film film;
+
 	@OneToMany
 	@JoinColumn(name = "attore_id", nullable = false)
-	 private Attore attore;
+	private Attore attore;
 
 	public Long getId() {
 		return id;
@@ -55,6 +55,5 @@ public class FilmAttore {
 	public String toString() {
 		return "Film_attore [id=" + id + ", film=" + film + ", attore=" + attore + "]";
 	}
-	
-	
+
 }
