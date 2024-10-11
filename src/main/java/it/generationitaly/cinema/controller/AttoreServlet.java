@@ -1,8 +1,10 @@
 package it.generationitaly.cinema.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import it.generationitaly.cinema.entity.Attore;
+import it.generationitaly.cinema.entity.Film;
 import it.generationitaly.cinema.repository.impl.AttoreRepositoryImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -23,8 +25,15 @@ public class AttoreServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		long id = Long.parseLong(request.getParameter("id"));
+		String nome = request.getParameter("nome");
+		String cognome = request.getParameter("cognome");
+		
 		Attore attore = attoreRepository.findById(id);
+		
+		List<Film> listFilmByAttore = attoreRepository.findListFilmByAttore(nome, cognome);
+		
 		request.setAttribute("attore", attore);
+		request.setAttribute("listaFilmAttore", listFilmByAttore);
 		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
 		// attore
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("attore.jps");
