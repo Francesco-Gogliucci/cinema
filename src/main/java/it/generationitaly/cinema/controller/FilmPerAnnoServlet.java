@@ -22,7 +22,7 @@ public class FilmPerAnnoServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String anno = request.getParameter("anno");
-		List<Film> filmAnno = filmRepository.ricercaFilmByAnno(anno);
+		List<Film> filmAnno = filmRepository.findFilmByAnno(anno);
 		request.setAttribute("filmAnno", filmAnno);
 		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
 		// attore

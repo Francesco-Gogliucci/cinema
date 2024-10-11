@@ -15,7 +15,7 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 	}
 
 	@Override
-	public List<Film> ricercaFilmByCategoriaId(Long id) {
+	public List<Film> findFilmByCategoriaId(Long id) {
 		List<Film> film = null;
 		String jpql = "SELECT f FROM Film f JOIN f.categoria c WHERE c.id = :id";
 		EntityManager em = null;
@@ -42,7 +42,7 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 	}
 
 	@Override
-	public List<Film> ricercaFilmByAnno(String anno) {
+	public List<Film> findFilmByAnno(String anno) {
 		int annoUscita = Integer.parseInt(anno);
 		List<Film> film = null;
 		String jpql = "SELECT f FROM Film f WHERE FUNCTION ('YEAR',f.dataUscita)  = :annoUscita ";
