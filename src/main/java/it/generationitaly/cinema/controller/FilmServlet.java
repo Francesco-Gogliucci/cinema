@@ -28,6 +28,7 @@ public class FilmServlet extends HttpServlet {
 		long id = Long.parseLong(request.getParameter("id"));
 		Film film = filmRepository.findById(id);
 		request.setAttribute("film", film);
+		//TODO aggiungere recensione e attori all'entity film 
 
 		List<Attore> attori = filmAttoreRepository.findAttoreByFilmId(id);
 		request.setAttribute("attori", attori);
