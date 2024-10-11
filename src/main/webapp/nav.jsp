@@ -50,7 +50,7 @@
             <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" style="border-radius: 20px;">
            <button class="btn  btn-sm btn-giallo" type="submit">Cerca</button>
           <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
-       <button class="btn btn-sm btn-nero" type="button">Registrati</button>
+       <a href="./registrazione.jsp" class="btn btn-sm btn-nero" type="button">Registrati</a>
             </form>
 		    </div>
 		  </div>
