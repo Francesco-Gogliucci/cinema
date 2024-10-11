@@ -32,7 +32,7 @@ CREATE TABLE categoria (
 
 CREATE TABLE film (
     id BIGINT NOT NULL AUTO_INCREMENT,
-    titolo VARCHAR(45) NOT NULL,
+    titolo VARCHAR(100) NOT NULL,
     trama VARCHAR(3000) NOT NULL,
     locandina VARCHAR(3000) NOT NULL,
     data_uscita DATE NOT NULL,
