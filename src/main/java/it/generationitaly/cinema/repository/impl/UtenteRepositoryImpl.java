@@ -1,13 +1,9 @@
 package it.generationitaly.cinema.repository.impl;
 
 import java.util.List;
-<<<<<<< HEAD
-import it.generationitaly.cinema.entity.*;
 import it.generationitaly.cinema.entity.Preferiti;
-=======
 
-import it.generationitaly.cinema.entity.Film;
->>>>>>> branch 'Servlet' of https://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@github.com/SaraColella94/cinema
+
 import it.generationitaly.cinema.entity.Utente;
 import it.generationitaly.cinema.repository.UtenteRepository;
 import jakarta.persistence.EntityManager;
@@ -69,7 +65,6 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 				em.close();
 		}
 	}
-<<<<<<< HEAD
 	
 	@Override
 	public List<Preferiti> findPreferitiByUtenteId(Long utenteId) {
@@ -99,13 +94,6 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 	    
 	    return preferiti;
 	}
-}
-=======
 
-	@Override
-	public List<Film> findPreferitiByUtenteId(Long utenteId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 }
->>>>>>> branch 'Servlet' of https://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@github.com/SaraColella94/cinema
+
