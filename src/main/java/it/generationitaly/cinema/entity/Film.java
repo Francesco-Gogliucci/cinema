@@ -41,16 +41,16 @@ public class Film {
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
 
-    @Column(name = "produzione", length = 45, nullable = false)  // Produzione è ora una stringa
+    @Column(name = "produzione", length = 45, nullable = false)  
     private String produzione;
 
-    @Column(name = "budget", nullable = false)  // Budget è ora un intero
+    @Column(name = "budget", nullable = false) 
     private int budget;
 
     public Film() {
     }
 
-    // Getter e setter
+   
     public Long getId() {
         return id;
     }
