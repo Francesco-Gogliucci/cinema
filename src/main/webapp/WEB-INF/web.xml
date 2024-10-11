@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="https://jakarta.ee/xml/ns/jakartaee"
-	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
-	version="6.0">
-	<display-name>cinema</display-name>
-	<servlet>
-		<description>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" version="6.0">
+  <display-name>cinema</display-name>
+  <servlet>
+    <description>
 		</description>
-		<display-name>FilmServlet</display-name>
-		<servlet-name>FilmServlet</servlet-name>
-		<servlet-class>it.generationitaly.cinema.controller.FilmServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>
+    <display-name>FilmServlet</display-name>
+    <servlet-name>FilmServlet</servlet-name>
+    <servlet-class>it.generationitaly.cinema.controller.FilmServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>
 		</description>
-		<display-name>ElencoFilmServlet</display-name>
-		<servlet-name>ElencoFilmServlet</servlet-name>
-		<servlet-class>it.generationitaly.cinema.controller.ElencoFilmServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>FilmServlet</servlet-name>
-		<url-pattern>/dettagliFilm</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>ElencoFilmServlet</servlet-name>
-		<url-pattern>/elencofilm</url-pattern>
-	</servlet-mapping>
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
+    <display-name>ElencoFilmServlet</display-name>
+    <servlet-name>ElencoFilmServlet</servlet-name>
+    <servlet-class>it.generationitaly.cinema.controller.ElencoFilmServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FilmServlet</servlet-name>
+    <url-pattern>/dettagliFilm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ElencoFilmServlet</servlet-name>
+    <url-pattern>/elencofilm</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>RegisterServlet</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>it.generationitaly.cinema.controller.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
