@@ -49,7 +49,7 @@
 		     <form class="d-flex" role="search" style="margin-bottom: 5px;" >
             <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" style="border-radius: 20px;">
            <button class="btn  btn-sm btn-giallo" type="submit">Cerca</button>
-           <button class="btn btn-sm btn-giallo" type="button" >Accedi</button>
+          <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
        <button class="btn btn-sm btn-nero" type="button">Registrati</button>
             </form>
 		    </div>
