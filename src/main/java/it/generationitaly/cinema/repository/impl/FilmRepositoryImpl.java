@@ -15,9 +15,9 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 	}
 
 	@Override
-	public List<Film> ricercaFilmByCategoria(String categoria) {
+	public List<Film> ricercaFilmByCategoriaId(Long id) {
 		List<Film> film = null;
-		String jpql = "SELECT f FROM Film f JOIN f.categoria c WHERE c.genere = :genere";
+		String jpql = "SELECT f FROM Film f JOIN f.categoria c WHERE c.id = :id";
 		EntityManager em = null;
 		EntityTransaction tx = null;
 		try {
@@ -25,7 +25,7 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 			tx = em.getTransaction();
 			tx.begin();
 			TypedQuery<Film> query = em.createQuery(jpql, Film.class);
-			query.setParameter("genere", categoria);
+			query.setParameter("id", id);
 			film = query.getResultList();
 			tx.commit();
 		} catch (Exception e) {
