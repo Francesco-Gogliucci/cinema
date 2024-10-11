@@ -1,4 +1,4 @@
-package it.generationitaly.cinema.resository.impl;
+package it.generationitaly.cinema.repository.impl;
 
 import java.util.List;
 
