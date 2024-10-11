@@ -13,6 +13,7 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 		super(Utente.class);
 	}
 
+
 	@Override
 	public Utente findByUsername(String username) {
 		Utente utente = null;

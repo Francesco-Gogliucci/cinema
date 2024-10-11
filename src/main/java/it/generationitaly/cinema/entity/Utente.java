@@ -1,11 +1,15 @@
 package it.generationitaly.cinema.entity;
 
+import java.util.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "utente")
@@ -18,6 +22,16 @@ public class Utente {
 
 	@Column(name = "email", length = 45, nullable = false, unique = true)
 	private String email;
+
+	@Column(name = "nome", length = 45, nullable = false)
+	private String nome;
+
+	@Column(name = "cognome", length = 45, nullable = false)
+	private String cognome;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "data_nascita", nullable = false)
+	private Date dataNascita;
 
 	@Column(name = "username", length = 45, nullable = false)
 	private String username;
