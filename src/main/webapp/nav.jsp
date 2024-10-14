@@ -21,32 +21,15 @@
 		    <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 		    <li class="nav-item">
-		     <a class="nav-link active" aria-current="page" href="./home.jsp">Novità</a>
+		     <a class="nav-link active" aria-current="page" href="./community.jsp">Community</a>
 		     </li>
 		      <li class="nav-item">
-		     <a class="nav-link" href="./home.jsp">Film</a>
+		     <a class="nav-link" href="">Film</a>
 		     </li>
-		     <li class="nav-item dropdown">
-		      <a class="nav-link dropdown-toggle" href="./categorie.jsp" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		            Generi
-		       </a>
-		       <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Azione</a></li>
-            <li><a class="dropdown-item" href="#">Avventura</a></li>
-            <li><a class="dropdown-item" href="#">Drammatico</a></li>
-            <li><a class="dropdown-item" href="#">Commedia</a></li>
-            <li><a class="dropdown-item" href="#">Horror</a></li>
-            <li><a class="dropdown-item" href="#">Fantascienza</a></li>
-            <li><a class="dropdown-item" href="#">Fantasy</a></li>
-            <li><a class="dropdown-item" href="#">Thriller</a></li>
-            <li><a class="dropdown-item" href="#">Romantico</a></li>
-            <li><a class="dropdown-item" href="#">Animazione</a></li>
-            <li><a class="dropdown-item" href="#">Documentario</a></li>
-            <li><a class="dropdown-item" href="#">Musical</a></li>
-          </ul>
-		   </li>
-			 </ul>
-		     <form class="d-flex" role="search" style="margin-bottom: 5px;" >
+		    <li class="nav-item">
+		     <a class="nav-link" href="./categorie.jsp">Generi</a>
+		     </li>
+		     <form class="d-flex" role="search" style="margin-bottom: 5px; padding-left: 500px;" >
             <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" style="border-radius: 20px;">
            <button class="btn  btn-sm btn-giallo" type="submit">Cerca</button>
           <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
