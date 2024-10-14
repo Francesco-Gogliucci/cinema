@@ -28,6 +28,8 @@
 <div class="album py-5">
 	 <div class="container" style="padding-top: 20px">
 		 <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+	<!--List<Film> posterFilms= (List<Film>) request.getattribute("nome servlet");-->
 	 <!-- codice temporaneo per pololare la pagina -->
 	 
 			 <% HashMap <String, String> films = new HashMap<>(); 
@@ -65,7 +67,7 @@
 </div>
 
 
-		<!-- Categori, bottoni-->
+		<!-- Categoria, bottoni-->
 
 	<div class="container text-end" style="padding-top: 20px;">
 	<div class ="row row-cols-md-2 g-3">
@@ -93,13 +95,14 @@
 				categorie.add("Musical");
 				
 				for(String categoria : categorie){%>
-			<div class="col">
-				<a href="./film-cercati.jsp"><button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
-	    border-radius: 20px;
-	    color: white;
-	    padding: 5px 20px;
-	    font-size: 14px;
-	    border: none;"><%=categoria%></button></a>
+			<div class="col"
+<!-- inserire nell'href una chamata alla sevlet con l'attributo per fare una ricerca per categoria e andare alla pagina tramite la sevlet-->
+			<a href="./film-cercati.jsp"><button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
+				    border-radius: 20px;
+				    color: white;
+				    padding: 5px 20px;
+				    font-size: 14px;
+				    border: none;"><%=categoria%></button></a>
 			</div>
 			<% }
 			%>
@@ -109,6 +112,7 @@
 	</div>
 	
 	<!--  recensioni utente -->
+	<!-- inserire un href per l'utente, che vada tramite la servlet delle recensioni ad aprire uns pagina con le recensioni dell'utente-->
 	<div class="container text-end" style="padding-top: 40px;">
 	<div class ="row row-cols-md-2 g-3">
 	<div class="col" ></div>
@@ -154,6 +158,7 @@
 	   				 <h5><%=recensione.getUtente().getUsername() %></h5>
 	   			</div >
 	   			<div class="col" style="border-top: 4px solid rgb(101, 131, 161); color:rgb(101, 131, 161); ">
+				<!--sarebbe troppo mettere una locandina o unpulsante per sapere andare alla pagina film?-->
 	   			<h5 style="color:white"><%=recensione.getFilm().getTitolo()%></h5>
 	   			<p><%=recensione.getRecensione()%></p>
 	   			</div>
