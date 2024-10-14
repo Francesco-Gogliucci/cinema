@@ -1,12 +1,17 @@
 package it.generationitaly.cinema.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -35,6 +40,15 @@ public class Attore {
 
 	@Column(name = "biografia", length = 3000, nullable = false)
 	private String biografia;
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	// indica la tabella intermedia
+	@JoinTable(name = "film_attore", joinColumns =
+	// indica la colonna che contiene l'id dell'attore
+	@JoinColumn(name = "attore_id"), inverseJoinColumns =
+	// indica la colonna che contiene l'id del film
+	@JoinColumn(name = "film_id"))
+	private List<Film> film;
 
 	public Long getId() {
 		return id;
@@ -82,6 +96,14 @@ public class Attore {
 
 	public void setBiografia(String biografia) {
 		this.biografia = biografia;
+	}
+
+	public List<Film> getFilm() {
+		return film;
+	}
+
+	public void setFilm(List<Film> film) {
+		this.film = film;
 	}
 
 	@Override
