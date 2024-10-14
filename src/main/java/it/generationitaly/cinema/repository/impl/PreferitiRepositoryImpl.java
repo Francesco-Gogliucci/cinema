@@ -1,11 +1,9 @@
 package it.generationitaly.cinema.repository.impl;
 
 import java.util.List;
-import it.generationitaly.cinema.entity.Preferiti;
 
+import it.generationitaly.cinema.entity.Preferiti;
 import it.generationitaly.cinema.repository.PreferitiRepository;
-import it.generationitaly.cinema.entity.Utente;
-import it.generationitaly.cinema.repository.UtenteRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
@@ -15,6 +13,7 @@ public class PreferitiRepositoryImpl extends JpaRepositoryImpl<Preferiti, Long> 
 		super(Preferiti.class);
 	}
 
+	@Override
 	public List<Preferiti> findPreferitiByUtenteId(Long utenteId) {
 		EntityManager em = null;
 		EntityTransaction tx = null;
@@ -33,11 +32,13 @@ public class PreferitiRepositoryImpl extends JpaRepositoryImpl<Preferiti, Long> 
 			tx.commit();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
-			if (tx != null && tx.isActive())
+			if (tx != null && tx.isActive()) {
 				tx.rollback();
+			}
 		} finally {
-			if (em != null)
+			if (em != null) {
 				em.close();
+			}
 		}
 
 		return preferiti;
