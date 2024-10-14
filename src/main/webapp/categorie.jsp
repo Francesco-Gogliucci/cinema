@@ -13,8 +13,9 @@
 	</head>
 	<body class="custom-bg">
 		<%@ include file="nav.jsp"%>
+		<div class="mt-4"></div>
 		<div class="album py-5">
-	 <div class="container" style="padding-top: 20px">
+	 <div class="container" style="padding-top: 50px">
 		 <div class ="row row-cols-3 row-cols-sm-3 row-cols-md-4 g-3">
 	 <!-- codice temporaneo per pololare la pagina -->
 	 
@@ -35,16 +36,36 @@
 			 	
 			 %>
 	  			 <div class="col">
-					 <div class="card "
-						 style="border-color:transparent;
-							height: 90%; width:200px;
-							background-color: transparent;
-							margin-left: 15px;
-						}">
-					 <img class="card-img-top" src="<%= url%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
-	 			<h6 class="card-title testo-pargraph"><%= categorie.get(url)%></h6>
-			 </div>
-	 	 </div>
+					<div class="card" 
+						style="border-color: transparent; 
+						height: 310px; 
+						width: 210px; 
+						background-color: transparent; 
+						margin-left: 15px; 
+						border-bottom:#1A2D3F;
+						background: linear-gradient(180deg, rgba(68, 119, 165, 0) 10%, #1A2D3F 100%), url(<%= url%>); 
+						background-size: cover; 
+						background-position: center; 
+						border-radius: 15px;
+						position: relative;
+						padding-bottom: -2px;
+						box-shadow: 0 2px 4px rgba(0, 0, 0, 1);">
+				
+						<h6 class="card-title testo-paragraph text-bottom" 
+							style="position: absolute; 
+							bottom: 0; 
+							width: 100%; 
+							text-align: center; 
+							text-transform: uppercase; 
+							font-weight:bold;
+							padding-bottom: 8px;
+							margin-bottom: 10; 
+							color: white;">
+							<%= categorie.get(url)%>
+						</h6>
+					</div>
+				</div>
+
 	
 			 <%
 	 		}

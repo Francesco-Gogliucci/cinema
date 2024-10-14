@@ -107,6 +107,20 @@
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
       }
+      .login-background{
+			background-color: transparent; 
+			background: url(./img-ref/background-kubrick.png); 
+			background-size: cover; 
+			background-position: center; 
+		}
+	.form-aspect{
+		border-color: transparent;
+		background-color: rgba(26, 45, 63, 0.7);
+		border-radius:15px;
+		padding: 50px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+		
+	}
 	      
     </style>
 
@@ -115,45 +129,15 @@
    <link href="sign-in.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="custom-bg">
+<body class="login-background">
 <%@ include file="nav.jsp"%>
-<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-  <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-          id="bd-theme"
-          type="button"
-          aria-expanded="false"
-          data-bs-toggle="dropdown"
-          aria-label="Toggle theme (auto)">
-    <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-  </button>
-  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-    <li>
-      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-        <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-        Light
-        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-      </button>
-    </li>
-    <li>
-      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-        <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-        Dark
-        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-      </button>
-    </li>
-    <li>
-      <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-        <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        Auto
-        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-      </button>
-    </li>
-  </ul>
-</div>
 
-<main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 pt-4"> 
+<div class="mt-5"></div>
+
+<main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 mb-5"> 
+
   <form class="col-12 col-md-4 m-auto">
+  <div class="form-aspect mt-4">
     <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" >
     <h1 class="h4 mb-3 fw-normal" style="color: white">Login</h1> 
 
@@ -174,8 +158,12 @@
       </label>
     </div>
    <button class="btn" style="background-color: rgb(238, 226, 58); border-radius: 20px;" type="submit">Sign in</button>
-  </form>
+ </div>
+</form>
+
 </main>
+
+<%@ include file="footer.jsp"%>
 
 
 <script src="https://getbootstrap/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

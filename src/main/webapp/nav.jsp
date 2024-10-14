@@ -10,7 +10,7 @@
     crossorigin="anonymous">
      <link rel="stylesheet" href="style.css">
   </head>
- <nav class="navbar navbar-expand-lg" style="background-color: rgb(101, 131, 161);">
+ <nav class="navbar fixed-top navbar-expand-lg mb-5" style="background-color: rgb(101, 131, 161);box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
   	<div class="container-fluid">
 	 <a class="navbar-brand" href="#">
       <img src="./img-ref/bozza_logo.png" alt="Bootstrap" width="150" height="56">
