@@ -1,11 +1,8 @@
 package it.generationitaly.cinema.controller;
 
 import java.io.IOException;
-import java.util.List;
 
-import it.generationitaly.cinema.entity.Attore;
 import it.generationitaly.cinema.entity.Film;
-import it.generationitaly.cinema.entity.Recensione;
 import it.generationitaly.cinema.repository.impl.FilmAttoreRepositoryImpl;
 import it.generationitaly.cinema.repository.impl.FilmRepositoryImpl;
 import it.generationitaly.cinema.repository.impl.RecensioneRepositoryImpl;
@@ -28,14 +25,6 @@ public class FilmServlet extends HttpServlet {
 		long id = Long.parseLong(request.getParameter("id"));
 		Film film = filmRepository.findById(id);
 		request.setAttribute("film", film);
-		//TODO aggiungere recensione e attori all'entity film 
-
-		List<Attore> attori = filmAttoreRepository.findAttoreByFilmId(id);
-		request.setAttribute("attori", attori);
-
-		List<Recensione> recensioni = recensioneRepository.findRecensioneByFilmId(id);
-		request.setAttribute("recensioni", recensioni);
-
 		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
 		// film
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film.jsp");
