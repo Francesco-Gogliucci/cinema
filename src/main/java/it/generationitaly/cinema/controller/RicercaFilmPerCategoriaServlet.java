@@ -12,8 +12,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/ricercaFilmPerAnno")
-public class FilmPerAnnoServlet extends HttpServlet {
+@WebServlet("/ricercaPerCategoria")
+public class RicercaFilmPerCategoriaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private FilmRepositoryImpl filmRepository = new FilmRepositoryImpl();
@@ -21,12 +21,12 @@ public class FilmPerAnnoServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		String anno = request.getParameter("anno");
-		List<Film> filmAnno = filmRepository.findFilmByAnno(anno);
-		request.setAttribute("filmAnno", filmAnno);
-		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
-		// attore
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("filmAnno.jps");
+		long idCategoria = Long.parseLong(request.getParameter("idCategoria"));
+		List<Film> filmCategoria = filmRepository.findFilmByCategoriaId(idCategoria);
+		request.setAttribute("filmCategoria", filmCategoria);
+		
+		// inserita pagina jsp corretta 
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("categoria.jps");
 		requestDispatcher.forward(request, response);
 	}
 
