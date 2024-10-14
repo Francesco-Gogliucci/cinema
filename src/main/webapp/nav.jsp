@@ -12,7 +12,7 @@
   </head>
  <nav class="navbar navbar-expand-lg" style="background-color: rgb(101, 131, 161);">
   	<div class="container-fluid">
-	 <a class="navbar-brand" href="#">
+	 <a class="navbar-brand" href="./home.jsp">
       <img src="" alt="Bootstrap" width="100" height="39">
    	 </a>
  	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,29 +24,12 @@
 		     <a class="nav-link active" aria-current="page" href="#">Novità</a>
 		     </li>
 		      <li class="nav-item">
-		     <a class="nav-link" href="./home">Film</a>
+		     <a class="nav-link" href="">Film</a>
 		     </li>
-		     <li class="nav-item dropdown">
-		      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-		            Generi
-		       </a>
-		       <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Azione</a></li>
-            <li><a class="dropdown-item" href="#">Avventura</a></li>
-            <li><a class="dropdown-item" href="#">Drammatico</a></li>
-            <li><a class="dropdown-item" href="#">Commedia</a></li>
-            <li><a class="dropdown-item" href="#">Horror</a></li>
-            <li><a class="dropdown-item" href="#">Fantascienza</a></li>
-            <li><a class="dropdown-item" href="#">Fantasy</a></li>
-            <li><a class="dropdown-item" href="#">Thriller</a></li>
-            <li><a class="dropdown-item" href="#">Romantico</a></li>
-            <li><a class="dropdown-item" href="#">Animazione</a></li>
-            <li><a class="dropdown-item" href="#">Documentario</a></li>
-            <li><a class="dropdown-item" href="#">Musical</a></li>
-          </ul>
-		   </li>
-			 </ul>
-		     <form class="d-flex" role="search" style="margin-bottom: 5px;" >
+		    <li class="nav-item">
+		     <a class="nav-link" href="./categorie.jsp">Generi</a>
+		     </li>
+		     <form class="d-flex" role="search" style="margin-bottom: 5px; padding-left: 500px;" >
             <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" style="border-radius: 20px;">
            <button class="btn  btn-sm btn-giallo" type="submit">Cerca</button>
           <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
