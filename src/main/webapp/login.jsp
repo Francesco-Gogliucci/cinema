@@ -138,7 +138,12 @@
 <main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 mb-5"> 
 
   <form class="col-12 col-md-4 m-auto">
+<<<<<<< HEAD
   <div class="form-aspect mt-4">
+
+=======
+  <div class="form-aspect mt-4">
+>>>>>>> branch 'frontend' of https://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@github.com/SaraColella94/cinema
 <main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 pt-4"> 
   <form action="login" method="post"class="col-12 col-md-4 m-auto">
     <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" >
