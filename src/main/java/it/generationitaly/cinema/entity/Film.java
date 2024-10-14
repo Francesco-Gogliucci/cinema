@@ -1,14 +1,17 @@
 package it.generationitaly.cinema.entity;
 
 import java.util.Date;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -17,106 +20,117 @@ import jakarta.persistence.TemporalType;
 @Table(name = "film")
 public class Film {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
+	private Long id;
 
-    @Column(name = "titolo", length = 100, nullable = false)
-    private String titolo;
+	@Column(name = "titolo", length = 100, nullable = false)
+	private String titolo;
 
-    @Column(name = "trama", length = 3000, nullable = false)
-    private String trama;
+	@Column(name = "trama", length = 3000, nullable = false)
+	private String trama;
 
-    @Column(name = "locandina", length = 3000, nullable = false)
-    private String locandina;
+	@Column(name = "locandina", length = 3000, nullable = false)
+	private String locandina;
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "data_uscita", nullable = false)
-    private Date dataUscita;
+	@Temporal(TemporalType.DATE)
+	@Column(name = "data_uscita", nullable = false)
+	private Date dataUscita;
 
-    @Column(name = "durata", nullable = false)
-    private int durata;
+	@Column(name = "durata", nullable = false)
+	private int durata;
 
-    @ManyToOne
-    @JoinColumn(name = "categoria_id", nullable = false)
-    private Categoria categoria;
+	@ManyToOne
+	@JoinColumn(name = "categoria_id", nullable = false)
+	private Categoria categoria;
 
-    @Column(name = "budget_produzione", nullable = false) 
-    private int budget;
+	@Column(name = "budget_produzione", nullable = false)
+	private int budget;
 
-    public Film() {
-    }
+	@OneToMany(mappedBy = "film", fetch = FetchType.EAGER)
+	private List<Recensione> recensioni;
 
-   
-    public Long getId() {
-        return id;
-    }
+	public Film() {
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	}
 
-    public String getTitolo() {
-        return titolo;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public void setTitolo(String titolo) {
-        this.titolo = titolo;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public String getTrama() {
-        return trama;
-    }
+	public String getTitolo() {
+		return titolo;
+	}
 
-    public void setTrama(String trama) {
-        this.trama = trama;
-    }
+	public void setTitolo(String titolo) {
+		this.titolo = titolo;
+	}
 
-    public String getLocandina() {
-        return locandina;
-    }
+	public String getTrama() {
+		return trama;
+	}
 
-    public void setLocandina(String locandina) {
-        this.locandina = locandina;
-    }
+	public void setTrama(String trama) {
+		this.trama = trama;
+	}
 
-    public Date getDataUscita() {
-        return dataUscita;
-    }
+	public String getLocandina() {
+		return locandina;
+	}
 
-    public void setDataUscita(Date dataUscita) {
-        this.dataUscita = dataUscita;
-    }
+	public void setLocandina(String locandina) {
+		this.locandina = locandina;
+	}
 
-    public int getDurata() {
-        return durata;
-    }
+	public Date getDataUscita() {
+		return dataUscita;
+	}
 
-    public void setDurata(int durata) {
-        this.durata = durata;
-    }
+	public void setDataUscita(Date dataUscita) {
+		this.dataUscita = dataUscita;
+	}
 
-    public Categoria getCategoria() {
-        return categoria;
-    }
+	public int getDurata() {
+		return durata;
+	}
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
-    }
+	public void setDurata(int durata) {
+		this.durata = durata;
+	}
 
-    public int getBudget() {
-        return budget;
-    }
+	public Categoria getCategoria() {
+		return categoria;
+	}
 
-    public void setBudget(int budget) {
-        this.budget = budget;
-    }
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 
-    @Override
-    public String toString() {
-        return "Film [id=" + id + ", titolo=" + titolo + ", trama=" + trama + ", locandina=" + locandina
-                + ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria
-                + ", budget=" + budget + "]";
-    }
+	public int getBudget() {
+		return budget;
+	}
+
+	public void setBudget(int budget) {
+		this.budget = budget;
+	}
+
+	public List<Recensione> getRecensioni() {
+		return recensioni;
+	}
+
+	public void setRecensioni(List<Recensione> recensioni) {
+		this.recensioni = recensioni;
+	}
+
+	@Override
+	public String toString() {
+		return "Film [id=" + id + ", titolo=" + titolo + ", trama=" + trama + ", locandina=" + locandina
+				+ ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria + ", budget="
+				+ budget + "]";
+	}
 }
