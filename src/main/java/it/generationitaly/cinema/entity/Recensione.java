@@ -28,6 +28,14 @@ public class Recensione {
 	@ManyToOne
 	@JoinColumn(name = "film_id", nullable = false)
 	private Film film;
+	
+	
+
+	public Recensione(String recensione, Utente utente, Film film) {
+		this.recensione = recensione;
+		this.utente = utente;
+		this.film = film;
+	}
 
 	public Long getId() {
 		return id;

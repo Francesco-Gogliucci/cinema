@@ -49,6 +49,10 @@ public class Film {
 
 	public Film() {
 	}
+	
+	public Film(String titolo) {
+		this.titolo = titolo;
+	}
 
 	public Long getId() {
 		return id;
