@@ -22,7 +22,7 @@ public class FilmPerCategoriaServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		long idCategoria = Long.parseLong(request.getParameter("idCategoria"));
-		List<Film> filmCategoria = filmRepository.ricercaFilmByCategoriaId(idCategoria);
+		List<Film> filmCategoria = filmRepository.findFilmByCategoriaId(idCategoria);
 		request.setAttribute("filmCategoria", filmCategoria);
 		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
 		// attore

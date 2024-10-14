@@ -3,11 +3,11 @@ package it.generationitaly.cinema.controller;
 import java.io.IOException;
 import java.util.List;
 import it.generationitaly.cinema.entity.Film;
-import it.generationitaly.cinema.entity.Preferiti; // Importa la tua entità Preferiti
+import it.generationitaly.cinema.entity.Preferiti;
 import it.generationitaly.cinema.entity.Utente;
-import it.generationitaly.cinema.repository.PreferitiRepository; // Importa il repository Preferiti
+import it.generationitaly.cinema.repository.PreferitiRepository;
 import it.generationitaly.cinema.repository.UtenteRepository;
-import it.generationitaly.cinema.repository.impl.PreferitiRepositoryImpl; // Importa la tua implementazione Preferiti
+import it.generationitaly.cinema.repository.impl.PreferitiRepositoryImpl;
 import it.generationitaly.cinema.repository.impl.UtenteRepositoryImpl;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -29,14 +29,12 @@ public class PreferitiUtenteServlet extends HttpServlet {
 
 		if (utente != null) {
 			Long utenteId = utente.getId();
-			List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId); // Usa
-																								// preferitiRepository
+			List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId);
 
 			request.setAttribute("preferiti", preferiti);
-
 			request.getRequestDispatcher("mostraPreferiti.jsp").forward(request, response);
 		} else {
-
+			// Se l'utente non è loggato, reindirizza alla pagina di login
 			response.sendRedirect("login.jsp");
 		}
 	}
