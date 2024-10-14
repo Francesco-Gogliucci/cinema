@@ -10,4 +10,6 @@ public interface FilmRepository extends JpaRepository<Film, Long> {
 
 	public List<Film> findFilmByAnno(String anno);
 
+	public List<Film> findFilmByTitolo(String titolo);
+
 }

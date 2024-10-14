@@ -69,4 +69,24 @@ public class FilmRepositoryImpl extends JpaRepositoryImpl<Film, Long> implements
 		return film;
 	}
 
+	@Override
+	public List<Film> findFilmByTitolo(String titolo) {
+		List<Film> films = null;
+		String jpql = "SELECT f FROM Film f WHERE LOWER(f.titolo) LIKE LOWER(:titolo)";
+		EntityManager em = null;
+		try {
+			em = emf.createEntityManager();
+			TypedQuery<Film> query = em.createQuery(jpql, Film.class);
+			query.setParameter("titolo", "%" + titolo + "%");
+			films = query.getResultList();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+		} finally {
+			if (em != null) {
+				em.close();
+			}
+		}
+		return films;
+	}
+
 }
