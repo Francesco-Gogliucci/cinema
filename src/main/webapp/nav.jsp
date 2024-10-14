@@ -12,7 +12,7 @@
   </head>
  <nav class="navbar fixed-top navbar-expand-lg mb-5" style="background-color: rgb(101, 131, 161);box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
   	<div class="container-fluid">
-	 <a class="navbar-brand" href="#">
+	 <a class="navbar-brand" href="./home.jsp">
       <img src="./img-ref/logo-popcorn.png" alt="Bootstrap" width="164.36" height="66">
    	 </a>
  	<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
