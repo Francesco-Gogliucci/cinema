@@ -3,9 +3,7 @@ package it.generationitaly.cinema.controller;
 import java.io.IOException;
 
 import it.generationitaly.cinema.entity.Film;
-import it.generationitaly.cinema.repository.impl.FilmAttoreRepositoryImpl;
 import it.generationitaly.cinema.repository.impl.FilmRepositoryImpl;
-import it.generationitaly.cinema.repository.impl.RecensioneRepositoryImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -16,8 +14,6 @@ public class FilmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	private FilmRepositoryImpl filmRepository = new FilmRepositoryImpl();
-	private FilmAttoreRepositoryImpl filmAttoreRepository = new FilmAttoreRepositoryImpl();
-	private RecensioneRepositoryImpl recensioneRepository = new RecensioneRepositoryImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)

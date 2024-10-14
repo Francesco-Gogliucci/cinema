@@ -3,6 +3,7 @@ package it.generationitaly.cinema.controller;
 import java.io.IOException;
 
 import it.generationitaly.cinema.entity.Recensione;
+import it.generationitaly.cinema.entity.Utente;
 import it.generationitaly.cinema.repository.impl.FilmRepositoryImpl;
 import it.generationitaly.cinema.repository.impl.RecensioneRepositoryImpl;
 import it.generationitaly.cinema.repository.impl.UtenteRepositoryImpl;
@@ -34,8 +35,9 @@ public class RecensioneServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
+		Utente utente = (Utente) session.getAttribute("utente");
 
-		if (session.getAttribute("username") != null) {
+		if (utente != null) {
 			String contenuto = request.getParameter("contenuto");
 			long idFilm = Long.parseLong(request.getParameter("idFilm"));
 			long idUtente = Long.parseLong(request.getParameter("idUtente"));
