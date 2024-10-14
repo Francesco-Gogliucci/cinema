@@ -25,8 +25,7 @@ public class ElencoAttoriServlet extends HttpServlet {
 		List<Attore> elencoAttori = attoreRepository.findAll();
 
 		request.setAttribute("elencoAttori", elencoAttori);
-		// inserire la pagina jsp corretta per la visualizzazione della lista degli
-		// attori
+		// 
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencoAttori.jsp");
 		requestDispatcher.forward(request, response);
 	}

@@ -39,14 +39,16 @@ public class RegisterServlet extends HttpServlet {
 
 		if (utenteRepository.existsByUsername(username)) {
 			request.setAttribute("errorMessage", "Username già in uso. Scegli un altro username.");
-			request.getRequestDispatcher("register.jsp").forward(request, response);
+			// inserita pagina jsp corretta 
+			request.getRequestDispatcher("registrazione.jsp").forward(request, response);
 			return;
 		}
 
 		// Salva l'utente nel repository
 		utenteRepository.save(utente);
-
+		
 		// Reindirizza alla pagina di login dopo la registrazione
+		// inserita pagina jsp corretta 
 		response.sendRedirect("login.jsp");
 	}
 }

@@ -23,9 +23,9 @@ public class FilmServlet extends HttpServlet {
 		long id = Long.parseLong(request.getParameter("id"));
 		Film film = filmRepository.findById(id);
 		request.setAttribute("film", film);
-		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
-		// film
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film.jsp");
+		
+		// inserita pagina jsp corretta 
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
 		requestDispatcher.forward(request, response);
 	}
 

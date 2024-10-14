@@ -25,7 +25,8 @@ public class ElencoFilmServlet extends HttpServlet {
 		List<Film> elencoFilm = filmrepository.findAll();
 		
 		request.setAttribute("elencoFilm", elencoFilm);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencofilm.jsp");
+		// inserita pagina jsp corretta 
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film.jsp");
 		requestDispatcher.forward(request, response);
 	}
 

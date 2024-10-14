@@ -30,9 +30,11 @@ public class LoginServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("utente", utente);
             session.setAttribute("username", utente.getUsername());
-
-            response.sendRedirect("index.jsp");
+            
+        	// inserita pagina jsp corretta 
+            response.sendRedirect("home.jsp");
         } else {
+        	// inserita pagina jsp corretta 
             response.sendRedirect("login.jsp?erroreCredenziali");
         }
     }

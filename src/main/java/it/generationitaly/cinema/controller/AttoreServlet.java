@@ -30,8 +30,7 @@ public class AttoreServlet extends HttpServlet {
 		
 		request.setAttribute("attore", attore);
 		request.setAttribute("listaFilmAttore", listFilmByAttore);
-		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
-		// attore
+		// inserita pagina jsp corretta 
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("attore.jps");
 		requestDispatcher.forward(request, response);
 	}
