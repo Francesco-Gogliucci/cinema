@@ -6,10 +6,12 @@ import it.generationitaly.cinema.entity.Film;
 import it.generationitaly.cinema.repository.impl.FilmRepositoryImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@WebServlet("/dettagliAttore")
 public class FilmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

@@ -6,12 +6,13 @@ import it.generationitaly.cinema.entity.Utente;
 import it.generationitaly.cinema.repository.UtenteRepository;
 import it.generationitaly.cinema.repository.impl.UtenteRepositoryImpl;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-
+@WebServlet("/login")
 public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
