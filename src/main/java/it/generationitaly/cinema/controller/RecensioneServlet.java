@@ -46,6 +46,7 @@ public class RecensioneServlet extends HttpServlet {
 
 			recensioneRepository.save(recensione);
 		} else {
+			// inserita pagina jsp corretta 
 			response.sendRedirect("login.jsp");
 			return;
 		}

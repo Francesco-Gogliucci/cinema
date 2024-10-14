@@ -34,6 +34,7 @@ public class PreferitiUtenteServlet extends HttpServlet {
 			request.setAttribute("preferiti", preferiti);
 			request.getRequestDispatcher("mostraPreferiti.jsp").forward(request, response);
 		} else {
+			// inserita pagina jsp corretta 
 			response.sendRedirect("login.jsp");
 			return;
 		}

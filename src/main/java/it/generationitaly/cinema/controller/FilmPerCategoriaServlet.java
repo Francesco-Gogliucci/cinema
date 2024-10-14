@@ -24,9 +24,9 @@ public class FilmPerCategoriaServlet extends HttpServlet {
 		long idCategoria = Long.parseLong(request.getParameter("idCategoria"));
 		List<Film> filmCategoria = filmRepository.findFilmByCategoriaId(idCategoria);
 		request.setAttribute("filmCategoria", filmCategoria);
-		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
-		// attore
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("filmCategoria.jps");
+		
+		// inserita pagina jsp corretta 
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("categoria.jps");
 		requestDispatcher.forward(request, response);
 	}
 
