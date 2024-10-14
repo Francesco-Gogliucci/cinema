@@ -70,17 +70,17 @@
 <br>
  <div class="row" style="padding-left: 100px;">
       <div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="Robert Downey Jr.">
+    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="">
     <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Mario900</h2>
     <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
 </div>
      <div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="Robert Downey Jr.">
+    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="">
     <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Andrea80</h2>
     <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
 </div>
 <div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="Robert Downey Jr.">
+    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="">
     <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Marco980</h2>
     <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
 </div>
