@@ -10,6 +10,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -50,6 +52,15 @@ public class Film {
 
 	@OneToMany(mappedBy = "film", fetch = FetchType.EAGER)
 	private List<Recensione> recensioni;
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	//indica la tabella intermedia 
+	@JoinTable(name = "film_attore", joinColumns =
+	//indica la colonna che contiene l'id del film
+	@JoinColumn(name = "film_id"), inverseJoinColumns = 
+	//indica la colonna che contiene l'id dell'attore
+	@JoinColumn(name = "attore_id"))
+	private List<Attore> attori;
 
 	public Film() {
 
@@ -125,6 +136,14 @@ public class Film {
 
 	public void setRecensioni(List<Recensione> recensioni) {
 		this.recensioni = recensioni;
+	}
+
+	public List<Attore> getAttori() {
+		return attori;
+	}
+
+	public void setAttori(List<Attore> attori) {
+		this.attori = attori;
 	}
 
 	@Override
