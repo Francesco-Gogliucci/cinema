@@ -1,7 +1,6 @@
 package it.generationitaly.cinema.repository.impl;
 
 import java.util.List;
-import it.generationitaly.cinema.entity.Preferiti;
 
 import it.generationitaly.cinema.entity.Utente;
 import it.generationitaly.cinema.repository.UtenteRepository;
@@ -31,11 +30,13 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 			tx.commit();
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
-			if (tx != null && tx.isActive())
+			if (tx != null && tx.isActive()) {
 				tx.rollback();
+			}
 		} finally {
-			if (em != null)
+			if (em != null) {
 				em.close();
+			}
 		}
 		return utente;
 	}
@@ -56,12 +57,14 @@ public class UtenteRepositoryImpl extends JpaRepositoryImpl<Utente, Long> implem
 			return count > 0; // Restituisce true se l'username esiste
 		} catch (Exception e) {
 			System.err.println(e.getMessage());
-			if (tx != null && tx.isActive())
+			if (tx != null && tx.isActive()) {
 				tx.rollback();
+			}
 			return false; // In caso di errore, restituisce false
 		} finally {
-			if (em != null)
+			if (em != null) {
 				em.close();
+			}
 		}
 	}
 }
