@@ -13,7 +13,7 @@
 </head>
 <body class="custom-bg">
 <%@ include file="nav.jsp"%>
-<div class="container" style="padding-top: 40px;">
+<div class="container mt-5" style="padding-top: 40px;">
   <div class="row g-3">
     <div class="col text-start" style="border-bottom: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
       <h3>La nostra community</h3>
