@@ -152,33 +152,33 @@
 </div>
 
 <main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 pt-4"> 
-  <form class="col-12 col-md-4 m-auto">
+  <form  action="RegisterServlet" method="post" class="col-12 col-md-4 m-auto">
     <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" >
     <h1 class="h4 mb-3 fw-normal" style="color: white">Registrati</h1> 
 
     <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Mario Rossi">
-      <label for="floatingInput">Nome</label>
+      <input type="text" class="form-control" id="input-nome" placeholder="Mario Rossi" name="nome">
+      <label for="input-nome">Nome</label>
     </div>
     <br>
      <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Mario Rossi">
-      <label for="floatingInput">Cognome</label>
+      <input type="text" class="form-control" id="input-cognome" placeholder="Mario Rossi" name="cognome" >
+      <label for="input-cognome">Cognome</label>
     </div>
     <br>
      <div class="form-floating">
-      <input type="text" class="form-control" id="floatingInput" placeholder="Mario Rossi">
-      <label for="floatingInput">Username</label>
+      <input type="text" class="form-control" id="input-username" placeholder="MarioUser" name="username">
+      <label for="input-username">Username</label>
     </div>
     <br>
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email</label>
+      <input type="email" class="form-control" id="input-email" placeholder="name@example.com" name="email">
+      <label for="input-email">Email</label>
     </div>
     <br>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Password</label>
+      <input type="password" class="form-control" id="input-password" placeholder="Password" name="password">
+      <label for="input-password">Password</label>
     </div>
     <br>
    <button class="btn" style="background-color: rgb(238, 226, 58); border-radius: 20px;" type="submit">Registrati</button>
