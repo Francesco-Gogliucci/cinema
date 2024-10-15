@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/dettagliAttore")
+@WebServlet("/dettagliFilm")
 public class FilmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -23,8 +23,8 @@ public class FilmServlet extends HttpServlet {
 		long id = Long.parseLong(request.getParameter("id"));
 		Film film = filmRepository.findById(id);
 		request.setAttribute("film", film);
-		
-		// inserita pagina jsp corretta 
+
+		// inserita pagina jsp corretta
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
 		requestDispatcher.forward(request, response);
 	}

@@ -4,32 +4,9 @@
 	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
 	version="6.0">
 	<display-name>cinema</display-name>
-	
 	<welcome-file-list>
 		<welcome-file>home.jsp</welcome-file>
 	</welcome-file-list>
-	<servlet>
-		<description>
-		</description>
-		<display-name>UtentiServlet</display-name>
-		<servlet-name>UtentiServlet</servlet-name>
-		<servlet-class>it.generationitaly.cinema.controller.UtentiServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<description>
-		</description>
-		<display-name>UtenteServlet</display-name>
-		<servlet-name>UtenteServlet</servlet-name>
-		<servlet-class>it.generationitaly.cinema.controller.UtenteServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>UtentiServlet</servlet-name>
-		<url-pattern>/UtentiServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>UtenteServlet</servlet-name>
-		<url-pattern>/utente</url-pattern>
-	</servlet-mapping>
 
 	<session-config>
 		<session-timeout>30</session-timeout>
