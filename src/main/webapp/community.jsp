@@ -21,7 +21,7 @@
     </div>
     <div class="row" style="padding-left: 100px;">
      
-      <% List<Recensione> recensioni = (List <Recensione>) request.getAttribute("elencoRecensioni") 
+      <% List<Recensione> recensioni = (List <Recensione>) request.getAttribute("elencoRecensioni"); 
         for (Recensione recensione : recensioni) {
         	
         
