@@ -132,18 +132,10 @@
 <body class="login-background">
 <%@ include file="nav.jsp"%>
 
-
-<div class="mt-5"></div>
-
 <main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 mb-5"> 
-
-
-  <form class="col-12 col-md-4 m-auto">
-  <div class="form-aspect mt-4">
-<main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 pt-4"> 
-<!--aggiugere sevlet utente-->
+<div class="form-aspect mt-4">
   <form action="login" method="post"class="col-12 col-md-4 m-auto">
-	<--modificarealtezza elarghezza logo-->
+	<!--modificarealtezza elarghezza logo-->
     <img class="mb-4" src="./logo-pop corn.png" alt="" width="72" height="57" >
     <h1 class="h4 mb-3 fw-normal" style="color: white">Login</h1> 
 
@@ -165,8 +157,10 @@
       <label class="form-check-label" for="flexCheckDefault" style="color: white">
         Remember me
       </label>
+
     </div>
    <button class="btn" style="background-color: rgb(238, 226, 58); border-radius: 20px;" type="submit">Login</button>
+ 	</form>
  </div>
    <% if (request.getParameter("erroreCredenziali") != null) { %>
     <br>
@@ -175,7 +169,6 @@
 		Credenziali errate!
 	</div>
 	<% } %>
-</form>
 
 </main>
 
