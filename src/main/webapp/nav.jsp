@@ -27,7 +27,7 @@
 		     <a class="nav-link" href="#">Film</a>
 		     </li>
 		    <li class="nav-item">
-		     <a class="nav-link" href="./categorie.jsp">Generi</a>
+		     <a class="nav-link" href="elencoCategoria">Generi</a>
 		     </li>
 		     </ul>
 		     <form class="d-flex" role="search" style="margin-bottom: 5px; padding-left: 300px;" >
