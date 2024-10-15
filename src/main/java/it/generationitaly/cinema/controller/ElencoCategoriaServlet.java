@@ -35,7 +35,7 @@ public class ElencoCategoriaServlet extends HttpServlet {
 			System.out.println("FORWARD");
 			requestDispatcher.forward(request, response);
 		} else {
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencoCategoria.jsp");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("./categorie.jsp");
 			requestDispatcher.forward(request, response);
 		}
 	}
