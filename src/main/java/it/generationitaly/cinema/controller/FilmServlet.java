@@ -25,7 +25,7 @@ public class FilmServlet extends HttpServlet {
 		request.setAttribute("film", film);
 
 		// inserita pagina jsp corretta
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film.jsp");
 		requestDispatcher.forward(request, response);
 	}
 

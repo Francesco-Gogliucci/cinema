@@ -29,22 +29,9 @@
 	 <div class="container" style="padding-top: 20px">
 		 <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 
-	<!--List<Film> posterFilms= (List<Film>) request.getattribute("nome servlet");-->
-	 <!-- codice temporaneo per pololare la pagina -->
-	 
-			 <% HashMap <String, String> films = new HashMap<>(); 
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/2/7/7/0/6/4/277064-barbie-0-1000-0-1500-crop.jpg?v=1b83dc7a71", "Barbie");
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/8/6/1/1/4/86114-the-wolf-of-wall-street-0-1000-0-1500-crop.jpg?v=9fd1891260","The wolf of Wall Street");
-			 		films.put("https://a.ltrbxd.com/resized/sm/upload/hv/nn/05/ss/d20vOJpywFDoz7Dd4ChomGdP0fr-0-1000-0-1500-crop.jpg?v=836521d1aa","Tonya");
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/9/4/9/0/5/3/949053-its-whats-inside-0-1000-0-1500-crop.jpg?v=ea1abf3c49","It’s What’s Inside");
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/8/0/0/8/5/8/800858-joker-folie-a-deux-0-1000-0-1500-crop.jpg?v=a4bf0389e2","Joker: Folie à Deux");
-			 		films.put("https://a.ltrbxd.com/resized/sm/upload/t0/3y/yr/rs/n3rm3gxguxzFDlygpROV7RHbELe-0-1000-0-1500-crop.jpg?v=67909d635e","Suicide Squad");
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/5/8/9/3/1/7/589317-amsterdam-0-1000-0-1500-crop.jpg?v=92e1cb7cab","Amsterdam");
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/3/9/7/8/5/9/397859-once-upon-a-time-in-hollywood-0-1000-0-1500-crop.jpg?v=f3e8612854","Unce Upon a Time in Hollywood");
-			 
-			 	
-			 	for(String url : films.keySet()){
-			 	
+	<% List<Film> posterFilm= (List<Film>) request.getAttribute("elencoFilm");
+			for(Film film : posterFilm){
+			
 			 %>
 	  			 <div class="col">
 					 <div class="card mb-3" 
@@ -53,8 +40,8 @@
 							background-color: transparent;
 							margin-left: 15px;
 						}">
-					<a href="./film.jsp"><img class="card-img-top" src="<%= url%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a> 
-	 			<h6 class="card-title testo-pargraph"><%= films.get(url)%></h6>
+					<a href="./film.jsp"><img class="card-img-top" src="<%=film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a> 
+	 			<h6 class="card-title testo-pargraph"><%=film.getTitolo()%></h6>
 			 </div>
 	 	 </div>
 	
@@ -81,7 +68,7 @@
 	<div class="container" style="padding-top: 40px">
 	<div class ="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-3">	
 		<div class="col"></div>
-			<% List<String> categorie = new ArrayList <String>();
+			<% /* List<String> categorie = new ArrayList <String>();
 				categorie.add("Azione");
 				categorie.add("Avventura");
 				categorie.add("Commedia");
@@ -93,16 +80,17 @@
 				categorie.add("Animazione");
 				categorie.add("Documentario");
 				categorie.add("Musical");
-				
-				for(String categoria : categorie){%>
+				 */
+				 List <Categoria> categorie = (List <Categoria>)request.getAttribute("elencoCategorie");
+				for(Categoria categoria : categorie){%>
 			<div class="col">
 <!-- inserire nell'href una chamata alla sevlet con l'attributo per fare una ricerca per categoria e andare alla pagina tramite la sevlet-->
-			<a href="./film-cercati.jsp"><button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
+			<a href="ricercaPerCategoria?idCategoria<%= categoria.getId()%>"><button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
 				    border-radius: 20px;
 				    color: white;
 				    padding: 5px 20px;
 				    font-size: 14px;
-				    border: none;"><%=categoria%></button></a>
+				    border: none;"><%=categoria.getGenere()%></button></a>
 			</div>
 			<% }
 			%>
@@ -125,7 +113,7 @@
 	<div class="container text-cetered" style="padding-top: 40px;">
 	
 	<% 
-	        // Creazione di oggetti Utente
+	        /* // Creazione di oggetti Utente
 	        Utente utente1 = new Utente("Mario Rossi");
 	        Utente utente2 = new Utente("Luisa Verdi");
 	        Utente utente3 = new Utente("Giulia Bianchi");
@@ -149,22 +137,36 @@
 				recensioni.add(recensione2);
 				recensioni.add(recensione3);
 				recensioni.add(recensione4);
+				 */
+			List<Recensione> recensioni= (List<Recensione>)request.getAttribute("listaRecensioni");
+				 
+				 if(recensioni==null){
+					 %> <p> al momento non ci sono recensioni<% 
+				 }else{
+					 for(Recensione recensione:recensioni){%>
+				 
+			
+				<div class ="row row-cols-md-3 g-3">
 				
-			for(Recensione recensione:recensioni){%>
-			
-			<div class ="row row-cols-md-2 g-3">
-			
-				<div class="col" style="color:rgb(101, 131, 161); width: 200px; padding-left:20px">
-	   				 <h5><%=recensione.getUtente().getUsername() %></h5>
-	   			</div >
-	   			<div class="col" style="border-top: 4px solid rgb(101, 131, 161); color:rgb(101, 131, 161); ">
-				<!--sarebbe troppo mettere una locandina o unpulsante per sapere andare alla pagina film?-->
-	   			<h5 style="color:white"><%=recensione.getFilm().getTitolo()%></h5>
-	   			<p><%=recensione.getRecensione()%></p>
-	   			</div>
-			</div >
-		<%	}
-	%>
+					<div class="col" style="color:rgb(101, 131, 161); width: 200px; padding-left:20px">
+		   				 <h5><%=recensione.getUtente().getUsername() %></h5>
+		   			</div >
+		   			<div class="col" style="border-top: 4px solid rgb(101, 131, 161); color:rgb(101, 131, 161); ">
+					<!--sarebbe troppo mettere una locandina o unpulsante per sapere andare alla pagina film?-->
+		   			<h5 style="color:white"><%=recensione.getFilm().getTitolo()%></h5>
+		   			<p><%=recensione.getRecensione()%></p>
+		   			</div>
+		   			<div class="col">
+		   			<a href="FilmServlet?id=<%= recensione.getFilm().getId()%>">
+		   				<img src="<%=recensione.getFilm().getLocandina()%>"></a>
+		   			</div>
+				</div >
+			<%	}
+			}
+		%>
+		<div class="row text-center">
+			<a href="RecensioniServlet"><button> Scopri altre recensioni</button></a>
+		</div>
 	</div>
 	
 	<%@ include file="footer.jsp"%>

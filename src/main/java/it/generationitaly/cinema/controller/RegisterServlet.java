@@ -21,6 +21,8 @@ public class RegisterServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		String email = request.getParameter("email");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		String nome = request.getParameter("nome");
@@ -31,6 +33,7 @@ public class RegisterServlet extends HttpServlet {
 		Date dataNascita = Date.valueOf(dataNascitaStr);
 
 		Utente utente = new Utente();
+		utente.setEmail(email);
 		utente.setUsername(username);
 		utente.setPassword(password);
 		utente.setNome(nome);
