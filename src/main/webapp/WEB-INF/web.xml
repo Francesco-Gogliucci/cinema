@@ -7,14 +7,4 @@
   <session-config>
     <session-timeout>30</session-timeout>
   </session-config>
-  <servlet>
-    <description></description>
-    <display-name>HomeServlet</display-name>
-    <servlet-name>HomeServlet</servlet-name>
-    <servlet-class>it.generationitaly.cinema.controller.HomeServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>HomeServlet</servlet-name>
-    <url-pattern>/Home</url-pattern>
-  </servlet-mapping>
 </web-app>
