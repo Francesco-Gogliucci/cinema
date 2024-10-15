@@ -165,7 +165,7 @@
 			}
 		%>
 		<div class="row text-center">
-			<a href="RecensioniServlet"><button style="color=blue"> Scopri altre recensioni</button></a>
+			<a href="RecensioniServlet"><button class="btn-chiaro"> Scopri altre recensioni</button></a>
 		</div>
 	</div>
 	
