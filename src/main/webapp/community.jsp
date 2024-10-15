@@ -28,7 +28,7 @@
       %> <div class="col-lg-2">
     <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
     <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= recensione.getUtente().getUsername() %></h2>
-    <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
+    <p><a class="btn btn-giallo" href="./utente.jsp">Vedi utente</a></p>
 </div>
     <% } %>
 
