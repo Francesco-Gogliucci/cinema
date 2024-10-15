@@ -48,7 +48,7 @@
 <br><br><br>
 <div class="row">
   <% 
-    List<Attore> elencoAttori = (List<Attore>) request.getAttribute("elencoAttori");
+    List<Attore> elencoAttori = film.getAttori();
       for (Attore attore : elencoAttori) { 
   %>
       <div class="col-lg-4">
