@@ -209,7 +209,7 @@ INSERT INTO film VALUES('60','Uncharted','Nathan Drake e il suo compagno di avve
 
 //inserimento di Attori
 
-<<<<<<< HEAD
+
    
 INSERT INTO attore VALUES ('1','Margot', 'Robbie', '1990-07-02','https://static2.amica.it/wp-content/uploads/2023/08/AMICARCS_20230804112136213_202d2c3412a893b2aed9156e58fb0f2f1-1-635x967.jpg', 'Margot Robbie è un''attrice e produttrice australiana, riconosciuta a livello internazionale per la sua versatilità e talento. 
 Cresciuta a Dalby, nel Queensland, ha iniziato la sua carriera nel 2007 con un ruolo nella soap opera Neighbours, che le ha conferito notorietà in Australia. Il suo debutto cinematografico avviene nel 2013 con il film ""The Wolf of Wall Street"", in cui recita accanto a Leonardo DiCaprio, ricevendo ampi consensi dalla critica. 
@@ -317,7 +317,7 @@ INSERT INTO recensione VALUES ('7','Mi è piaciuto vedere come Deadpool e Wolver
 Entrambi i personaggi hanno storie intricate e profonde che li rendono affascinanti 
 Deadpool, con il suo umorismo tagliente e la capacità di rompere la quarta parete, si vede spesso come un anti-eroe piuttosto che un eroe tradizionale. Wolverine, con il suo passato tormentato e la lotta interna tra la bestia e l’uomo, rappresenta un viaggio di redenzione e scoperta di sé
 Anche se non sempre sono considerati eroi e il loro passato li fa sentire sbagliati, le loro azioni dimostrano un forte senso di giustizia e protezione verso gli altri. Questo li rende personaggi importanti per il futuro Marvel. Con questo upgrade sono diventati dei veri eroi','2','6');
-=======
+
 // relazione attore film
 INSERT INTO film_attore VALUES('1','3','1'); 
 INSERT INTO film_attore VALUES('2','11','1'); 
@@ -334,5 +334,5 @@ INSERT INTO film_attore VALUES('12','1','4');
 INSERT INTO film_attore VALUES('13','5','4');
 INSERT INTO film_attore VALUES('14','28','2'); 
 INSERT INTO film_attore VALUES('14','28','2'); 
-////
->>>>>>> branch 'master' of https://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@github.com/SaraColella94/cinema.git
+
+
