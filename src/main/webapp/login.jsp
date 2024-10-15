@@ -149,13 +149,13 @@
 
 	<!--manda nome servlet-->
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Email</label>
+      <input type="text" class="form-control" id="floatingInput" placeholder="user98" name="username">
+      <label for="floatingInput">Username</label>
     </div>
     <br>
 	<!--manda pasword-->
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
       <label for="floatingPassword">Password</label>
     </div>
 
