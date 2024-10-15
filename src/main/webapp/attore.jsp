@@ -34,8 +34,8 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <!-- Poster dei film -->
                     <% 
-                        List<Film> posterFilm = attore.getFilm();
-                        for (Film film : posterFilm) { 
+                    List<Film> listFilmByAttore = attore.getFilm();
+                        for (Film film : listFilmByAttore) { 
                     %>
                         <div class="col">
                             <div class="card-locandina card" style="border-color:transparent; height: 100%; width:200px; background-color: transparent;">
