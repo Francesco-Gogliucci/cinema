@@ -30,11 +30,6 @@ public class ElencoRecensioniServlet extends HttpServlet {
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
 			requestDispatcher.include(request, response);
 		}
-		request.setAttribute("elencoRecensioni", elencoRecensioni);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-		requestDispatcher.forward(request, response);
-	}
-
 	}
 
 	@Override
