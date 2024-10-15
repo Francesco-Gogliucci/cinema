@@ -318,7 +318,7 @@ Entrambi i personaggi hanno storie intricate e profonde che li rendono affascina
 Deadpool, con il suo umorismo tagliente e la capacità di rompere la quarta parete, si vede spesso come un anti-eroe piuttosto che un eroe tradizionale. Wolverine, con il suo passato tormentato e la lotta interna tra la bestia e l’uomo, rappresenta un viaggio di redenzione e scoperta di sé
 Anche se non sempre sono considerati eroi e il loro passato li fa sentire sbagliati, le loro azioni dimostrano un forte senso di giustizia e protezione verso gli altri. Questo li rende personaggi importanti per il futuro Marvel. Con questo upgrade sono diventati dei veri eroi','2','6');
 
-// relazione attore film
+// relazione attore fil
 INSERT INTO film_attore VALUES('1','3','1'); 
 INSERT INTO film_attore VALUES('2','11','1'); 
 INSERT INTO film_attore VALUES('3','12','1'); 
