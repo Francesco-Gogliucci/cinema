@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-        <%@ page import="it.generationitaly.cinema.entity.*" %>
-<%@ page import="java.util.List"
-		import="java.util.HashMap"
- %>
+<%@ page import="it.generationitaly.cinema.entity.*" %>
+<%@ page import="java.util.List" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,32 +25,26 @@
   <h2 class="text-center mb-4; testo-titoli">Film Preferiti</h2>
 	 <div class="container" style="padding-top: 20px">
 		 <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-	 <!-- codice temporaneo per pololare la pagina -->
-	 
-			 <% HashMap <String, String> films = new HashMap<>(); 
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/2/7/7/0/6/4/277064-barbie-0-1000-0-1500-crop.jpg?v=1b83dc7a71", "Barbie");
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/8/6/1/1/4/86114-the-wolf-of-wall-street-0-1000-0-1500-crop.jpg?v=9fd1891260","The wolf of Wall Street");
-			 		films.put("https://a.ltrbxd.com/resized/sm/upload/hv/nn/05/ss/d20vOJpywFDoz7Dd4ChomGdP0fr-0-1000-0-1500-crop.jpg?v=836521d1aa","Tonya");
-			 		films.put("https://a.ltrbxd.com/resized/film-poster/9/4/9/0/5/3/949053-its-whats-inside-0-1000-0-1500-crop.jpg?v=ea1abf3c49","It’s What’s Inside");
-			 
-			 	
-			 	for(String url : films.keySet()){
-			 	
-			 %>
+		 <!-- Mostrare i film preferiti -->
+		 <% 
+		    List<Preferiti> preferiti = (List<Preferiti>) request.getAttribute("preferiti");
+		    if (preferiti != null) {
+		        for (Preferiti p : preferiti) {
+		            Film film = p.getFilm();
+		    %>
 	  			 <div class="col">
 					 <div class="card-locandina card" 
 						 style="border-color:transparent;
 							height: 100%; width:200px;
-							background-color: transparent;
-						}">
-					 <img class="card-img-top" src="<%= url%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
-	 			<h6 class="card-title testo-pargraph"><%= films.get(url)%></h6>
+							background-color: transparent;">
+					 <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
+	 			<h6 class="card-title testo-pargraph"><%= film.getTitolo() %></h6>
 			 </div>
 	 	 </div>
-	
-			 <%
-	 		}
-		 %>
+	 <% 
+		        }
+		    }
+	 %>
 	
 	 	</div>
 	 </div>

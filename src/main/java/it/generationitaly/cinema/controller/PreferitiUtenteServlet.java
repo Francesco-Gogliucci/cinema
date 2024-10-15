@@ -16,52 +16,60 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 public class PreferitiUtenteServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private PreferitiRepository preferitiRepository = new PreferitiRepositoryImpl();
+    private PreferitiRepository preferitiRepository = new PreferitiRepositoryImpl();
 
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-		HttpSession session = request.getSession();
-		Utente utente = (Utente) session.getAttribute("utente");
+        HttpSession session = request.getSession();
+       
+        Utente utente = (Utente) session.getAttribute("utente");
 
-		if (utente != null) {
-			Long utenteId = utente.getId();
-			List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId);
+        if (utente != null) {
+            Long utenteId = utente.getId();
+           
+            List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId);
 
-			request.setAttribute("preferiti", preferiti);
-			request.getRequestDispatcher("mostraPreferiti.jsp").forward(request, response);
-		} else {
-			// inserita pagina jsp corretta 
-			response.sendRedirect("login.jsp");
-			return;
-		}
-	}
+           
+            request.setAttribute("preferiti", preferiti);
+            // Inoltra la richiesta alla pagina utente.jsp
+            request.getRequestDispatcher("utente.jsp").forward(request, response); // Modificata da mostraPreferiti.jsp a utente.jsp
+        } else {
+            // Se l'utente non è autenticato, reindirizza alla pagina di login
+            response.sendRedirect("login.jsp");
+            return;
+        }
+    }
 
-	@Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
-		FilmRepositoryImpl filmRepository = new FilmRepositoryImpl();
-		HttpSession session = request.getSession();
-		Utente utente = (Utente) session.getAttribute("utente");
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        FilmRepositoryImpl filmRepository = new FilmRepositoryImpl();
+        HttpSession session = request.getSession();
+       
+        Utente utente = (Utente) session.getAttribute("utente");
 
-		if (utente != null) {
-			long filmId = Long.parseLong(request.getParameter("filmId"));
+        if (utente != null) {
+            long filmId = Long.parseLong(request.getParameter("filmId"));
 
-			Film film = filmRepository.findById(filmId);
+            
+            Film film = filmRepository.findById(filmId);
 
-			Preferiti preferiti = new Preferiti();
-			preferiti.setFilm(film);
-			preferiti.setUtente(utente);
+            Preferiti preferiti = new Preferiti();
+            preferiti.setFilm(film);
+            preferiti.setUtente(utente);
 
-			preferitiRepository.save(preferiti);
+            preferitiRepository.save(preferiti);
 
-			response.sendRedirect("preferiti.jsp");
-		} else {
-			response.sendRedirect("login.jsp");
-			return;
-		}
-	}
+         
+            response.sendRedirect("utente.jsp"); // Modificata da preferiti.jsp a utente.jsp
+        } else {
+            // Se l'utente non è autenticato, reindirizza alla pagina di login
+            response.sendRedirect("login.jsp");
+            return;
+        }
+    }
 }
