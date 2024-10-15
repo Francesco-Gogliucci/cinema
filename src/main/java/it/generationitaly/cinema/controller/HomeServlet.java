@@ -18,19 +18,13 @@ public class HomeServlet extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+		throws ServletException, IOException {
+		System.out.println("Start HOME SERVLET");
 		request.setAttribute("home", true);
-
 		RequestDispatcher dispatcherFilm = request.getRequestDispatcher("elencoFilm");
 		// include i dati ricavati da questa servlet
-		dispatcherFilm.include(request, response);
-		
-		RequestDispatcher dispatcherCategoria = request.getRequestDispatcher("elencoCategoria");
-		dispatcherCategoria.include(request, response);
-
-		RequestDispatcher dispatcherRecensioni = request.getRequestDispatcher("elencoRecensioni");
-		dispatcherRecensioni.forward(request, response);
-
+		System.out.println("FORWARD");
+		dispatcherFilm.forward(request, response);
 	}
 
 	@Override

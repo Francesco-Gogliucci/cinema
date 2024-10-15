@@ -22,25 +22,26 @@ public class ElencoCategoriaServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("Start ELENCO CATEGORIA");
 
 		List<Categoria> elencoCategorie = categoriaRepository.findAll();
 
-		boolean home = (boolean) request.getAttribute("home");
+		Boolean home = (Boolean) request.getAttribute("home");
 
-		if (home) {
-			request.setAttribute("elencoCategorie", elencoCategorie);
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-			requestDispatcher.include(request, response);
-		}
 		request.setAttribute("elencoCategorie", elencoCategorie);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-		requestDispatcher.forward(request, response);
+
+		if (home != null && home) {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencoRecensioni");
+			System.out.println("FORWARD");
+			requestDispatcher.forward(request, response);
+		} else {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencoCategoria.jsp");
+			requestDispatcher.forward(request, response);
+		}
 	}
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 	}
-
 }

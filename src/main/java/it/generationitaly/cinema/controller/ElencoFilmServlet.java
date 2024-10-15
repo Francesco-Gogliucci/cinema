@@ -22,21 +22,20 @@ public class ElencoFilmServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("Start ELENCO FILM");
 
 		List<Film> elencoFilm = filmrepository.findAll();
+		Boolean home = (Boolean) request.getAttribute("home");
+		request.setAttribute("elencoFilm", elencoFilm);
 
-		boolean home = (boolean) request.getAttribute("home");
-
-		if (home) {
-			request.setAttribute("elencoFilm", elencoFilm);
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-			requestDispatcher.include(request, response);
+		if (home != null && home) {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencoCategoria");
+			System.out.println("FORWARD");
+			requestDispatcher.forward(request, response);
 		} else {
-			request.setAttribute("elencoFilm", elencoFilm);
-			// inserita pagina jsp corretta
+			// Inserita pagina JSP corretta
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
 			requestDispatcher.forward(request, response);
 		}
 	}
-
 }

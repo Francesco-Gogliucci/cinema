@@ -12,23 +12,29 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/elencoRecensioniServlet")
+@WebServlet("/elencoRecensioni")
 public class ElencoRecensioniServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	RecensioneRepositoryImpl recensioneRepository = new RecensioneRepositoryImpl();
+	private RecensioneRepositoryImpl recensioneRepository = new RecensioneRepositoryImpl();
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		System.out.println("Start ELENCO RECENSIONI");
 		List<Recensione> elencoRecensioni = recensioneRepository.findAll();
 
-		boolean home = (boolean) request.getAttribute("home");
+		Boolean home = (Boolean) request.getAttribute("home");
 
-		if (home) {
-			request.setAttribute("elencoRecensioni", elencoRecensioni);
+		request.setAttribute("elencoRecensioni", elencoRecensioni);
+
+		if (home != null && home) {
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-			requestDispatcher.include(request, response);
+			System.out.println("FORWARD");
+			requestDispatcher.forward(request, response);
+		} else {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("recensioni.jsp");
+			requestDispatcher.forward(request, response);
 		}
 	}
 
@@ -36,5 +42,4 @@ public class ElencoRecensioniServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 	}
-
 }
