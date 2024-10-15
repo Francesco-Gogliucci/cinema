@@ -25,7 +25,7 @@
   <h2 class="text-center mb-4; testo-titoli">Film Preferiti</h2>
 	 <div class="container" style="padding-top: 20px">
 		 <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
-		 <!-- Mostrare i film preferiti -->
+		 <!-- Mostrare i film preferit -->
 		 <% 
 		    List<Preferiti> preferiti = (List<Preferiti>) request.getAttribute("preferiti");
 		    if (preferiti != null) {

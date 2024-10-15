@@ -38,7 +38,7 @@ public class PreferitiUtenteServlet extends HttpServlet {
             // Inoltra la richiesta alla pagina utente.jsp
             request.getRequestDispatcher("utente.jsp").forward(request, response); // Modificata da mostraPreferiti.jsp a utente.jsp
         } else {
-            // Se l'utente non è autenticato, reindirizza alla pagina di login
+            // Se l'utente non è autenticato, reindirizz alla pagina di login
             response.sendRedirect("login.jsp");
             return;
         }
