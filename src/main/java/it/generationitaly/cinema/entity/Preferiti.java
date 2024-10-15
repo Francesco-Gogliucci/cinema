@@ -1,5 +1,5 @@
 package it.generationitaly.cinema.entity;
-
+// faccio questo commento per provare a rimanda
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,8 +10,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "film_attore")
-public class FilmAttore {
+@Table(name = "preferiti")
+public class Preferiti {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +23,10 @@ public class FilmAttore {
 	private Film film;
 
 	@ManyToOne
-	@JoinColumn(name = "attore_id", nullable = false)
-	private Attore attore;
+	@JoinColumn(name = "utente_id", nullable = false)
+	private Utente utente;
 
-	public FilmAttore() {
+	public Preferiti() {
 	}
 
 	public Long getId() {
@@ -45,17 +45,16 @@ public class FilmAttore {
 		this.film = film;
 	}
 
-	public Attore getAttore() {
-		return attore;
+	public Utente getUtente() {
+		return utente;
 	}
 
-	public void setAttore(Attore attore) {
-		this.attore = attore;
+	public void setUtente(Utente utente) {
+		this.utente = utente;
 	}
 
 	@Override
 	public String toString() {
-		return "FilmAttore [id=" + id + ", film=" + film.getTitolo() + ", attore=" + attore.getNome() + " "
-				+ attore.getCognome() + "]";
+		return "Preferiti [id=" + id + ", film=" + film + ", utente=" + utente + "]";
 	}
 }

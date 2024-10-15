@@ -1,13 +1,19 @@
 package it.generationitaly.cinema.entity;
 
 import java.util.Date;
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -21,13 +27,13 @@ public class Film {
 	@Column(name = "id", nullable = false)
 	private Long id;
 
-	@Column(name = "titolo", length = 45, nullable = false)
+	@Column(name = "titolo", length = 100, nullable = false)
 	private String titolo;
 
-	@Column(name = "trama", length = 45, nullable = false)
+	@Column(name = "trama", length = 3000, nullable = false)
 	private String trama;
 
-	@Column(name = "locandina", length = 300, nullable = false)
+	@Column(name = "locandina", length = 3000, nullable = false)
 	private String locandina;
 
 	@Temporal(TemporalType.DATE)
@@ -41,13 +47,23 @@ public class Film {
 	@JoinColumn(name = "categoria_id", nullable = false)
 	private Categoria categoria;
 
-	@Column(name = "casa_produzione", length = 45, nullable = false)
-	private String casaProduzione;
-
 	@Column(name = "budget_produzione", nullable = false)
-	private int budgetProduzione;
+	private int budget;
+
+	@OneToMany(mappedBy = "film", fetch = FetchType.EAGER)
+	private List<Recensione> recensioni;
+
+	@ManyToMany(fetch = FetchType.EAGER)
+	//indica la tabella intermedia 
+	@JoinTable(name = "film_attore", joinColumns =
+	//indica la colonna che contiene l'id del film
+	@JoinColumn(name = "film_id"), inverseJoinColumns = 
+	//indica la colonna che contiene l'id dell'attore
+	@JoinColumn(name = "attore_id"))
+	private List<Attore> attori;
 
 	public Film() {
+
 	}
 	
 	public Film(String titolo) {
@@ -110,26 +126,34 @@ public class Film {
 		this.categoria = categoria;
 	}
 
-	public String getCasaProduzione() {
-		return casaProduzione;
+	public int getBudget() {
+		return budget;
 	}
 
-	public void setCasaProduzione(String casaProduzione) {
-		this.casaProduzione = casaProduzione;
+	public void setBudget(int budget) {
+		this.budget = budget;
 	}
 
-	public int getBudgetProduzione() {
-		return budgetProduzione;
+	public List<Recensione> getRecensioni() {
+		return recensioni;
 	}
 
-	public void setBudgetProduzione(int budgetProduzione) {
-		this.budgetProduzione = budgetProduzione;
+	public void setRecensioni(List<Recensione> recensioni) {
+		this.recensioni = recensioni;
+	}
+
+	public List<Attore> getAttori() {
+		return attori;
+	}
+
+	public void setAttori(List<Attore> attori) {
+		this.attori = attori;
 	}
 
 	@Override
 	public String toString() {
 		return "Film [id=" + id + ", titolo=" + titolo + ", trama=" + trama + ", locandina=" + locandina
-				+ ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria + ", casaProduzione="
-				+ casaProduzione + ", budgetProduzione=" + budgetProduzione + "]";
+				+ ", dataUscita=" + dataUscita + ", durata=" + durata + ", categoria=" + categoria + ", budget="
+				+ budget + "]";
 	}
 }

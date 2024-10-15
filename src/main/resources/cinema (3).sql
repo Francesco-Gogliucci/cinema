@@ -15,6 +15,9 @@ CREATE TABLE attore (
 CREATE TABLE utente (
     id BIGINT NOT NULL AUTO_INCREMENT,
     email VARCHAR(45) NOT NULL UNIQUE,
+    nome VARCHAR(45) NOT NULL,
+    cognome VARCHAR(45) NOT NULL,
+    data_nascita DATE NOT NULL,
     username VARCHAR(45) NOT NULL,
     password VARCHAR(45) NOT NULL,
     PRIMARY KEY (id)
@@ -29,7 +32,7 @@ CREATE TABLE categoria (
 
 CREATE TABLE film (
     id BIGINT NOT NULL AUTO_INCREMENT,
-    titolo VARCHAR(45) NOT NULL,
+    titolo VARCHAR(100) NOT NULL,
     trama VARCHAR(3000) NOT NULL,
     locandina VARCHAR(3000) NOT NULL,
     data_uscita DATE NOT NULL,
