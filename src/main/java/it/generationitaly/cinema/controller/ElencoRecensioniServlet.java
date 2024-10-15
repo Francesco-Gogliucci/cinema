@@ -33,7 +33,7 @@ public class ElencoRecensioniServlet extends HttpServlet {
 			System.out.println("FORWARD");
 			requestDispatcher.forward(request, response);
 		} else {
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("recensioni.jsp");
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("community.jsp");
 			requestDispatcher.forward(request, response);
 		}
 	}

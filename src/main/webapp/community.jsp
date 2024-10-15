@@ -20,36 +20,18 @@
       <p>Film lovers and friends</p>
     </div>
     <div class="row" style="padding-left: 100px;">
-      <div class="col-lg-2">
+     
+      <% List<Recensione> recensioni = (List <Recensione>) request.getAttribute("elencoRecensioni") 
+        for (Recensione recensione : recensioni) {
+        	
+        
+      %> <div class="col-lg-2">
     <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
-    <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Mario900</h2>
+    <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= recensione.getUtente().getUsername() %></h2>
     <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
 </div>
-     <div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
-    <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Andrea80</h2>
-    <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
-</div>
-<div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
-    <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Marco980</h2>
-    <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
-</div>
- <div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
-    <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Mario900</h2>
-    <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
-</div>
-     <div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
-    <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Andrea80</h2>
-    <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
-</div>
-<div class="col-lg-2">
-    <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
-    <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Marco980</h2>
-    <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
-</div>
+    <% } %>
+
 <div class="container text-end" style="padding-top: 40px;">
 	<div class ="row row-cols-md-2 g-3">
 	<div class="col" ></div>
@@ -63,29 +45,16 @@
 	
 	<% 
 	        // Creazione di oggetti Utente
-	        Utente utente1 = new Utente("Mario Rossi");
-	        Utente utente2 = new Utente("Luisa Verdi");
-	        Utente utente3 = new Utente("Giulia Bianchi");
-	        Utente utente4 = new Utente("Alessandro Neri");
+	       
 
 	        // Creazione di oggetti Film
-	        Film film1 = new Film("Inception");
-	        Film film2 = new Film("The Matrix");
-	        Film film3 = new Film("The Godfather");
-	        Film film4 = new Film("Pulp Fiction");
+	       
 
 	        // Creazione di oggetti Recensione
-	        Recensione recensione1 = new Recensione("Film spettacolare, trama coinvolgente.", utente1, film1);
-	        Recensione recensione2 = new Recensione("Un classico della fantascienza, da rivedere!", utente2, film2);
-	        Recensione recensione3 = new Recensione("Uno dei migliori film di sempre.", utente3, film3);
-	        Recensione recensione4 = new Recensione("Dialoghi e regia magistrali!", utente4, film4);
+	       
 
 			//aggiunta recensioni a una lista, come ci arriveranno da una servelet
-			List <Recensione> recensioni=new ArrayList<>();
-				recensioni.add(recensione1);
-				recensioni.add(recensione2);
-				recensioni.add(recensione3);
-				recensioni.add(recensione4);
+			
 				
 			for(Recensione recensione:recensioni){%>
 			
