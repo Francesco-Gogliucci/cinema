@@ -40,8 +40,8 @@
 							background-color: transparent;
 							margin-left: 15px;
 						}">
-					<a href="./film.jsp"><img class="card-img-top" src="<%= film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a> 
-	 			<h6 class="card-title testo-pargraph"><%= film.getTitolo()%></h6>
+					<a href="./film.jsp"><img class="card-img-top" src="<%=film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a> 
+	 			<h6 class="card-title testo-pargraph"><%=film.getTitolo()%></h6>
 			 </div>
 	 	 </div>
 	
@@ -81,8 +81,8 @@
 				categorie.add("Documentario");
 				categorie.add("Musical");
 				 */
-				 List <Categoria> categorie = request.getAttribute("")
-				for(String categoria : categorie){%>
+				 List <Categoria> categorie = (List <Categoria>)request.getAttribute("elencoCategorie");
+				for(Categoria categoria : categorie){%>
 			<div class="col">
 <!-- inserire nell'href una chamata alla sevlet con l'attributo per fare una ricerca per categoria e andare alla pagina tramite la sevlet-->
 			<a href="ricercaPerCategoria?idCategoria<%= categoria.getId()%>"><button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
@@ -90,7 +90,7 @@
 				    color: white;
 				    padding: 5px 20px;
 				    font-size: 14px;
-				    border: none;"><%=categoria.getNome()%></button></a>
+				    border: none;"><%=categoria.getGenere()%></button></a>
 			</div>
 			<% }
 			%>
@@ -139,7 +139,12 @@
 				recensioni.add(recensione4);
 				 */
 			List<Recensione> recensioni= (List<Recensione>)request.getAttribute("listaRecensioni");
-			for(Recensione recensione:recensioni){%>
+				 
+				 if(recensioni==null){
+					 %> <p> al momento non ci sono recensioni<% 
+				 }else{
+					 for(Recensione recensione:recensioni){%>
+				 
 			
 				<div class ="row row-cols-md-3 g-3">
 				
@@ -157,6 +162,7 @@
 		   			</div>
 				</div >
 			<%	}
+			}
 		%>
 		<div class="row text-center">
 			<a href="RecensioniServlet"><button> Scopri altre recensioni</button></a>

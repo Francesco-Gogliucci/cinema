@@ -16,18 +16,26 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/elencoFilm")
 public class ElencoFilmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
-	private FilmRepository filmrepository = new FilmRepositoryImpl();
-	
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		List<Film> elencoFilm = filmrepository.findAll();
-		
-		request.setAttribute("elencoFilm", elencoFilm);
-		// inserita pagina jsp corretta 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-		requestDispatcher.forward(request, response);
-	}
 
+	private FilmRepository filmrepository = new FilmRepositoryImpl();
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		System.out.println("Start ELENCO FILM");
+
+		List<Film> elencoFilm = filmrepository.findAll();
+		Boolean home = (Boolean) request.getAttribute("home");
+		request.setAttribute("elencoFilm", elencoFilm);
+
+		if (home != null && home) {
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("elencoCategoria");
+			System.out.println("FORWARD");
+			requestDispatcher.forward(request, response);
+		} else {
+			// Inserita pagina JSP corretta
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
+			requestDispatcher.forward(request, response);
+		}
+	}
 }
