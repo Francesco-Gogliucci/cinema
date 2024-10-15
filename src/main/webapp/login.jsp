@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Signin Template · Bootstrap v5.3</title>
+    <title>login</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
@@ -166,8 +166,15 @@
         Remember me
       </label>
     </div>
-   <button class="btn" style="background-color: rgb(238, 226, 58); border-radius: 20px;" type="submit">Sign in</button>
+   <button class="btn" style="background-color: rgb(238, 226, 58); border-radius: 20px;" type="submit">Login</button>
  </div>
+   <% if (request.getParameter("erroreCredenziali") != null) { %>
+    <br>
+    <br>
+    <div class="alert alert-danger" role="alert">
+		Credenziali errate!
+	</div>
+	<% } %>
 </form>
 
 </main>

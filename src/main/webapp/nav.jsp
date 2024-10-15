@@ -29,11 +29,14 @@
 		    <li class="nav-item">
 		     <a class="nav-link" href="./categorie.jsp">Generi</a>
 		     </li>
-		     <form class="d-flex" role="search" style="margin-bottom: 5px; padding-left: 500px;" >
+		     <form class="d-flex" role="search" style="margin-bottom: 5px; padding-left: 300px;" >
             <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" style="border-radius: 20px;">
            <button class="btn  btn-sm btn-giallo" type="submit">Cerca</button>
           <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
        <a href="./registrazione.jsp" class="btn btn-sm btn-nero" type="button">Registrati</a>
+        <span class="fw-bold" style="color: white; padding-left: 20px;"><%= session.getAttribute("username") %></span>			
+				<form class ="d-flex" action="logout" method ="post">
+				<button class="btn btn-giallo" type="submit">LOGOUT</button>
             </form>
 		    </div>
 		  </div>
