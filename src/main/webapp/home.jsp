@@ -95,7 +95,7 @@
 				categorie.add("Musical");
 				
 				for(String categoria : categorie){%>
-			<div class="col"
+			<div class="col">
 <!-- inserire nell'href una chamata alla sevlet con l'attributo per fare una ricerca per categoria e andare alla pagina tramite la sevlet-->
 			<a href="./film-cercati.jsp"><button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
 				    border-radius: 20px;
