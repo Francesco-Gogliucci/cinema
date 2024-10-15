@@ -12,9 +12,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class RicercaAttorePerNomeECognomeServlet
- */
 @WebServlet("/ricercaAttore")
 public class RicercaAttorePerNomeECognomeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -27,8 +24,12 @@ public class RicercaAttorePerNomeECognomeServlet extends HttpServlet {
 		String nomeECognome = request.getParameter("nome");
 		// divisione della string per ogni spazio contenuto
 		String[] stringaDivisa = nomeECognome.split(" ");
-		String nome = stringaDivisa[0];
-		String cognome = stringaDivisa[1];
+		String nome = null;
+		String cognome = null;
+		if (!stringaDivisa[0].equals("") && !stringaDivisa[1].equals("")) {
+			nome = stringaDivisa[0];
+			cognome = stringaDivisa[1];
+		}
 		List<Attore> attori = attoreRepository.findAttoreByNomeECognome(nome, cognome);
 		request.setAttribute("attori", attori);
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("attori.jps");
