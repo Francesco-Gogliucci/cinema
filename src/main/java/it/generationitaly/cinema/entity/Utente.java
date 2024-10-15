@@ -38,6 +38,10 @@ public class Utente {
 
 	@Column(name = "password", length = 45, nullable = false)
 	private String password;
+	
+
+	public Utente() {
+	}
 
 	public Utente(String username) {
 		this.username = username;

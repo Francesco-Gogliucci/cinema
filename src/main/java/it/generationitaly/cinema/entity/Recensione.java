@@ -31,6 +31,9 @@ public class Recensione {
 	
 	
 
+	public Recensione() {
+	}
+
 	public Recensione(String recensione, Utente utente, Film film) {
 		this.recensione = recensione;
 		this.utente = utente;
