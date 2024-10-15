@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.122.0">
-    <title>Signin Template · Bootstrap v5.3</title>
+    <title>Registrati</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
@@ -131,7 +131,7 @@
 <body class="login-background">
 <%@ include file="nav.jsp"%>
 <main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 pt-4 mb-4"> 
-  <form  action="RegisterServlet" method="post" class="col-12 col-md-4 m-auto">
+  <form action="registrazione" method="post" class="col-12 col-md-4 m-auto">
    <div class="form-aspect mt-4 mb-2">
     <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" >
     <h1 class="h4 mb-3 fw-normal" style="color: white">Registrati</h1> 
@@ -145,6 +145,11 @@
      <div class="form-floating">
       <input type="text" class="form-control" id="input-cognome" placeholder="Mario Rossi" name="cognome" >
       <label for="input-cognome">Cognome</label>
+    </div>
+    <br>
+    <div class="form-floating">
+      <input type="date" class="form-control" id="input-date" placeholder="DataNascita" name="dataNascita">
+      <label for="input-date">Data Nascita</label>
     </div>
     <br>
      <div class="form-floating">
