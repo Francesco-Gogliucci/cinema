@@ -40,7 +40,7 @@
 							background-color: transparent;
 							margin-left: 15px;
 						}">
-					<a href="./film.jsp"><img class="card-img-top" src="<%=film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a> 
+					<a href="dettagliFilm?id=<%= film.getId()%>"><img class="card-img-top" src="<%=film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a> 
 	 			<h6 class="card-title testo-pargraph"><%=film.getTitolo()%></h6>
 			 </div>
 	 	 </div>
@@ -165,7 +165,7 @@
 			}
 		%>
 		<div class="row text-center">
-			<a href="RecensioniServlet"><button> Scopri altre recensioni</button></a>
+			<a href="RecensioniServlet"><button class="btn-chiaro"> Scopri altre recensioni</button></a>
 		</div>
 	</div>
 	

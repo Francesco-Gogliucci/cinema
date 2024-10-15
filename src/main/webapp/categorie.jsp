@@ -52,6 +52,7 @@
 	 			 		for (String urlCategoria : categorieImg.keySet()) {
 	 			 %>
 	  			 <div class="col">
+	  			 <a href="ricercaPerCategoria?idCategoria=<%=categorieImg.get(urlCategoria).getId() %>">
 					<div class="card" 
 						style="border-color: transparent; 
 						height: 310px; 
@@ -77,9 +78,9 @@
 							padding-bottom: 8px;
 							margin-bottom: 10; 
 							color: white;">
-							<%= categorieImg.get(urlCategoria)%>
+							<%= categorieImg.get(urlCategoria).getGenere()%>
 						</h6>
-					</div>
+					</div></a>
 				</div>
 
 	
