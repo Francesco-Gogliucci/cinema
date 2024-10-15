@@ -55,7 +55,7 @@
         <img src="<%= attore.getFoto()%>" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="<%= attore.getNome() %> <%= attore.getCognome() %>">
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
         <p style="font-size: 15px; opacity: 0.5; color: white">Ruolo principale</p>
-        <p><a class="btn btn-giallo" href="#">Vedi attore</a></p>
+        <p><a class="btn btn-giallo" href="./attore.jsp">Vedi attore</a></p>
       </div>
   <% 
       } 
