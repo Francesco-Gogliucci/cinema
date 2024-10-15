@@ -21,7 +21,7 @@
 	 <!-- codice temporaneo per pololare la pagina -->
 	 
 			 <%
-	 			 List<Categoria> categorie = (List<Categoria>) request.getAttribute("categorie");
+	 			 List<Categoria> categorie = (List<Categoria>) request.getAttribute("elencoCategorie");
 			 				 
 	 			 	 List<String> url = new ArrayList<String>();
 	 			 		url.add("https://a.ltrbxd.com/resized/film-poster/2/7/7/0/6/4/277064-barbie-0-1000-0-1500-crop.jpg?v=1b83dc7a71");
@@ -38,13 +38,15 @@
 	 			 		url.add("https://a.ltrbxd.com/resized/film-poster/4/4/4/6/0/0/444600-jojo-rabbit-0-1000-0-1500-crop.jpg?v=a5ad083635");
 
 	 			 		HashMap<String, Categoria> categorieImg = new HashMap<>();
-	 			 		
-	 			 		int i=0;
-	 			 		for(Categoria categoria : categorie){
-	 			 			categorieImg.put(url.get(i), categoria);
-	 			 			i++;
+	 			 		if (categorie != null && !categorie.isEmpty()) {
+	 			 		     // Assicuriamoci che la dimensione sia coerente
+	 			 		    for (int i = 0; i < categorie.size(); i++) {
+	 			 		        categorieImg.put(url.get(i), categorie.get(i));
+	 			 		    }
+	 			 		} else {
+	 			 		    // Logica per gestire il caso in cui la lista categorie sia vuota o null
+	 			 		    System.out.println("La lista delle categorie è vuota o null.");
 	 			 		}
-
 	 			 		
 
 	 			 		for (String urlCategoria : categorieImg.keySet()) {
