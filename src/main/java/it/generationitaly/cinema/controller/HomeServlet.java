@@ -24,10 +24,12 @@ public class HomeServlet extends HttpServlet {
 		RequestDispatcher dispatcherFilm = request.getRequestDispatcher("elencoFilm");
 		// include i dati ricavati da questa servlet
 		dispatcherFilm.include(request, response);
-		// recensioni e categorie
-		RequestDispatcher dispatcherFilm = request.getRequestDispatcher("elencoFilm");
-		// include i dati ricavati da questa servlet
-		dispatcherFilm.include(request, response);
+		
+		RequestDispatcher dispatcherCategoria = request.getRequestDispatcher("elencoCategoria");
+		dispatcherCategoria.include(request, response);
+
+		RequestDispatcher dispatcherRecensioni = request.getRequestDispatcher("elencoRecensioni");
+		dispatcherRecensioni.forward(request, response);
 
 	}
 

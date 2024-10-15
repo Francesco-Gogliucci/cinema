@@ -25,10 +25,18 @@ public class ElencoFilmServlet extends HttpServlet {
 
 		List<Film> elencoFilm = filmrepository.findAll();
 
-		request.setAttribute("elencoFilm", elencoFilm);
-		// inserita pagina jsp corretta
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
-		requestDispatcher.forward(request, response);
+		boolean home = (boolean) request.getAttribute("home");
+
+		if (home) {
+			request.setAttribute("elencoFilm", elencoFilm);
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
+			requestDispatcher.include(request, response);
+		} else {
+			request.setAttribute("elencoFilm", elencoFilm);
+			// inserita pagina jsp corretta
+			RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
+			requestDispatcher.forward(request, response);
+		}
 	}
 
 }
