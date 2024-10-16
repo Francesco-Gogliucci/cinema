@@ -44,7 +44,7 @@ public class AttoreRepositoryImpl extends JpaRepositoryImpl<Attore, Long> implem
 	@Override
 	public List<Attore> findAttoreByNomeECognome(String nome, String cognome) {
 		List<Attore> attori = null;
-		String jpql = "SELECT a FROM Attore a WHERE LOWER(a.nome) LIKE LOWER(:nome) AND LOWER(a.cognome) LIKE LOWER(:cognome)";
+		String jpql = "SELECT a FROM Attore a WHERE LOWER(a.nome) LIKE LOWER(:nome) OR LOWER(a.cognome) LIKE LOWER(:cognome)";
 		EntityManager em = null;
 		try {
 			em = emf.createEntityManager();
