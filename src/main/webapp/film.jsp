@@ -81,10 +81,10 @@
 
 <!-- Sezione recensioni -->
 <br><br>
-<div class="row" style="padding-left: 200px;">
+<div class="row" style="padding-left: 60px;">
   <div class="col-lg-4">
     <% if (session.getAttribute("username") == null) { %>
-      <p style="font-size: 15px; color: white"><a href="./login.jsp" class="btn btn-giallo"<i class="bi bi-box-arrow-in-right"></i>> Accedi per aggiungere una recensione</a></p>
+      <p style="font-size: 15px; color: white"><a href="./login.jsp" class="btn btn-giallo" <i class="bi bi-pencil"></i>> Accedi per aggiungere una recensione</a></p>
     <% } else {
     	Utente utente = (Utente) session.getAttribute("utente");
     	Long utenteId = utente.getId(); // Recuperiamo l'utente
@@ -119,7 +119,7 @@
 </div>
 
 <!-- Sezione Preferiti -->
-<div class="row" style="padding-left: 200px;">
+<div class="row" style="padding-left: 60px;">
   <div class="col-lg-4">
   <% if (session.getAttribute("username") == null) { %>
               <p style="font-size: 15px; color: white"> <a href="./login.jsp" class="btn btn-giallo"<i class="bi bi-box-arrow-in-right"></i>>Accedi per aggiungere il film ai preferiti</a></p>
