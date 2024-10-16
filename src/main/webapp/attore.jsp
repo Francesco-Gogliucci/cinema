@@ -24,7 +24,7 @@
                     <% Attore attore = (Attore) request.getAttribute("attore"); %>
                     <img src="<%= attore.getFoto() %>" height="550" width="358" style="border-radius:15px" class="card-img-top" alt="Foto attore">
                     <div class="card-body">
-                        <p class="card-text" style="color: white;"><%= attore.getBiografia() %></p>
+                        <p class="card-text" style="color:rgb(101, 131, 161)"><%= attore.getBiografia() %></p>
                     </div>
                 </div>
             </div> 
