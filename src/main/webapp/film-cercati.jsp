@@ -62,7 +62,7 @@
 	
 			 <%}
 			}
-			if(request.getAttribute("filmTitolo")!= null){	%>
+			if(request.getAttribute("attori")!= null){	%>
 	<div class="row">
 	
 	<% List<Attore> attoreRicerca = (List<Attore>)request.getAttribute("attori");
