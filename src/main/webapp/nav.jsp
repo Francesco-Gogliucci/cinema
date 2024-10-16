@@ -25,7 +25,7 @@
                 </li>
                 <li class="nav-item">
                 <!-- Inserito collegamento a fil.jsp -->
-                    <a class="nav-link" href="ricercaFilmPerAnno">Novità</a>
+                    <a class="nav-link" href="ricercaFilmPerAnno?anno=2024">Novità</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="elencoCategoria">Generi</a>

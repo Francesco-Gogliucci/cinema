@@ -78,7 +78,7 @@
                 List<Film> annoFilm = (List<Film>) request.getAttribute("filmAnno");
 
             	SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
-            	String annoRiferimento = "2023";
+            	String annoRiferimento = "2024";
 				
                 if (annoFilm != null && !annoFilm.isEmpty()) {
                     for (Film film : annoFilm) {
