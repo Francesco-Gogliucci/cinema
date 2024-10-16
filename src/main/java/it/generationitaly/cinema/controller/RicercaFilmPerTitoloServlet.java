@@ -27,7 +27,7 @@ public class RicercaFilmPerTitoloServlet extends HttpServlet {
 		request.setAttribute("filmTitolo", filmTitolo);
 		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
 		// attore
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film.jps");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jps");
 		requestDispatcher.forward(request, response);
 	}
 

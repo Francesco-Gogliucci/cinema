@@ -32,7 +32,7 @@ public class RicercaAttorePerNomeECognomeServlet extends HttpServlet {
 		}
 		List<Attore> attori = attoreRepository.findAttoreByNomeECognome(nome, cognome);
 		request.setAttribute("attori", attori);
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("attori.jps");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jps");
 		requestDispatcher.forward(request, response);
 	}
 
