@@ -70,7 +70,7 @@ public class PreferitiUtenteServlet extends HttpServlet {
 			//aggiornamento della sessione con i nuovi dati dell'utente
 			//cosi da poter mostrare l'ultimo film aggiunto
 			Utente utenteAggiornato = utenteRepository.findById(utente.getId());
-			session.setAttribute("utente", utenteAggiornato);
+			request.setAttribute("utente", utenteAggiornato);
 
 			doGet(request, response);
 		} else {
