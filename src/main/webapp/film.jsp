@@ -1,3 +1,4 @@
+<%@page import="it.generationitaly.cinema.repository.impl.PreferitiRepositoryImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.cinema.entity.*" %>
 <%@ page import="java.util.List" %>
@@ -95,6 +96,36 @@
   </div>
   <% } %>
 </div>
+<!-- Sezione Preferiti -->
+<div class="row" style="padding-left: 200px;">
+  <div class="col-lg-4">
+  <% if (session.getAttribute("username") == null) { %>
+                <p> <a href="./login.jsp">Accedi</a> per aggiungere il film ai preferiti</p>
+            <% } else { 
+            	//verifica se il film è gia nei preferiti dell'utente
+            	Utente utente = (Utente) session.getAttribute("utente");
+            	Long utenteId = utente.getId(); // Recuperiamo l'utente
+            	PreferitiRepositoryImpl preferitiRepository = new PreferitiRepositoryImpl();
+            	List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId);
+            	boolean preferito = false;
+            	for(Preferiti p : preferiti) {
+            	    if(p.getFilm().getId().equals(film.getId())) {
+            	        preferito = true;
+            	        break;
+            	    }
+            	}
+            %>
+    	<form action="preferiti" method="post">
+    	   <input type="hidden" name="idUtente" value="<%=utente.getId()%>">
+    	   <input type="hidden" name="filmId" value="<%=film.getId()%>">
+    	   <% if(preferito) { %>
+    	       <img alt="fiml gia nei preferiti" src="star.png" style="width:100px">
+    	   <% } else { %>
+    	       <button type="submit" class="btn btn-giallo"><img alt="fiml gia nei preferiti" src="star white.png" style="width:100px"></button>
+    	   <% } %>
+    	</form>
+    <% } %>
+  </div>
 </div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body class="custom-bg">
 <%@ include file="nav.jsp"%>
-<%Utente utente = (Utente) request.getAttribute("utente"); %>
+<%Utente utente = (Utente) session.getAttribute("utente"); %>
 <section class="py-5 text-center container headline-background">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
