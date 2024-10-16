@@ -10,6 +10,7 @@
 </head>
 <body class="custom-bg">
 <%@ include file="nav.jsp"%>
+<%Utente utente = (Utente) request.getAttribute("utente"); %>
 <section class="py-5 text-center container headline-background">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
@@ -17,7 +18,7 @@
     </div>
       <div class="col-lg-4">
     <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="">
-    <h2 class="fw-normal" style="font-size: 20px; color:rgb(238, 226, 58);">User</h2>
+    <h2 class="fw-normal" style="font-size: 20px; color:rgb(238, 226, 58);"><%= utente.getUsername()%></h2>
 </div>
   </section>
  
@@ -27,7 +28,7 @@
 		 <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 		 <!-- Mostrare i film preferit -->
 		 <% 
-		    List<Preferiti> preferiti = (List<Preferiti>) request.getAttribute("preferiti");
+		    List<Preferiti> preferiti = utente.getPreferiti();
 		    if (preferiti != null) {
 		        for (Preferiti p : preferiti) {
 		            Film film = p.getFilm();

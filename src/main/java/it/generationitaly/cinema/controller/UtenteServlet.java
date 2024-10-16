@@ -7,11 +7,12 @@ import it.generationitaly.cinema.repository.UtenteRepository;
 import it.generationitaly.cinema.repository.impl.UtenteRepositoryImpl;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
+@WebServlet("/utenteServlet")
 public class UtenteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -26,7 +27,7 @@ public class UtenteServlet extends HttpServlet {
 		request.setAttribute("utente", utente);
 		
 		// inserita pagina jsp corretta 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("utente");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("utente.jsp");
 		requestDispatcher.forward(request, response);
 		
 		
