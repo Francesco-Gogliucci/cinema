@@ -95,10 +95,8 @@
 
 	<div class="container text-end" style="padding-top: 20px;">
 	<div class ="row row-cols-md-2 g-3">
-	<div class="col" ></div>
-	  <div class="col" style="border-bottom: 4px solid rgb(101, 131, 161); color:rgb(101, 131, 161);">
-	    <h3>Scopri i film tramite le categorie</h3>
-	  </div>  
+	    <a href="elencoCategoria"><button class="btn-chiaro">Scopri i film tramite le categorie</button>
+	    </a>
 	</div>
 	</div>
 
