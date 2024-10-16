@@ -26,7 +26,7 @@ public class RicercaFilmPerAnnoServlet extends HttpServlet {
 		request.setAttribute("filmAnno", filmAnno);
 		// inserire la pagina jsp corretta per la visualizzazione dei dettagli di un
 		// attore
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("novita.jps");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("novita.jsp");
 		requestDispatcher.forward(request, response);
 	}
 
