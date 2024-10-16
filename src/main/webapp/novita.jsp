@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="it.generationitaly.cinema.entity.*" %>
+    <%@ page import="java.util.List"
+		import="java.util.HashMap"
+		import="java.util.ArrayList"
+		import="java.util.Date"
+		import="java.text.SimpleDateFormat"
+ %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,6 +68,47 @@
   </button>
 </div>
 </div>
+</div>
+	<!-- Novità card film --> 
+<div class="album py-5">
+    <div class="container" style="padding-top: 20px">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+
+            <%
+                List<Film> annoFilm = (List<Film>) request.getAttribute("filmAnno");
+
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                Date dataDiRiferimento = sdf.parse("2023-09-07");
+
+                if (annoFilm != null && !annoFilm.isEmpty()) {
+                    for (Film film : annoFilm) {
+                        if (film.getDataUscita().after(dataDiRiferimento)) {
+            %>
+            <div class="col">
+                <div class="card mb-3" 
+                    style="border-color:transparent;
+                        height: 90%; width:200px;
+                        background-color: transparent;
+                        margin-left: 15px;">
+                    <a href="dettagliFilm?id=<%= film.getId()%>">
+                        <img class="card-img-top" src="<%=film.getLocandina()%>" 
+                            style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
+                    </a> 
+                    <h6 class="card-title testo-paragraph">
+                        <%=film.getTitolo()%>
+                    </h6>
+                </div>
+            </div>
+            <%
+                        }
+                    }
+                } else {
+                    System.out.println("Nessun film disponibile.");
+                }
+            %>
+
+        </div>
+    </div>
 </div>
 <%@ include file="footer.jsp"%>
 <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
