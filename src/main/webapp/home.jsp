@@ -139,7 +139,7 @@
 				recensioni.add(recensione3);
 				recensioni.add(recensione4);
 				 */
-			List<Recensione> recensioni= (List<Recensione>)request.getAttribute("listaRecensioni");
+			List<Recensione> recensioni= (List<Recensione>)request.getAttribute("elencoRecensioni");
 				 
 				 if(recensioni==null){
 					 %> <p> al momento non ci sono recensioni<% 
@@ -158,7 +158,7 @@
 		   			<p><%=recensione.getRecensione()%></p>
 		   			</div>
 		   			<div class="col">
-		   			<a href="FilmServlet?id=<%= recensione.getFilm().getId()%>">
+		   			<a href="dettagliFilm?id=<%= recensione.getFilm().getId()%>">
 		   				<img src="<%=recensione.getFilm().getLocandina()%>"></a>
 		   			</div>
 				</div >
