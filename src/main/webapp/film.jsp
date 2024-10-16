@@ -1,4 +1,5 @@
 <%@page import="it.generationitaly.cinema.repository.impl.PreferitiRepositoryImpl"%>
+<%@page import="it.generationitaly.cinema.repository.impl.RecensioneRepositoryImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.cinema.entity.*" %>
 <%@ page import="java.util.List" %>
@@ -81,21 +82,41 @@
 <br><br>
 <div class="row" style="padding-left: 200px;">
   <div class="col-lg-4">
-  <% if (session.getAttribute("username") == null) { %>
-                <p> <a href="./login.jsp">Accedi</a> per aggiungere una recensione</p>
-            <% } else { %>
-    <div class="border rounded" style="background-color: rgb(101, 131, 161); border: none;">
-      <div class="p-4" style="background-color: transparent;">
-        <h5 class="mb-3" style="color: white;">Lascia una recensione</h5>
-        <textarea class="form-control mb-3" rows="3" placeholder="La tua recensione" required style="background-color: transparent; color: white; border: 1px solid yellow;"></textarea>
-        <div class="form-floating mb-3">
-          <button type="submit" class="btn btn-giallo" style="color: black;">INVIA RECENSIONE</button>
+    <% if (session.getAttribute("username") == null) { %>
+      <p><a href="./login.jsp">Accedi</a> per aggiungere una recensione</p>
+    <% } else {
+    	Utente utente = (Utente) session.getAttribute("utente");
+    	Long utenteId = utente.getId(); // Recuperiamo l'utente
+    	RecensioneRepositoryImpl recensioniRepository = new RecensioneRepositoryImpl();
+    	List<Recensione> recensioni = recensioniRepository .findRecensioneByUtenteId(utenteId);
+    	boolean recensito = false;
+    	for(Recensione r : recensioni) {
+    	    if(r.getFilm().getId().equals(film.getId())) {
+    	        recensito = true;
+    	        break;
+    	    }
+    	}
+    	%>
+    	<% if(recensito == false) { %>
+      <div class="border rounded" style="background-color: rgb(101, 131, 161); border: none;">
+        <div class="p-4" style="background-color: transparent;">
+          <h5 class="mb-3" style="color: white;">Lascia una recensione</h5>          
+          <form action="recensione" method="post">
+            <input type="hidden" name="filmId" value="<%= film.getId() %>">
+            <textarea class="form-control mb-3" name="testoRecensione" rows="3" placeholder="La tua recensione" required style="background-color: transparent; color: white; border: 1px solid yellow;"></textarea>
+            <div class="form-floating mb-3">
+              <button type="submit" class="btn btn-giallo" style="color: black;">INVIA RECENSIONE</button>
+            </div>
+          </form>
+          <% }else{%>
+          	<p>Film gia recensito</p>
+          <%}%>
         </div>
       </div>
-    </div>
+    <% } %>
   </div>
-  <% } %>
 </div>
+
 <!-- Sezione Preferiti -->
 <div class="row" style="padding-left: 200px;">
   <div class="col-lg-4">
@@ -115,10 +136,10 @@
             	    }
             	}
             %>
+    	   <% if(preferito == false) { %>
     	<form action="preferiti" method="post">
     	   <input type="hidden" name="idUtente" value="<%=utente.getId()%>">
     	   <input type="hidden" name="filmId" value="<%=film.getId()%>">
-    	   <% if(preferito) { %>
     	       <img alt="fiml gia nei preferiti" src="star.png" style="width:100px">
     	   <% } else { %>
     	       <button type="submit" class="btn btn-giallo"><img alt="fiml gia nei preferiti" src="star white.png" style="width:100px"></button>

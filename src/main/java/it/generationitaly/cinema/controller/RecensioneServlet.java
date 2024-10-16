@@ -1,6 +1,7 @@
 package it.generationitaly.cinema.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import it.generationitaly.cinema.entity.Recensione;
 import it.generationitaly.cinema.entity.Utente;
@@ -18,9 +19,29 @@ import jakarta.servlet.http.HttpSession;
 public class RecensioneServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	RecensioneRepositoryImpl recensioniRepository = new RecensioneRepositoryImpl();
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
+		HttpSession session = request.getSession();
+
+		Utente utente = (Utente) session.getAttribute("utente");
+
+		if (utente != null) {
+			Long utenteId = utente.getId();
+
+			List<Recensione> recensioni= recensioniRepository.findRecensioneByUtenteId(utenteId);
+
+			request.setAttribute("recensioniUtente", recensioni);
+			// Inoltra la richiesta alla pagina utente.jsp
+			request.getRequestDispatcher("utente.jsp").forward(request, response); // Modificata da mostraPreferiti.jsp
+																					// a utente.jsp
+		} else {
+			// Se l'utente non è autenticato, reindirizz alla pagina di login
+			response.sendRedirect("login.jsp");
+			return;
+		}
 
 	}
 
@@ -35,18 +56,21 @@ public class RecensioneServlet extends HttpServlet {
 		Utente utente = (Utente) session.getAttribute("utente");
 
 		if (utente != null) {
-			String contenuto = request.getParameter("contenuto");
-			long idFilm = Long.parseLong(request.getParameter("idFilm"));
-			long idUtente = Long.parseLong(request.getParameter("idUtente"));
+			String testoRecensione = request.getParameter("testoRecensione");
+			long idFilm = Long.parseLong(request.getParameter("filmId"));
 
 			Recensione recensione = new Recensione();
 			recensione.setFilm(filmRepository.findById(idFilm));
-			recensione.setUtente(utenteRepository.findById(idUtente));
-			recensione.setRecensione(contenuto);
+			recensione.setUtente(utente);
+			recensione.setRecensione(testoRecensione);
 
 			recensioneRepository.save(recensione);
+			Utente utenteAggiornato = utenteRepository.findById(utente.getId());
+			request.setAttribute("utente", utenteAggiornato);
+			
+			doGet(request, response);
 		} else {
-			// inserita pagina jsp corretta 
+			// inserita pagina jsp corretta
 			response.sendRedirect("login.jsp");
 			return;
 		}
