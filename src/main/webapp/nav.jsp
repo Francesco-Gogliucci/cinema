@@ -31,8 +31,8 @@
                 </li>
             </ul>
 
-            <form class="d-flex" action="ricercaFilm" method="get" role="search" style="margin-bottom: 5px; padding-left: 300px;">
-                <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" name="titolo" style="border-radius: 20px;">
+            <form class="d-flex" action="ricercaFilmEAttoreServlet" method="get" role="search" style="margin-bottom: 5px; padding-left: 300px;">
+                <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" name="ricerca" style="border-radius: 20px;">
                 <button class="btn btn-sm btn-giallo" type="submit">Cerca</button>
             </form>
 
