@@ -17,13 +17,23 @@
   <!-- Dettagli del film -->
   <div class="col-md-4">
     <div class="card card-attore" style="border-color:transparent; background-color: transparent; padding-top: 100px;">
-      <% Film film = (Film) request.getAttribute("film"); %>
+      <% 
+        Film film = (Film) request.getAttribute("film"); 
+        // Aggiunto controllo nullità per evitare errori
+        if (film != null) { 
+      %>
          <img src="<%= film.getLocandina() %>" height="550" width="358" style="border-radius:15px" class="card-img-top" alt="locandina del film">
          <div class="card-body"></div>
+      <% 
+        } else { 
+      %>
+         <p style="color: white;">Film non trovato.</p>
+      <% } %>
     </div>
   </div>
 
   <!-- Dettagli del film -->
+  <% if (film != null) { %> <!-- Aggiunto controllo nullità qui -->
   <div style="margin-left: 20px; max-width: 500px; padding-top: 100px;">
       <span style="font-size: 40px; opacity: 0.5; color: white;">DETTAGLI</span>
       <h1 style="color: white;">"<%= film.getTitolo() %>"</h1>
@@ -40,6 +50,8 @@
         <p style="font-size: 15px; opacity: 0.5; color: white;"><%= film.getCategoria() %></p>
       </div>
     </div>
+  <% } %> <!-- Fine controllo nullità -->
+
 </div>
 
 <!-- Sezione CAST -->
@@ -48,18 +60,19 @@
 <br><br><br>
 <div class="row">
   <% 
-    List<Attore> elencoAttori = film.getAttori();
+    if (film != null) { // Aggiunto controllo nullità anche per il cast
+      List<Attore> elencoAttori = film.getAttori();
       for (Attore attore : elencoAttori) { 
   %>
       <div class="col-lg-4">
-        <img src="<%= attore.getFoto()%>" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="<%= attore.getNome() %> <%= attore.getCognome() %>">
+        <img src="<%= attore.getFoto() %>" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="<%= attore.getNome() %> <%= attore.getCognome() %>">
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
         <p style="font-size: 15px; opacity: 0.5; color: white">Ruolo principale</p>
         <p><a class="btn btn-giallo" href="./attore.jsp">Vedi attore</a></p>
       </div>
   <% 
       } 
-   
+    } 
   %>
 </div>
 
