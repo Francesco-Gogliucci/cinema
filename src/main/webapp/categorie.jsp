@@ -24,8 +24,8 @@
 	 			 List<Categoria> categorie = (List<Categoria>) request.getAttribute("elencoCategorie");
 			 				 
 	 			 	 List<String> url = new ArrayList<String>();
-	 			 		url.add("https://a.ltrbxd.com/resized/film-poster/2/7/7/0/6/4/277064-barbie-0-1000-0-1500-crop.jpg?v=1b83dc7a71");
 	 			 		url.add("https://a.ltrbxd.com/resized/film-poster/8/6/1/1/4/86114-the-wolf-of-wall-street-0-1000-0-1500-crop.jpg?v=9fd1891260");
+	 			 		url.add("https://a.ltrbxd.com/resized/film-poster/2/7/7/0/6/4/277064-barbie-0-1000-0-1500-crop.jpg?v=1b83dc7a71");
 	 			 		url.add("https://a.ltrbxd.com/resized/sm/upload/hv/nn/05/ss/d20vOJpywFDoz7Dd4ChomGdP0fr-0-1000-0-1500-crop.jpg?v=836521d1aa");
 	 			 		url.add("https://a.ltrbxd.com/resized/film-poster/8/5/3/8/2/2/853822-pearl-0-1000-0-1500-crop.jpg?v=471dfc4a24");
 	 			 		url.add("https://a.ltrbxd.com/resized/film-poster/8/8/0/0/5/0/880050-love-death-robots-three-robots-exit-strategies-0-1000-0-1500-crop.jpg?v=253fd8ca8f");

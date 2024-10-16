@@ -43,7 +43,7 @@ public class RicercaFilmEAttoreServlet extends HttpServlet {
 			request.setAttribute("filmTitolo", filmTitolo);
 		}
 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("?.jps");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jps");
 		requestDispatcher.forward(request, response);
 	}
 
