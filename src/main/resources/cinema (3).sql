@@ -447,6 +447,25 @@ INSERT INTO film_attore VALUES('11','9','3');
 INSERT INTO film_attore VALUES('12','1','4');
 INSERT INTO film_attore VALUES('13','5','4');
 INSERT INTO film_attore VALUES('14','28','2'); 
-INSERT INTO film_attore VALUES('14','28','2'); 
+INSERT INTO film_attore VALUES('15','28','2'); 
+INSERT INTO film_attore VALUES('16','40','4');
+INSERT INTO film_attore VALUES('17','41','4');
+INSERT INTO film_attore VALUES('18','11','5');
+INSERT INTO film_attore VALUES('19','53','5');
+INSERT INTO film_attore VALUES('20','12','6');
+INSERT INTO film_attore VALUES('21','15','6');
+INSERT INTO film_attore VALUES('22','30','6');
+INSERT INTO film_attore VALUES('23','47','6');
+INSERT INTO film_attore VALUES('24','58','6');
+INSERT INTO film_attore VALUES('25','14','7');
+INSERT INTO film_attore VALUES('26','30','7');
+INSERT INTO film_attore VALUES('27','14','8');
+INSERT INTO film_attore VALUES('28','16','9');
+INSERT INTO film_attore VALUES('29','16','10');
+INSERT INTO film_attore VALUES('30','16','11');
+INSERT INTO film_attore VALUES('31','17','12');
+INSERT INTO film_attore VALUES('32','20','13');
+INSERT INTO film_attore VALUES('33','20','14');
+INSERT INTO film_attore VALUES('34','20','15');
 
 
