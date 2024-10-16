@@ -37,7 +37,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="co.png" style=""  class="d-block w-100"  alt="...">
+      <a href="dettagliFilm?id=3"><img src="co.png" class="d-block w-100"  alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h5>First slide label</h5>
         <p>Some representative placeholder content for the first slide.</p>
@@ -69,6 +69,15 @@
 </div>
 </div>
 </div>
+<!-- head novità -->
+<section class="py-5 text-center container-fluid headline-background">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="testo-titoli">NOVITA'</h1>
+        <p class="testo-pargraph">Resta sempre aggiornato sulle ultime uscite e scopri sempre nuovi titoly grazie alla nostra community</p>
+      </div>
+    </div>
+  </section>
 	<!-- Novità card film --> 
 <div class="album py-5">
     <div class="container" style="padding-top: 20px">
@@ -95,7 +104,7 @@
                         <img class="card-img-top" src="<%=film.getLocandina()%>" 
                             style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
                     </a> 
-                    <h6 class="card-title testo-paragraph">
+                    <h6 class="card-title testo-paragraph" style="color: white">
                         <%=film.getTitolo()%>
                     </h6>
                 </div>
