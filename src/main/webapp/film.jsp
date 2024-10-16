@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>Film</title>
 <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 <body class="custom-bg">
 <%@ include file="nav.jsp"%>
@@ -83,7 +84,7 @@
 <div class="row" style="padding-left: 200px;">
   <div class="col-lg-4">
     <% if (session.getAttribute("username") == null) { %>
-      <p><a href="./login.jsp">Accedi</a> per aggiungere una recensione</p>
+      <p style="font-size: 15px; color: white"><a href="./login.jsp" class="btn btn-giallo"<i class="bi bi-box-arrow-in-right"></i>> Accedi per aggiungere una recensione</a></p>
     <% } else {
     	Utente utente = (Utente) session.getAttribute("utente");
     	Long utenteId = utente.getId(); // Recuperiamo l'utente
@@ -121,7 +122,7 @@
 <div class="row" style="padding-left: 200px;">
   <div class="col-lg-4">
   <% if (session.getAttribute("username") == null) { %>
-                <p> <a href="./login.jsp">Accedi</a> per aggiungere il film ai preferiti</p>
+              <p style="font-size: 15px; color: white"> <a href="./login.jsp" class="btn btn-giallo"<i class="bi bi-box-arrow-in-right"></i>>Accedi per aggiungere il film ai preferiti</a></p>
             <% } else { 
             	//verifica se il film è gia nei preferiti dell'utente
             	Utente utente = (Utente) session.getAttribute("utente");
