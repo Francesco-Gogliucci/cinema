@@ -29,9 +29,13 @@ public class RicercaFilmEAttoreServlet extends HttpServlet {
 		String[] stringaDivisa = ricerca.split(" ");
 		String nome = null;
 		String cognome = null;
-		if (!stringaDivisa[0].equals("") && !stringaDivisa[1].equals("")) {
-			nome = stringaDivisa[0];
-			cognome = stringaDivisa[1];
+		// Controllo se ci sono almeno 2 elementi nell'array
+		if (stringaDivisa.length > 0) {
+		    nome = stringaDivisa[0]; // Assegna il primo elemento
+		}
+
+		if (stringaDivisa.length > 1) {
+		    cognome = stringaDivisa[1]; // Assegna il secondo elemento solo se esiste
 		}
 		List<Attore> attori = attoreRepository.findAttoreByNomeECognome(nome, cognome);
 		if (!attori.isEmpty()) {
@@ -43,7 +47,7 @@ public class RicercaFilmEAttoreServlet extends HttpServlet {
 			request.setAttribute("filmTitolo", filmTitolo);
 		}
 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jps");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
 		requestDispatcher.forward(request, response);
 	}
 
