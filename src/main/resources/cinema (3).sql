@@ -23,6 +23,8 @@ CREATE TABLE utente (
     PRIMARY KEY (id)
 );
 
+INSERT INTO utente VALUES ('1','lauraemail@mail.com','Laura','Trocchia', '1997-03-18','Lauratote','pass1' );
+
 CREATE TABLE categoria (
     id BIGINT NOT NULL AUTO_INCREMENT,
     genere VARCHAR(45) NOT NULL,
