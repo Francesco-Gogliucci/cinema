@@ -77,13 +77,14 @@
             <%
                 List<Film> annoFilm = (List<Film>) request.getAttribute("filmAnno");
 
-                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                Date dataDiRiferimento = sdf.parse("2023-09-07");
-
+            	SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+            	String annoRiferimento = "2023";
+				
                 if (annoFilm != null && !annoFilm.isEmpty()) {
                     for (Film film : annoFilm) {
-                        if (film.getDataUscita().after(dataDiRiferimento)) {
-            %>
+                 String annoFilmUscita = sdf.format(film.getDataUscita());
+				if (annoFilmUscita.equals(annoRiferimento)) {
+			%>
             <div class="col">
                 <div class="card mb-3" 
                     style="border-color:transparent;
@@ -100,7 +101,7 @@
                 </div>
             </div>
             <%
-                        }
+                     }
                     }
                 } else {
                     System.out.println("Nessun film disponibile.");
