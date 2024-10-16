@@ -25,7 +25,7 @@
                 </li>
                 <li class="nav-item">
                 <!-- Inserito collegamento a fil.jsp -->
-                    <a class="nav-link" href="film.jsp">Film</a>
+                    <a class="nav-link" href="novita.jsp">Novità</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="elencoCategoria">Generi</a>
