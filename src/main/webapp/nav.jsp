@@ -24,7 +24,7 @@
                     <a class="nav-link active" aria-current="page" href="elencoRecensioni">Community</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Film</a>
+                    <a class="nav-link" href="film.jsp">Film</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="elencoCategoria">Generi</a>
