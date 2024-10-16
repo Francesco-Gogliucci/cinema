@@ -47,7 +47,7 @@
         <span style="font-size: 20px; opacity: 0.5; color: white;">Data di uscita:</span>
         <p style="font-size: 15px; opacity: 0.5; color: white;"><%= film.getDataUscita() %></p>
         <span style="font-size: 20px; opacity: 0.5; color: white;">Genere:</span>
-        <p style="font-size: 15px; opacity: 0.5; color: white;"><%= film.getCategoria() %></p>
+        <p style="font-size: 15px; opacity: 0.5; color: white;"><%= film.getCategoria().getGenere() %></p>
       </div>
     </div>
   <% } %> <!-- Fine controllo nullità -->
@@ -80,6 +80,9 @@
 <br><br>
 <div class="row" style="padding-left: 200px;">
   <div class="col-lg-4">
+  <% if (session.getAttribute("username") == null) { %>
+                <p> <a href="./login.jsp">Accedi</a> per aggiungere una recensione</p>
+            <% } else { %>
     <div class="border rounded" style="background-color: rgb(101, 131, 161); border: none;">
       <div class="p-4" style="background-color: transparent;">
         <h5 class="mb-3" style="color: white;">Lascia una recensione</h5>
@@ -90,6 +93,7 @@
       </div>
     </div>
   </div>
+  <% } %>
 </div>
 </div>
 </body>
