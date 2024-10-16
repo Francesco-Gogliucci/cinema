@@ -32,5 +32,24 @@ public class RecensioneRepositoryImpl extends JpaRepositoryImpl<Recensione, Long
 		}
 		return recensioni;
 	}
-
+	
+	@Override
+	public List<Recensione> findRecensioneByUtenteId(Long utenteId) {
+	    List<Recensione> recensioni = null;
+	    String jpql = "SELECT r FROM Recensione r JOIN r.utente u WHERE u.id = :utenteId";
+	    EntityManager em = null;
+	    try {
+	        em = emf.createEntityManager();
+	        TypedQuery<Recensione> query = em.createQuery(jpql, Recensione.class);
+	        query.setParameter("utenteId", utenteId);
+	        recensioni = query.getResultList();
+	    } catch (Exception e) {
+	        System.err.println(e.getMessage());
+	    } finally {
+	        if (em != null) {
+	            em.close();
+	        }
+	    }
+	    return recensioni;
+	}
 }
