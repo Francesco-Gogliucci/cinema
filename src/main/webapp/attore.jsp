@@ -14,43 +14,49 @@
 <body class="custom-bg">
     <%@ include file="nav.jsp"%>
 
-    
     <div class="container text-center">
         <div class="row">
-           
+            <!-- Colonna foto attore e biografia -->
             <div class="col-md-4">
-                <!-- Card attore -->
                 <div class="card card-attore" style="border-color:transparent; background-color: transparent; padding-top: 100px;">
                     <% Attore attore = (Attore) request.getAttribute("attore"); %>
                     <img src="<%= attore.getFoto() %>" height="550" width="358" style="border-radius:15px" class="card-img-top" alt="Foto attore">
-                    <div class="card-body">
-                        <p class="card-text" style="color:rgb(101, 131, 161)"><%= attore.getBiografia() %></p>
-                    </div>
                 </div>
-            </div> 
+            </div>
 
-            <!-- Colonna film -->
-            <div class="col-md-8" style="padding-top: 150px">
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-                    <!-- Poster dei film -->
+            <!-- Colonna biografia -->
+            <div class="col-md-8" style="padding-top: 100px;">
+             <span style="font-size: 40px; opacity: 0.5; color: white;">BIOGRAFIA</span>
+                <div class="card-body">
+                    <p class="card-text" style="color:rgb(101, 131, 161); text-align: left;"><%= attore.getBiografia() %></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sezione dei film --><br>
+	<span style="font-size: 40px; opacity: 0.5; color: white;">FILM</span>
+        <div class="row" style="padding-top: 50px;">
+            <div class="col-md-12">
+                <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
                     <% 
                     List<Film> listFilmByAttore = attore.getFilm();
-                        for (Film film : listFilmByAttore) { 
+                    for (Film film : listFilmByAttore) { 
                     %>
                         <div class="col">
-                            <div class="card-locandina card" style="border-color:transparent;  height: 100%; width:200px; background-color: transparent;">
+                            <div class="card-locandina card" style="border-color:transparent; height: 100%; width:200px; background-color: transparent;">
                                 <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover" alt="Poster film">
-                                <h6 class="card-title "style="color: white;" ><%= film.getTitolo() %></h6>
+                                <h6 class="card-title" style="color: white;"><%= film.getTitolo() %></h6>
                             </div>
                         </div>
                     <% 
-                        } 
+                    } 
                     %>
                 </div>
-            </div> <!-- chiusura colonna film -->
-        </div>
+            </div>
+        </div> <!-- chiusura sezione film -->
     </div>
 
     <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+
 </html>
