@@ -38,7 +38,9 @@
 						 style="border-color:transparent;
 							height: 100%; width:200px;
 							background-color: transparent;">
+							<a>
 					 <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
+					 </a>
 	 			<h6 class="card-title testo-pargraph"><%= film.getTitolo() %></h6>
 			 </div>
 	 	 </div>
