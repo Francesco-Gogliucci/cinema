@@ -20,7 +20,7 @@
 	 <div class="container mt-5" style="padding-top: 20px">
 		 <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 		 <!-- se i film vengono dalla richiesta per categorie -->
-		 <%if(request.getAttribute("filmCategoria")!= null){
+		 <%if(request.getAttribute("filmCategoria")!=null){
 		 
 		 List<Film> filmCategoria = (List<Film>) request.getAttribute("filmCategoria");
 			 	for(Film film : filmCategoria){
@@ -33,7 +33,8 @@
 							background-color: transparent;
 							margin-left: 15px;
 						}">
-					 <img class="card-img-top" src="<%= film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
+						<a href="dettagliFilm?id=<%= film.getId()%>">
+					 <img class="card-img-top" src="<%= film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a>
 	 			<h6 class="card-title testo-pargraph"><%= film.getTitolo()%></h6>
 			 </div>
 	 	 </div>
@@ -41,7 +42,7 @@
 			<!-- se i film vengono dalla ricerca-->
 			<% }
 		 }
-			if(request.getAttribute("filmTitolo")!= null){
+			if(request.getAttribute("filmTitolo")!=null){
 			
 			
 			List<Film> filmRicerca = (List<Film>)request.getAttribute("filmTitolo");
@@ -55,14 +56,14 @@
 							height: 90%; width:200px;
 							background-color: transparent;
 							margin-left: 15px;">
-					 <a href=""><img class="card-img-top" src="<%= film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a>
+					 <a href="dettagliFilm?id=<%= film.getId()%>"><img class="card-img-top" src="<%= film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a>
 	 			<h6 class="card-title testo-pargraph"><%= film.getTitolo()%></h6>
 			 </div>
 	 	 </div>
 	
 			 <%}
 			}
-			if(request.getAttribute("attori")!= null){	%>
+			if(request.getAttribute("attori")!=null){	%>
 	<div class="row">
 	
 	<% List<Attore> attoreRicerca = (List<Attore>)request.getAttribute("attori");
@@ -75,9 +76,9 @@
   <% 
 		}
       } 
-		else{%>
+		 if((request.getAttribute("attori")==null)&&(request.getAttribute("filmTitolo")==null)&&(request.getAttribute("filmCategoria")==null)){%>
 			<div class="container text-center">
-				<h2>La tua ricerca non ha risultati</h2>
+				<h2 style="color:white">La tua ricerca non ha risultati</h2>
 				<!-- aggiungere una nuova barra di ricerca  -->
 			</div>
 			<% 
