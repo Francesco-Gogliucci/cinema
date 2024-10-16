@@ -44,7 +44,10 @@
                     %>
                         <div class="col">
                             <div class="card-locandina card" style="border-color:transparent; height: 100%; width:200px; background-color: transparent;">
-                                <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover" alt="Poster film">
+                             
+                           <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover" alt="Poster film">
+                               
+                        
                                 <h6 class="card-title" style="color: white;"><%= film.getTitolo() %></h6>
                             </div>
                         </div>
