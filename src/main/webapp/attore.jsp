@@ -26,7 +26,7 @@
 
             <!-- Colonna biografia -->
             <div class="col-md-8" style="padding-top: 100px;">
-             <span style="font-size: 40px; opacity: 0.5; color: white;">BIOGRAFIA</span>
+             <span style="font-size: 40px; opacity: 0.5; color: white;"><%= attore.getNome() %> <%= attore.getCognome()%></span>
                 <div class="card-body">
                     <p class="card-text" style="color:rgb(101, 131, 161); text-align: left;"><%= attore.getBiografia() %></p>
                 </div>
