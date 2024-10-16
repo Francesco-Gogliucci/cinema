@@ -24,6 +24,7 @@
                     <a class="nav-link active" aria-current="page" href="elencoRecensioni">Community</a>
                 </li>
                 <li class="nav-item">
+                <!-- Inserito collegamento a fil.jsp -->
                     <a class="nav-link" href="film.jsp">Film</a>
                 </li>
                 <li class="nav-item">
