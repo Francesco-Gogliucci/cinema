@@ -16,25 +16,30 @@ import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/mostraRecensioniUtente")
 public class MostraRecensioniUtenteServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	private RecensioneRepositoryImpl recensioneRepository = new RecensioneRepositoryImpl();
+    private RecensioneRepositoryImpl recensioneRepository = new RecensioneRepositoryImpl();
 
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-		HttpSession session = request.getSession();
-		Utente utente = (Utente) session.getAttribute("utente");
+        HttpSession session = request.getSession();
+        Utente utente = (Utente) session.getAttribute("utente");
 
-		if (utente != null) {
-			List<Recensione> recensioniUtente = utente.getRecensioni();
-			request.setAttribute("recensioniUtente", recensioniUtente);
+        List<Recensione> recensioniUtente = null;
 
-			RequestDispatcher dispatcher = request.getRequestDispatcher("utente.jsp");
-			dispatcher.forward(request, response);
-		} else {
-			response.sendRedirect("login.jsp");
-		}
-	}
+        // Controlla se l'utente è loggato
+        if (utente != null) {
+            recensioniUtente = utente.getRecensioni();
+            request.setAttribute("recensioniUtente", recensioniUtente);
+        }
+
+        
+        request.setAttribute("utente", utente);
+
+        
+        RequestDispatcher dispatcher = request.getRequestDispatcher("utente.jsp");
+        dispatcher.forward(request, response);
+    }
 }
