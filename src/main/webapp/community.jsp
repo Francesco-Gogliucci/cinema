@@ -63,7 +63,7 @@
 			if (recensioni != null) {
 				int i = 0;
 				for (Recensione recensione : recensioni) {
-					if (i >= 6)
+					if (i >= 20)
 						break;
 			%>
 
@@ -115,7 +115,7 @@
 	<div class="container ml-5 mb-5">
 		<% 
 		Set <Film> filmPreferiti = null;
-		int i = 5 ;
+		int i = 0 ;
 		for(Utente utente: elencoUtenti){
 			if(i > 5) break;
 		%>
@@ -145,9 +145,9 @@
 					</a> 
 				</div>
 			<%
-				i++;
+				
 			}
-		}
+			i++;}
 		%>
 		</div>
 	</div>

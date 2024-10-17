@@ -35,14 +35,17 @@
                     for (Preferiti p : preferiti) {
                         Film film = p.getFilm();
                 %>
-                    <div class="col">
-                        <div class="card-locandina card" style="border-color: transparent; height: 100%; width: 200px; background-color: transparent;">
-                            <a href="dettagliFilm?id=<%= film.getId() %>">
-                                <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius: 15px; height: 100%; width: 200px; object-fit: cover">
-                            </a>
-                            <h6 class="card-title testo-pargraph"><%= film.getTitolo() %></h6>
-                        </div>
-                    </div>
+                  <div class="col">
+					 <div class="card " 
+						 style="border-color:transparent;
+							height: 90%; width:200px;
+							background-color: transparent;
+							margin-left: 15px;
+							padding: 20">
+					 <a href="dettagliFilm?id=<%= film.getId()%>"><img class="card-img-top" src="<%= film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a>
+	 			<h6 class="card-title testo-pargraph"><%= film.getTitolo()%></h6>
+			 </div>
+	 	 </div>
                 <% 
                     }
                 }
@@ -60,7 +63,7 @@
         </div>
     </div>
 
-    <div class="container" style="padding-top: 20px;">
+    <div class="container mb-5" style="padding-top: 20px;">
         <div class="row row-cols-1 g-3">
             <!-- Mostrare le recensioni -->
             <% 
@@ -102,7 +105,7 @@
             %>
         </div>
     </div>
-
+<%-- 
     <div class="container" style="padding-top: 40px;">
         <div class="row g-3">
             <div class="row g-3">
@@ -132,6 +135,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --%>
+    <%@ include file="footer.jsp"%>
 </body>
 </html>
