@@ -1,3 +1,4 @@
+<%@page import="it.generationitaly.cinema.repository.impl.UtenteRepositoryImpl"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="it.generationitaly.cinema.entity.*" %>
@@ -51,7 +52,7 @@
 <div class="container" style="padding-top: 40px;">
     <div class="row g-3">
         <div class="col text-start" style="border-bottom: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
-            <h3>Le tue Recensioni</h3>
+            <h3>Recensioni</h3>
         </div>
         <div class="col"></div>
     </div>
@@ -66,13 +67,22 @@
             for (Recensione r : recensioniUtente) {
         %>
                 <div class="col">
-                    <div class="card" style="border-color: transparent; background-color: rgba(255, 255, 255, 0.8);">
-                        <div class="card-body">
-                            <h5 class="card-title"><%= r.getFilm().getTitolo() %></h5>
-                            <p class="card-text"><%= r.getRecensione() %></p>
-                        </div>
-                    </div>
-                </div>
+    				<div class="card" style="border-color: transparent; background-color: rgba(255, 255, 255, 0.8);">
+        				<div class="card-body d-flex justify-content-between align-items-center">
+							<a href="dettagliFilm?id=<%= r.getFilm().getId()%>" class="text-decoration-none"><h5 class="card-title m-0"><%= r.getFilm().getTitolo() %></h5></a>
+         				   <%
+         				  Utente utenteSessione = (Utente)session.getAttribute("utente");
+         				   if(utenteSessione.getId()==utente.getId()){ %>
+         				   <form action="rimuoviRecensione" method="post">
+              			  <input type="hidden" name="recensioneId" value="<%= r.getId() %>">
+              			  <input type="hidden" name="utenteId" value="<%= utente.getId() %>">
+              			  <button type="submit" class="btn btn-danger btn-sm">Elimina</button>
+           					</form>
+           					<%} %>
+       					 </div>
+       					 <p class="card-text"><%= r.getRecensione() %></p>
+    				</div>
+				</div>
         <%
             }
         } else if (utente != null) {
@@ -88,30 +98,32 @@
 
 <div class="container" style="padding-top: 40px;">
     <div class="row g-3">
-        <div class="col text-start" style="border-bottom: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
-            <h3>La nostra community</h3>
-        </div>
-        <div class="col"></div>
-    </div>
-</div>
+        <div class="row g-3">
+			<div class="col text-start" style="border-bottom: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
+				<h3>La nostra community</h3>
+				<p>Film lovers and friends</p>
+			</div>
 
-<br>
-<br>
-<div class="row" style="padding-left: 100px;">
-    <div class="col-lg-2">
-        <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="">
-        <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Mario900</h2>
-        <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
-    </div>
-    <div class="col-lg-2">
-        <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="">
-        <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Andrea80</h2>
-        <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
-    </div>
-    <div class="col-lg-2">
-        <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="100" height="100" alt="">
-        <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white">Marco980</h2>
-        <p><a class="btn btn-giallo" href="#">Vedi utente</a></p>
+			<div class="row" style="padding-left: 100px;">
+				<%
+				// Controllo se l'attributo recensioni è nullo per evitare un NullPointerException
+				UtenteRepositoryImpl utenteRepository = new UtenteRepositoryImpl(); 
+				List<Utente> elencoUtenti = utenteRepository.findAll(); 
+				if (elencoUtenti != null) {
+					int i = 0;
+					for (Utente u : elencoUtenti) {
+						if(i>5)
+							break;
+				%> 
+				<div class="col-lg-2">
+					<img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
+					<h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= u.getUsername() %></h2>
+					<p><a class="btn btn-giallo" href="utenteServlet?id=<%= u.getId()%>">Vedi utente</a></p>
+				</div>
+				<%i++;} 
+				}%>
+			</div>
+		</div>
     </div>
 </div>
 </body>

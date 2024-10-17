@@ -6,6 +6,9 @@ import it.generationitaly.cinema.entity.Recensione;
 
 public interface RecensioneRepository extends JpaRepository<Recensione, Long> {
 
-	public List<Recensione> findRecensioneByFilmId(Long filmId);
-	public List<Recensione> findRecensioneByUtenteId(Long utenteId);
+	List<Recensione> findRecensioneByFilmId(Long filmId);
+
+	List<Recensione> findRecensioneByUtenteId(Long utenteId);
+
+	Recensione findRecensioneByUtendeIdAndFilmId(long utenteId, long filmId);
 }
