@@ -34,6 +34,8 @@
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" style="position: relative;" >
@@ -58,6 +60,22 @@
       <div class="carousel-caption d-none d-md-block">
        <h2 class="testo-titoli" style="text-transform: uppercase; font-weight: bold;">Coming soon</h2>
         <h1 style="text-transform: uppercase;">Nosferatu: <span style="text-transform: lowercase;">Un racconto gotico sull'ossessione tra una giovane donna tormentata e il terrificante vampiro che si è infatuato di lei, provocando un indicibile orrore.</span></h1>
+      </div>
+    </div>
+      <div class="carousel-item" style="position: relative;">
+      <a href="dettagliFilm?id=65"><img src="carosello4.png" class="d-block w-100" alt="..."></a>
+      <div class="gradient-overlay"></div>
+      <div class="carousel-caption d-none d-md-block">
+       <h2 class="testo-titoli" style="text-transform: uppercase; font-weight: bold;">Coming soon</h2>
+        <h1 style="text-transform: uppercase;">Il Gladiatore II: <span style="text-transform: lowercase;">Diretto dal leggendario regista Ridley Scott, il Gladiatore II continua raccontare la straordinaria saga di potere, intrighi e vendetta ...</span></h1>
+      </div>
+    </div>
+     <div class="carousel-item" style="position: relative;">
+      <a href="dettagliFilm?id=66"><img src="carosello5.png" class="d-block w-100" alt="..."></a>
+      <div class="gradient-overlay"></div>
+      <div class="carousel-caption d-none d-md-block">
+       <h2 class="testo-titoli" style="text-transform: uppercase; font-weight: bold;">Coming soon</h2>
+        <h1 style="text-transform: uppercase;">The Substance: <span style="text-transform: lowercase;">Quanto è amara la Bellezza?</span></h1>
       </div>
     </div>
   </div>

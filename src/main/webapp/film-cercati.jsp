@@ -69,7 +69,7 @@
 	<% List<Attore> attoreRicerca = (List<Attore>)request.getAttribute("attori");
 			 	for(Attore attore : attoreRicerca){%>
       <div class="col-lg-4">
-        <img src="<%= attore.getFoto() %>" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="<%= attore.getNome() %> <%= attore.getCognome() %>">
+        <img src="<%= attore.getFoto() %>" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"><%= attore.getNome() %> <%= attore.getCognome() %>">
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
         <p><a class="btn btn-giallo" href="dettagliAttore?id=<%= attore.getId()%>">Vedi attore</a></p>
       </div>
@@ -91,9 +91,9 @@
 </div>
 
 
-		<!-- Categori, bottoni-->
+		<!-- Categoria bottone-->
 
-	<div class="container text-end" style="padding-top: 20px;">
+	<div class="container text-end mb-5" style="padding-top: 20px;">
 	<div class ="row row-cols-md-2 g-3">
 	    <a href="elencoCategoria"><button class="btn-chiaro">Scopri i film tramite le categorie</button>
 	    </a>
