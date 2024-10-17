@@ -31,7 +31,7 @@
                     <a class="nav-link" href="elencoCategoria">Generi</a>
                 </li>
                  <li class="nav-item">
-                    <a class="navbar-brand" href="./halloween.jsp">
+                    <a class="navbar-brand" href="ricercaPerCategoria?idCategoria=5">
             <img src="./img-ref/paghallo.png" alt="Bootstrap" width="100" height="70">
         </a>
                 </li>
