@@ -29,6 +29,7 @@ public class LoginServlet extends HttpServlet {
 		if (utente != null && utente.getPassword().equals(password)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("username", utente.getUsername());
+			session.setAttribute("utente", utente);
 			// inserita pagina jsp corretta
 			response.sendRedirect("homeServlet");
 		} else {

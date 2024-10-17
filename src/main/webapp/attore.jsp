@@ -26,7 +26,7 @@
 
             <!-- Colonna biografia -->
             <div class="col-md-8" style="padding-top: 100px;">
-             <span style="font-size: 40px; opacity: 0.5; color: white;">BIOGRAFIA</span>
+             <span style="font-size: 40px; opacity: 0.5; color: white;"><%= attore.getNome() %> <%= attore.getCognome()%></span>
                 <div class="card-body">
                     <p class="card-text" style="color:rgb(101, 131, 161); text-align: left;"><%= attore.getBiografia() %></p>
                 </div>
@@ -44,7 +44,10 @@
                     %>
                         <div class="col">
                             <div class="card-locandina card" style="border-color:transparent; height: 100%; width:200px; background-color: transparent;">
-                                <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover" alt="Poster film">
+                             
+                           <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover" alt="Poster film">
+                               
+                        
                                 <h6 class="card-title" style="color: white;"><%= film.getTitolo() %></h6>
                             </div>
                         </div>

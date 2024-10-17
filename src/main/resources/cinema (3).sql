@@ -23,6 +23,8 @@ CREATE TABLE utente (
     PRIMARY KEY (id)
 );
 
+INSERT INTO utente VALUES ('1','lauraemail@mail.com','Laura','Trocchia', '1997-03-18','Lauratote','pass1' );
+
 CREATE TABLE categoria (
     id BIGINT NOT NULL AUTO_INCREMENT,
     genere VARCHAR(45) NOT NULL,
@@ -445,6 +447,58 @@ INSERT INTO film_attore VALUES('11','9','3');
 INSERT INTO film_attore VALUES('12','1','4');
 INSERT INTO film_attore VALUES('13','5','4');
 INSERT INTO film_attore VALUES('14','28','2'); 
-INSERT INTO film_attore VALUES('14','28','2'); 
+INSERT INTO film_attore VALUES('15','28','2'); 
+INSERT INTO film_attore VALUES('16','40','4');
+INSERT INTO film_attore VALUES('17','41','4');
+INSERT INTO film_attore VALUES('18','11','5');
+INSERT INTO film_attore VALUES('19','53','5');
+INSERT INTO film_attore VALUES('20','12','6');
+INSERT INTO film_attore VALUES('21','15','6');
+INSERT INTO film_attore VALUES('22','30','6');
+INSERT INTO film_attore VALUES('23','47','6');
+INSERT INTO film_attore VALUES('24','58','6');
+INSERT INTO film_attore VALUES('25','14','7');
+INSERT INTO film_attore VALUES('26','30','7');
+INSERT INTO film_attore VALUES('27','14','8');
+INSERT INTO film_attore VALUES('28','16','9');
+INSERT INTO film_attore VALUES('29','16','10');
+INSERT INTO film_attore VALUES('30','16','11');
+INSERT INTO film_attore VALUES('31','17','12');
+INSERT INTO film_attore VALUES('32','20','13');
+INSERT INTO film_attore VALUES('33','20','14');
+INSERT INTO film_attore VALUES('34','20','15');
+INSERT INTO film_attore VALUES('35','21','16');
+INSERT INTO film_attore VALUES('36','22','16');
+INSERT INTO film_attore VALUES('37','21','17');
+INSERT INTO film_attore VALUES('38','22','17');
+INSERT INTO film_attore VALUES('39','25','17');
+INSERT INTO film_attore VALUES('40','28','18');
+INSERT INTO film_attore VALUES('41','47','18');
+INSERT INTO film_attore VALUES('42','48','18');
+INSERT INTO film_attore VALUES('43','50','18');
+INSERT INTO film_attore VALUES('44','28','19');
+INSERT INTO film_attore VALUES('45','48','19');
+INSERT INTO film_attore VALUES('46','49','19');
+INSERT INTO film_attore VALUES('47','7','20');
+INSERT INTO film_attore VALUES('48','15','20');
+INSERT INTO film_attore VALUES('49','47','21');
+INSERT INTO film_attore VALUES('50','57','21');
+INSERT INTO film_attore VALUES('51','24','22');
+INSERT INTO film_attore VALUES('52','47','22');
+INSERT INTO film_attore VALUES('53','50','22');
+INSERT INTO film_attore VALUES('54','4','23');
+INSERT INTO film_attore VALUES('55','8','23');
+INSERT INTO film_attore VALUES('56','9','23');
+INSERT INTO film_attore VALUES('57','45','23');
+INSERT INTO film_attore VALUES('58','36','24');
+INSERT INTO film_attore VALUES('59','37','24');
+INSERT INTO film_attore VALUES('60','38','24');
+INSERT INTO film_attore VALUES('61','42','24');
+INSERT INTO film_attore VALUES('62','43','24');
+INSERT INTO film_attore VALUES('63','44','24');
+INSERT INTO film_attore VALUES('64','45','24');
+INSERT INTO film_attore VALUES('65','46','24');
+INSERT INTO film_attore VALUES('66','32','8');
+INSERT INTO film_attore VALUES('67','33','8');
 
 
