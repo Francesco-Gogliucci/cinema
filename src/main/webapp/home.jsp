@@ -70,20 +70,7 @@
 
 <div class="container" style="padding-top: 50px">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-3">
-        <% 
-        /* List<String> categorie = new ArrayList <String>();
-		categorie.add("Azione");
-		categorie.add("Avventura");
-		categorie.add("Commedia");
-		categorie.add("Horror");
-		categorie.add("Fantascienza");
-		categorie.add("Fantasy");
-		categorie.add("Thriller");
-		categorie.add("Romantico");
-		categorie.add("Animazione");
-		categorie.add("Documentario");
-		categorie.add("Musical");
-		 */
+        <%
         List<Categoria> categorie = (List<Categoria>) request.getAttribute("elencoCategorie");
         for (int i = 0; i < categorie.size(); i++) { 
             Categoria categoria = categorie.get(i);
@@ -136,10 +123,10 @@
 				 if(recensioni==null){
 					 %> <p> al momento non ci sono recensioni<% 
 				 }else{
-					 int i= 7;
-					 for(Recensione recensione:recensioni){%>
-				 		if(i>7) break;
-			
+					 int i= 1;
+					 for(Recensione recensione:recensioni){
+				 		if(i>3) break;
+				 		%>
 				<div class ="row row-cols-md-3 g-3">
 				
 					<div class="col" style="color:rgb(101, 131, 161); width: 200px; padding-left:20px">
