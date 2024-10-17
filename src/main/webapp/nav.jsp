@@ -38,23 +38,24 @@
                 </li>
             </ul>
 
-            <form class="d-flex" action="ricercaFilmEAttoreServlet" method="get" role="search" style="margin-bottom: 5px; padding-left: 300px;">
-                <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" name="ricerca" style="border-radius: 20px;">
-                <button class="btn btn-sm btn-giallo" type="submit">Cerca</button>
-            </form>
+           <form class="d-flex align-items-center" action="ricercaFilmEAttoreServlet" method="get" role="search" style="margin-bottom: 0; padding-left: 300px;">
+                 <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" name="ricerca" style="border-radius: 20px; height: 38px;">
+                 <button class="btn btn-sm btn-giallo" type="submit" style="height: 38px; margin-left: 5px;">Cerca</button>
+              </form>
 
-            <% if (session.getAttribute("username") == null) { %>
-                <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
-                <a href="./registrazione.jsp" class="btn btn-sm btn-nero" type="button">Registrati</a>
-            <% } else { %>
-            <%Utente utente = (Utente)session.getAttribute("utente");%>
-                <span class="fw-bold" style="color: white; padding-left: 20px;">
-                   <a  class="text-warning text-decoration-none" href="utenteServlet?id=<%=utente.getId()%>"><%= session.getAttribute("username") %></a>
-                </span>
-                <form class="d-flex" action="logout" method="post">
-                    <button class="btn btn-giallo" type="submit">LOGOUT</button>
-                </form>
-            <% } %>
+           <% if (session.getAttribute("username") == null) { %>
+             <a href="./login.jsp" class="btn btn-sm btn-giallo" style="margin-left: 10px; height: 38px;display: flex; justify-content: center; align-items: center;">Accedi</a>
+             <a href="./registrazione.jsp" class="btn btn-sm btn-nero" type="button" style="margin-left: 10px; height: 38pxdisplay: flex; justify-content: center; align-items: center;;">Registrati</a>
+     <% } else { %>
+       <% Utente utente = (Utente)session.getAttribute("utente"); %>
+    <span class="fw-bold" style="color: white; padding-left: 20px;">
+        <a class="text-warning text-decoration-none" href="utenteServlet?id=<%= utente.getId() %>"><%= session.getAttribute("username") %></a>
+    </span>
+    <form class="d-flex" action="logout" method="post" style="margin-left: 10px;">
+        <button class="btn btn-giallo" type="submit" style="height: 38px;">LOGOUT</button>
+         </form>
+      <% } %>
+           
         </div>
     </div>
 </nav>

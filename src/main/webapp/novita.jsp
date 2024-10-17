@@ -37,21 +37,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a href="dettagliFilm?id=3"><img src="carosello1.jpg" class="d-block w-100"  alt="..."></a>
+      <a href="dettagliFilm?id=61"><img src="carosello1.jpg" class="d-block w-100"  alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h3 style="text-transform: uppercase;">Coming soon</h3>
         <h1 style="text-transform: uppercase;">Terrifier 3:<span style="text-transform: lowercase;"> il nuovo violentissimo slasher con Art il Clown</span></h1>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="carosello2.png" class="d-block w-100" alt="...">
+      <a href="dettagliFilm?id=62"><img src="carosello2.png" class="d-block w-100" alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h3 style="text-transform: uppercase;">Coming soon</h3>
         <h1 style="text-transform: uppercase;">Wicked:<span style="text-transform: lowercase;"> scopri la vera storia mai raccontata delle streghe di Oz nel più grande successo di Broadway</span></h1>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="carosello3.png" class="d-block w-100" alt="...">
+      <a href="dettagliFilm?id=63"><img src="carosello3.png" class="d-block w-100" alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
        <h3 style="text-transform: uppercase;">Coming soon</h3>
         <h1 style="text-transform: uppercase;">Nosferatu: <span style="text-transform: lowercase;">Un racconto gotico sull'ossessione tra una giovane donna tormentata e il terrificante vampiro che si è infatuato di lei, provocando un indicibile orrore.</span></h1>
