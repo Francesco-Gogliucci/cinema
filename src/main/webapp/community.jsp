@@ -129,7 +129,7 @@
 </div>
 <div class="mb-3"></div>
 <!-- parte dei preferiti utenti -->
-<div class = "container ml-5">
+<div class = "container ml-5 mb-5">
 	<% 
 	Set <Film> filmPreferiti = null;
 	int i = 5 ;
