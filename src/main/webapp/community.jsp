@@ -84,7 +84,8 @@
 						style="border-color: transparent; 
 						height: 310px; 
 						width: 210px; 
-						margin-left: 15px; 
+						margin-left: 15px;
+						margin-top: 60px; 
 						border-bottom:#1A2D3F;
 						background: linear-gradient(180deg, rgba(68, 119, 165, 0) 10%, #1A2D3F 100%), url(<%= recensione.getFilm().getLocandina() %>); 
 						background-size: cover; 
