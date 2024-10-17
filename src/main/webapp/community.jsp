@@ -56,7 +56,7 @@
 		</div>
 	</div>
 
-	<div class="container ml-5" style="padding-top: 40px;">
+	<div class="container ml-5 mt-3" style="padding-top: 40px;">
 		<div class="row">
 			<%
 			if (recensioni != null) {
@@ -131,13 +131,15 @@
 			
 			for(Film preferiti : filmPreferiti){
 			%>
-				<div class="col card mb-3" 
+				<div class="col card mb-3 mt-5" 
 					style="border-color:transparent;
 					height: 90%; width:100px;
 					background-color: transparent;
 					margin-left: 15px;">
 					<a href="dettagliFilm?id=<%= preferiti.getId()%>">
-						<img class="card-img-top" src="<%=preferiti.getLocandina()%>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
+						<img class="rounded-circle" 
+     src="<%=preferiti.getLocandina()%>" 
+     style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);">
 					</a> 
 				</div>
 			<%
