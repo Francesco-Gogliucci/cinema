@@ -112,7 +112,7 @@
 	</div>
 
 	<!-- parte dei preferiti utenti -->
-	<div class="container ml-5 mb-5">
+	<div class="container ml-5">
 		<% 
 		Set <Film> filmPreferiti = null;
 		int i = 0 ;
@@ -144,14 +144,11 @@
      style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);">
 					</a> 
 				</div>
-			<%
-				
-			}
-			i++;}
-		%>
-		</div>
-	</div>
+			<%}
+			i++;}%>
+		</div>	
+	</div>	
 
-	<%@ include file="footer.jsp"%>
+	
 </body>
 </html>

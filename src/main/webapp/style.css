@@ -25,6 +25,8 @@
 .btn-chiaro{
 	 background-color: rgb(101, 131, 161);
     border-radius: 20px;
+    border-left:3px;
+    border-left-color:#C3E1FF;
     color: white;
     padding: 5px 20px;
     font-size: 14px;
@@ -35,11 +37,13 @@
 }
 .btn-chiaro:hover {
   background-color: #2980b9;  /* Cambia il colore di sfondo al passaggio del mouse */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .btn-chiaro:active {
   background-color: #1c5980;  /* Cambia il colore di sfondo quando il bottone è cliccato */
 }
+
 .custom-bg {
     background-color: rgb(26, 45, 63);
 }

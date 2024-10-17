@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
     
 	    
-	<footer class="container-fluid text-end" style="background-image: url('./img-ref/footer.png'); background-size: cover; background-position: center; padding: 50px 0; color: white;">
+	<footer class="container-fluid text-end mt-5" style="background-image: url('./img-ref/footer.png'); background-size: cover; background-position: center; padding: 50px; color: white;">
 	  <div class="row">
 	    <div class="col-7 ">
 	      <img src="./img-ref/logo-senzapop.png">
