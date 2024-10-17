@@ -24,13 +24,14 @@
       <% 
         // Controllo se l'attributo recensioni è nullo per evitare un NullPointerException
         List<Recensione> recensioni = (List <Recensione>) request.getAttribute("elencoRecensioni"); 
-        if (recensioni != null) {
-          for (Recensione recensione : recensioni) {
+        List<Utente> utenti = (List <Utente>) request.getAttribute("elencoUtenti"); 
+        if (utenti != null) {
+          for (Utente utente : utenti) {
       %> 
         <div class="col-lg-2">
           <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
-          <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= recensione.getUtente().getUsername() %></h2>
-          <p><a class="btn btn-giallo" href="utenteServlet?id=<%= recensione.getUtente().getId()%>">Vedi utente</a></p>
+          <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= utente.getUsername() %></h2>
+          <p><a class="btn btn-giallo" href="utenteServlet?id=<%= utente.getId()%>">Vedi utente</a></p>
         </div>
       <% 
           } 
