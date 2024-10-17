@@ -35,7 +35,7 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <a href="dettagliFilm?id=61"><img src="carrosellohalloween1.png" class="d-block w-100"  alt="..."></a>
+      <a href="dettagliFilm?id=61"><img src="carosellohalloween1.png" class="d-block w-100"  alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h1 style="text-transform: uppercase;">Terrifier 3:<span style="text-transform: lowercase;"> il nuovo violentissimo slasher con Art il Clown</span></h1>
       </div>
