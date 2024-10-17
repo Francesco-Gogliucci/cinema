@@ -119,6 +119,7 @@
 	<div class ="row row-cols-md-2 g-3">
 	<div class="col" ></div>
 	  <div class="col" style="border-bottom: 4px solid rgb(101, 131, 161); color:rgb(101, 131, 161);">
+	     
 	    <h3>Scopri i film tramite le recensioni della nostra community</h3>
 	  </div>  
 	</div>
@@ -172,7 +173,7 @@
 		   			</div>
 		   			<div class="col">
 		   			<a href="dettagliFilm?id=<%= recensione.getFilm().getId()%>">
-		   				<img class="card-img-top" src="<%=recensione.getFilm().getLocandina()%>" style="height:550px ;width : 320px; border-radius:15px; padding-bottom: 100px; margin-top: 50px;"></a>
+		   				<img class="card-img-top" src="<%=recensione.getFilm().getLocandina()%>" style="height:580px ;width : 350px; border-radius:15px; padding-bottom: 100px; margin-top: 50px; margin-left: 40px"></a>
 		   			</div>
 				</div >
 			<%	}
