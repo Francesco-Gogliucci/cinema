@@ -30,6 +30,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="elencoCategoria">Generi</a>
                 </li>
+                 <li class="nav-item">
+                    <a class="navbar-brand" href="./halloween.jsp">
+            <img src="./img-ref/paghallo.png" alt="Bootstrap" width="164.36" height="66">
+        </a>
+                </li>
             </ul>
 
             <form class="d-flex" action="ricercaFilmEAttoreServlet" method="get" role="search" style="margin-bottom: 5px; padding-left: 300px;">
