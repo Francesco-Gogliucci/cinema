@@ -44,4 +44,33 @@ public class PreferitiRepositoryImpl extends JpaRepositoryImpl<Preferiti, Long> 
 		return preferiti;
 	}
 
+	@Override
+	public Preferiti findPreferitoByUtendeIdAndFilmId(long utenteId, long filmId) {
+		EntityManager em = null;
+		EntityTransaction tx = null;
+		Preferiti preferito = null;
+		String jpql = "SELECT p FROM Preferiti p WHERE p.utente.id = :utenteId AND p.film.id = :filmId";
+		try {
+			em = emf.createEntityManager();
+			tx = em.getTransaction();
+			tx.begin();
+			TypedQuery<Preferiti> query = em.createQuery(jpql, Preferiti.class);
+			query.setParameter("utenteId", utenteId);
+			query.setParameter("filmId", filmId);
+			preferito = query.getSingleResult();
+			tx.commit();
+		} catch (Exception e) {
+			System.err.println(e.getMessage());
+			if (tx != null && tx.isActive()) {
+				tx.rollback();
+			}
+		} finally {
+			if (em != null) {
+				em.close();
+			}
+		}
+
+		return preferito;
+	}
+
 }

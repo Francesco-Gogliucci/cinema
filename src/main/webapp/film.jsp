@@ -122,37 +122,52 @@
 
 <!-- Sezione Preferiti -->
   <div class="col col-md-4 mb-5 ml-5">
-  <% if (session.getAttribute("username") == null) { %>
-              <p style="font-size: 15px; color: white"> <a href="./login.jsp" class="btn btn-giallo"<i class="bi bi-box-arrow-in-right"></i>>Accedi per aggiungere il film ai preferiti</a></p>
-            <% } else { 
-            	//verifica se il film è gia nei preferiti dell'utente
-            	Utente utente = (Utente) session.getAttribute("utente");
-            	Long utenteId = utente.getId(); // Recuperiamo l'utente
-            	PreferitiRepositoryImpl preferitiRepository = new PreferitiRepositoryImpl();
-            	List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId);
-            	boolean preferito = false;
-            	for(Preferiti p : preferiti) {
-            	    if(p.getFilm().getId().equals(film.getId())) {
-            	        preferito = true;
-            	        break;
-            	    }
-            	}
-            %>
-    	<form action="preferiti" method="post">
-    	<div class="container text-centered">
-    	   <input type="hidden" name="idUtente" value="<%=utente.getId()%>">
-    	   <input type="hidden" name="filmId" value="<%=film.getId()%>">
-    	   <% if(preferito == false) { %>
-    	   		<h5 style="color:white">Aggiungi ai preferiti</h5>
-    	   		<br>
-    	       <button type="submit" style="box-shadow:rgb(101, 131, 161)" class="btn btn-giallo mt-2"><img height="100" width="100" alt="fiml gia nei preferiti" src="star white.png" style="width:100px"></button>
-    	   <% } else { %>
-    	       <img alt="fiml gia nei preferiti" src="star.png" style="width:100px">
-    	   <% } %>
-    	   </div>
-    	</form>
+    <% if (session.getAttribute("username") == null) { %>
+        <p style="font-size: 15px; color: white">
+            <a href="./login.jsp" class="btn btn-giallo">
+                <i class="bi bi-box-arrow-in-right"></i> Accedi per aggiungere il film ai preferiti
+            </a>
+        </p>
+    <% } else { 
+        // Verifica se il film è già nei preferiti dell'utente
+        Utente utente = (Utente) session.getAttribute("utente");
+        Long utenteId = utente.getId(); // Recuperiamo l'utente
+        PreferitiRepositoryImpl preferitiRepository = new PreferitiRepositoryImpl();
+        List<Preferiti> preferiti = preferitiRepository.findPreferitiByUtenteId(utenteId);
+        boolean preferito = false;
+        
+        for (Preferiti p : preferiti) {
+            if (p.getFilm().getId().equals(film.getId())) {
+                preferito = true;
+                break;
+            }
+        }
+    %>
+        <div class="container text-centered">
+                <% if (preferito == false) { %>
+            		<form action="preferiti" method="post">
+                	<input type="hidden" name="utenteId" value="<%= utente.getId() %>">
+                	<input type="hidden" name="filmId" value="<%= film.getId() %>">
+                    <h5 style="color:white">Aggiungi ai preferiti</h5>
+                    <br>
+                    <button type="submit" style="box-shadow:rgb(101, 131, 161)" class="btn btn-giallo mt-2">
+                        <img height="100" width="100" alt="film da aggiungere ai preferiti" src="star white.png" style="width:100px">
+                    </button>
+                    </form>
+                <% } else { %>
+                    <h5 style="color:white">Film già nei preferiti</h5>
+                    <form action="rimuoviPreferito" method="post">
+                        <input type="hidden" name="utenteId" value="<%= utente.getId() %>">
+                        <input type="hidden" name="filmId" value="<%= film.getId() %>">
+                        <button type="submit" style="box-shadow:rgb(101, 131, 161)" class="btn btn-giallo mt-2">
+                            <img alt="film già nei preferiti" src="star.png" style="width:100px">
+                        </button>
+                    </form>
+                <% } %>
+        </div>
     <% } %>
-  </div>
+</div>
+
   <%  
   		if(film.getRecensioni()!= null && !film.getRecensioni().isEmpty()){
   			%>
