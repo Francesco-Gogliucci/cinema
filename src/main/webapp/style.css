@@ -94,6 +94,32 @@
   .card:hover {
     transform: scale(1.1);
   }
+  
+  
+.ghost, .bat {
+  position: fixed; /* Cambiato da absolute a fixed per occupare l'intera finestra */
+  bottom: 0;       /* Inizia dal fondo dello schermo */
+  width: 100px;    /* Dimensione degli elementi */
+  animation: floatUp 6s linear infinite; /* Animazione per farli salire */
+  z-index: 9999;   /* Assicurati che siano sopra il carosello */
+}
 
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh); /* Parte dal fondo della finestra */
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh); /* Muove l'elemento fuori dallo schermo */
+    opacity: 0; /* Scompare lentamente */
+  }
+}
 
+.halloween-background{
 
+background: linear-gradient(180deg, #0D052E 0%, #30154F 38.5%, #88694F 76.5%, #DFBD50 100%);
+
+}
