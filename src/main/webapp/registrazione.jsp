@@ -133,7 +133,7 @@
 <main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 pt-4 mb-4"> 
   <form action="registrazione" method="post" class="col-12 col-md-4 m-auto">
    <div class="form-aspect mt-4 mb-2">
-    <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57" >
+    <img class="mb-4" src="./img-ref/logo-login-registrazione.png" alt="" width="72" height="57" >
     <h1 class="h4 mb-3 fw-normal" style="color: white">Registrati</h1> 
 
     <div class="form-floating">

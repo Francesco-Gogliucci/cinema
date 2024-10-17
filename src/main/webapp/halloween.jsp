@@ -19,11 +19,6 @@
   </section>
 <div class="container mt-5" style="padding-top: 40px;">
   <div class="row g-3">
-    <div class="col text-start" style="border-bottom: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
-      <h3>Ciack & Chills: è Halloween!</h3>
-      <p>Sintonizzati per un divertimento da brividi! Stiamo preparando un'atmosfera spaventosa con una raccolta di film.</p>
-    </div>
-  </div>
     </div>
     <div class="row justify-content-evenly" style="padding-top: 50px">
   <div class="col-11" >
@@ -32,9 +27,13 @@
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+  <div class="carousel-item active">
+      <a href="dettagliFilm?id=62"><img src="carosellohalloweenbanner.png" class="d-block w-100" alt="..."></a>
+      </div>
+    <div class="carousel-item">
       <a href="dettagliFilm?id=61"><img src="carosellohalloween1.png" class="d-block w-100"  alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h1 style="text-transform: uppercase;">Terrifier 3:<span style="text-transform: lowercase;"> il nuovo violentissimo slasher con Art il Clown</span></h1>
@@ -97,5 +96,7 @@
 
 
     <%@ include file="footer.jsp"%>
+    <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
 </body>
 </html>
