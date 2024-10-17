@@ -137,13 +137,13 @@
             	    }
             	}
             %>
-    	   <% if(preferito == false) { %>
     	<form action="preferiti" method="post">
     	   <input type="hidden" name="idUtente" value="<%=utente.getId()%>">
     	   <input type="hidden" name="filmId" value="<%=film.getId()%>">
-    	       <img alt="fiml gia nei preferiti" src="star.png" style="width:100px">
-    	   <% } else { %>
+    	   <% if(preferito == false) { %>
     	       <button type="submit" class="btn btn-giallo"><img alt="fiml gia nei preferiti" src="star white.png" style="width:100px"></button>
+    	   <% } else { %>
+    	       <img alt="fiml gia nei preferiti" src="star.png" style="width:100px">
     	   <% } %>
     	</form>
     <% } %>
