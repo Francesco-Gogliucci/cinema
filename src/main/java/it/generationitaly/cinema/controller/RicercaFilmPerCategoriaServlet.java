@@ -27,7 +27,7 @@ public class RicercaFilmPerCategoriaServlet extends HttpServlet {
 		request.setAttribute("filmCategoria", filmCategoria);
 		
 		// inserita pagina jsp corretta 
-		RequestDispatcher requestDispatcher = request.getRequestDispatcher("halloween.jsp");
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("film-cercati.jsp");
 		requestDispatcher.forward(request, response);
 		
 	}
