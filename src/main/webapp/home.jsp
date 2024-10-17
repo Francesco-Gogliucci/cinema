@@ -66,6 +66,7 @@
     </div>
 </div>
 
+
 <div class="container" style="padding-top: 50px">
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-3">
         <% 
@@ -112,6 +113,7 @@
     </div>
 </div>
 
+
 	
 	<!--  recensioni utente -->
 	<!-- inserire un href per l'utente, che vada tramite la servlet delle recensioni ad aprire uns pagina con le recensioni dell'utente-->
@@ -128,31 +130,6 @@
 	<div class="container text-cetered" style="padding-top: 40px;">
 	
 	<% 
-	        /* // Creazione di oggetti Utente
-	        Utente utente1 = new Utente("Mario Rossi");
-	        Utente utente2 = new Utente("Luisa Verdi");
-	        Utente utente3 = new Utente("Giulia Bianchi");
-	        Utente utente4 = new Utente("Alessandro Neri");
-
-	        // Creazione di oggetti Film
-	        Film film1 = new Film("Inception");
-	        Film film2 = new Film("The Matrix");
-	        Film film3 = new Film("The Godfather");
-	        Film film4 = new Film("Pulp Fiction");
-
-	        // Creazione di oggetti Recensione
-	        Recensione recensione1 = new Recensione("Film spettacolare, trama coinvolgente.", utente1, film1);
-	        Recensione recensione2 = new Recensione("Un classico della fantascienza, da rivedere!", utente2, film2);
-	        Recensione recensione3 = new Recensione("Uno dei migliori film di sempre.", utente3, film3);
-	        Recensione recensione4 = new Recensione("Dialoghi e regia magistrali!", utente4, film4);
-
-			//aggiunta recensioni a una lista, come ci arriveranno da una servelet
-			List <Recensione> recensioni=new ArrayList<>();
-				recensioni.add(recensione1);
-				recensioni.add(recensione2);
-				recensioni.add(recensione3);
-				recensioni.add(recensione4);
-				 */
 			List<Recensione> recensioni= (List<Recensione>)request.getAttribute("elencoRecensioni");
 				 
 				 if(recensioni==null){
@@ -180,7 +157,7 @@
 			}
 		%>
 		<div class="row text-center">
-			<a href="RecensioniServlet"><button class="btn-chiaro"> Scopri altre recensioni</button></a>
+			<a href="elencoRecensioni"><button class="btn-chiaro"> Scopri altre recensioni</button></a>
 		</div>
 	</div>
 	
