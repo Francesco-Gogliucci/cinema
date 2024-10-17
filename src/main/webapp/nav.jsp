@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="it.generationitaly.cinema.entity.Utente" %>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,8 +47,9 @@
                 <a href="./login.jsp" class="btn btn-sm btn-giallo">Accedi</a>
                 <a href="./registrazione.jsp" class="btn btn-sm btn-nero" type="button">Registrati</a>
             <% } else { %>
+            <%Utente utente = (Utente)session.getAttribute("utente");%>
                 <span class="fw-bold" style="color: white; padding-left: 20px;">
-                    <%= session.getAttribute("username") %>
+                   <a  class="text-warning text-decoration-none" href="utenteServlet?id=<%=utente.getId()%>"><%= session.getAttribute("username") %></a>
                 </span>
                 <form class="d-flex" action="logout" method="post">
                     <button class="btn btn-giallo" type="submit">LOGOUT</button>

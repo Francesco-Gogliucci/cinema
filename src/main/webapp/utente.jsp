@@ -61,7 +61,7 @@
     <div class="row row-cols-1 g-3">
         <!-- Mostrare le recensioni -->
         <%
-        List<Recensione> recensioniUtente = utente != null ? (List<Recensione>) request.getAttribute("recensioniUtente") : null;
+        List<Recensione> recensioniUtente = utente != null ? utente.getRecensioni() : null;
         if (recensioniUtente != null) {
             for (Recensione r : recensioniUtente) {
         %>
