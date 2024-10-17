@@ -23,7 +23,7 @@ background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-1 mb-lg-0">
             <li class="nav-item" style="padding-top: 20px">
-                <a class="nav-link active" aria-current="page" href="elencoRecensioni" style="transition: transform 0.3s ease;">Community</a>
+                <a class="nav-link" aria-current="page" href="elencoRecensioni" style="transition: transform 0.3s ease;">Community</a>
             </li>
             <li class="nav-item" style="padding-top: 20px">
                 <a class="nav-link" href="ricercaFilmPerAnno?anno=2024" style="transition: transform 0.3s ease;">Novità</a>
