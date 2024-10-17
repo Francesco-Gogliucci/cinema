@@ -40,13 +40,13 @@
       </div>
     </div>
     <div class="carousel-item">
-      <a href="dettagliFilm?id=62"><img src="carosellohalloween2.png" class="d-block w-100" alt="..."></a>
+      <a href="dettagliFilm?id=67"><img src="carosellohalloween2.png" class="d-block w-100" alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h1 style="text-transform: uppercase;">It:<span style="text-transform: lowercase;"> L'adattamento dell'omonimo romanzo di Stephen King</span></h1>
       </div>
     </div>
     <div class="carousel-item">
-      <a href="dettagliFilm?id=63"><img src="carosellohalloween3.png" class="d-block w-100" alt="..."></a>
+      <a href="dettagliFilm?id=68"><img src="carosellohalloween3.png" class="d-block w-100" alt="..."></a>
       <div class="carousel-caption d-none d-md-block">
         <h1 style="text-transform: uppercase;">The nun: <span style="text-transform: lowercase;">Una giovane suora e un prete partono alla volta della Romania per scoprire i segreti di un luogo sacro infestato da uno spirito maligno.</span></h1>
       </div>
