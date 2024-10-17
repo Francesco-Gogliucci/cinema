@@ -117,7 +117,7 @@
                     if (elencoUtenti != null) {
                         int i = 0;
                         for (Utente u : elencoUtenti) {
-                            if (i > 5) break;
+                            if (i < 5) break;
                     %>
                     <div class="col-lg-2">
                         <img src="user-286.png" class="bd-placeholder-img rounded-circle" width="150" height="150" alt="">
