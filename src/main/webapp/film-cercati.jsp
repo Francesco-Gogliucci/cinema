@@ -91,9 +91,9 @@
 </div>
 
 
-		<!-- Categori, bottoni-->
+		<!-- Categoria bottone-->
 
-	<div class="container text-end" style="padding-top: 20px;">
+	<div class="container text-end mb-5" style="padding-top: 20px;">
 	<div class ="row row-cols-md-2 g-3">
 	    <a href="elencoCategoria"><button class="btn-chiaro">Scopri i film tramite le categorie</button>
 	    </a>
