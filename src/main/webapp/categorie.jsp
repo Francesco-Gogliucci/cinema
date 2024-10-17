@@ -11,6 +11,7 @@
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<link rel="stylesheet" href="style.css">
+		<link rel="icon" type="image/x-icon" href="popcorn.png">
 	</head>
 	<body class="custom-bg">
 		<%@ include file="nav.jsp"%>

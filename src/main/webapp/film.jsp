@@ -25,7 +25,7 @@
         // Aggiunto controllo nullità per evitare errori
         if (film != null) { 
       %>
-         <img src="<%= film.getLocandina() %>" height="550" width="358" style="border-radius:15px" class="card-img-top" alt="locandina del film">
+         <img src="<%= film.getLocandina() %>" height="100%" width="358" style="border-radius:15px" class="card-img-top" alt="locandina del film">
          <div class="card-body"></div>
       <% 
         } else { 
@@ -38,13 +38,15 @@
   <!-- Dettagli del film -->
   <% if (film != null) { %> <!-- Aggiunto controllo nullità qui -->
   <div style="margin-left: 20px; max-width: 500px; padding-top: 100px;">
-      <span style="font-size: 40px; opacity: 0.5; color: white;">DETTAGLI</span>
+      
       <h1 style="color: white;">"<%= film.getTitolo() %>"</h1>
       <div>
         <p style="color: white;"><%= film.getTrama() %></p>
       </div>
       <br>
       <div>
+      	<span style="font-size: 25px; opacity: 0.5; color: white;">DETTAGLI</span>
+      	<br>
         <span style="font-size: 20px; opacity: 0.5; color: white;">Durata:</span>
         <p style="font-size: 15px; opacity: 0.5; color: white;"><%= film.getDurata() %> minuti</p>
         <span style="font-size: 20px; opacity: 0.5; color: white;">Data di uscita:</span>
@@ -68,7 +70,7 @@
       for (Attore attore : elencoAttori) { 
   %>
       <div class="col-lg-4">
-        <img src="<%= attore.getFoto() %>" class="bd-placeholder-img rounded-circle" width="140" height="140" alt="<%= attore.getNome() %> <%= attore.getCognome() %>">
+        <img src="<%= attore.getFoto() %>" class="bd-placeholder-img rounded-circle" width="140" height="140" style="background-size: cover; overflow: hidden;"alt="<%= attore.getNome() %> <%= attore.getCognome() %>">
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
         <p style="font-size: 15px; opacity: 0.5; color: white">Ruolo principale</p>
         <p><a class="btn btn-giallo" href="dettagliAttore?id=<%= attore.getId()%>">Vedi attore</a></p>
@@ -78,11 +80,11 @@
     } 
   %>
 </div>
-
+</div>
 <!-- Sezione recensioni -->
 <br><br>
 <div class="row" style="padding-left: 60px;">
-  <div class="col-lg-4">
+  <div class="col col-md-8 mb-5">
     <% if (session.getAttribute("username") == null) { %>
       <p style="font-size: 15px; color: white"><a href="./login.jsp" class="btn btn-giallo" <i class="bi bi-pencil"></i>> Accedi per aggiungere una recensione</a></p>
     <% } else {
@@ -110,17 +112,15 @@
             </div>
           </form>
           <% }else{%>
-          	<p>Film gia recensito</p>
+          	<h4 style="color:white">Hai già recensito questo film</h4>
           <%}%>
         </div>
       </div>
     <% } %>
   </div>
-</div>
 
 <!-- Sezione Preferiti -->
-<div class="row" style="padding-left: 60px;">
-  <div class="col-lg-4">
+  <div class="col col-md-4 mb-5 ml-5">
   <% if (session.getAttribute("username") == null) { %>
               <p style="font-size: 15px; color: white"> <a href="./login.jsp" class="btn btn-giallo"<i class="bi bi-box-arrow-in-right"></i>>Accedi per aggiungere il film ai preferiti</a></p>
             <% } else { 
@@ -138,16 +138,54 @@
             	}
             %>
     	<form action="preferiti" method="post">
+    	<div class="container text-centered">
     	   <input type="hidden" name="idUtente" value="<%=utente.getId()%>">
     	   <input type="hidden" name="filmId" value="<%=film.getId()%>">
     	   <% if(preferito == false) { %>
-    	       <button type="submit" class="btn btn-giallo"><img alt="fiml gia nei preferiti" src="star white.png" style="width:100px"></button>
+    	   		<h5 style="color:white">Aggiungi ai preferiti</h5>
+    	   		<br>
+    	       <button type="submit" style="box-shadow:rgb(101, 131, 161)" class="btn btn-giallo mt-2"><img height="100" width="100" alt="fiml gia nei preferiti" src="star white.png" style="width:100px"></button>
     	   <% } else { %>
     	       <img alt="fiml gia nei preferiti" src="star.png" style="width:100px">
     	   <% } %>
+    	   </div>
     	</form>
     <% } %>
   </div>
-</div>
+  <%  
+  		if(film.getRecensioni()!= null && !film.getRecensioni().isEmpty()){
+  			%>
+		  <div class= "container mb-5">
+		  	<div class = "row">
+		  	
+		  		<div class="container text-centered" style="border-Top: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
+		  		<h3 style="color: rgb(101, 131, 161);">Recensioni della nostra Community</h3>
+		  		</div>
+		  		
+		  		<% List <Recensione> recensioni = film.getRecensioni();
+		  			int i=0;
+		  				for(Recensione recensione:recensioni){
+		  					if(i<6){ %>
+		  		<div class="col col-md-6" style="border-Top: 3px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
+		  		<h6><%= recensione.getUtente().getUsername()%></h6>
+		  		<p><%= recensione.getRecensione()%></p>
+		  		</div>
+  		<%}
+  		i++;} %>
+  			</div>
+  			<div class="container text-centered">
+  			<a href="elencoRecensioni"><button class="btn-chiaro">Scopri la nostra community</button></a>
+  			</div>
+  			</div>
+  		<% }%>
+  
+  
+  
+</div>  
+
+
+  <%@ include file="footer.jsp"%>
+  
+
 </body>
 </html>
