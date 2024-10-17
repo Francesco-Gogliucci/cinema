@@ -13,31 +13,51 @@
 </head>
 <nav class="navbar fixed-top navbar-expand-lg mb-5" style="
 background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0, 0) 100%), rgba(26,45,63,0.8) ; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="homeServlet">
-            <img src="./img-ref/logo-navbar.png" alt="Bootstrap" width="141" height="60">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-                <li class="nav-item" style="padding-top: 20px">
-                    <a class="nav-link active" aria-current="page" href="elencoRecensioni">Community</a>
-                </li>
-                <li class="nav-item" style="padding-top: 20px">
-                <!-- Inserito collegamento a fil.jsp -->
-                    <a class="nav-link" href="ricercaFilmPerAnno?anno=2024">Novità</a>
-                </li>
-                <li class="nav-item" style="padding-top: 20px">
-                    <a class="nav-link" href="elencoCategoria">Generi</a>
-                </li>
-                 <li class="nav-item">
-                    <a class="navbar-brand" href="HalloweenServlet?idCategoria=5">
-            <img src="./img-ref/paghallo.png" alt="Bootstrap" width="100" height="70">
-        </a>
-                </li>
-            </ul>
+   <div class="container-fluid">
+    <a class="navbar-brand" href="homeServlet">
+        <img src="./img-ref/logo-navbar.png" alt="Bootstrap" width="141" height="60" style="transition: transform 0.3s ease;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+            <li class="nav-item" style="padding-top: 20px">
+                <a class="nav-link active" aria-current="page" href="elencoRecensioni" style="transition: transform 0.3s ease;">Community</a>
+            </li>
+            <li class="nav-item" style="padding-top: 20px">
+                <a class="nav-link" href="ricercaFilmPerAnno?anno=2024" style="transition: transform 0.3s ease;">Novità</a>
+            </li>
+            <li class="nav-item" style="padding-top: 20px">
+                <a class="nav-link" href="elencoCategoria" style="transition: transform 0.3s ease;">Generi</a>
+            </li>
+            <li class="nav-item">
+                <a class="navbar-brand" href="HalloweenServlet?idCategoria=5">
+                    <img src="./img-ref/paghallo.png" alt="Bootstrap" width="100" height="70" style="transition: transform 0.3s ease;">
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+   
+    .navbar-brand img:hover {
+        transform: scale(1.1); /* Zoom al 120% */
+    }
+
+    
+    .nav-link {
+        transition: transform 0.3s ease, color 0.3s ease; 
+        color: black;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.1); 
+        color: rgb(238, 226, 58);
+    }
+</style>
+
 
            <form class="d-flex align-items-center" action="ricercaFilmEAttoreServlet" method="get" role="search" style="margin-bottom: 0; padding-left: 300px;">
                  <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" name="ricerca" style="border-radius: 20px; height: 38px;">
