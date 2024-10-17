@@ -98,7 +98,7 @@
 
         <!-- Colonna locandina del film -->
         <div class="col-md-4 text-center mt-3">
-            <a href="dettagliFilm?idCategoria=<%= recensione.getFilm().getId() %>">
+            <a href="dettagliFilm?id=<%= recensione.getFilm().getId() %>">
                 <div class="card"
                     style="border-color: transparent; 
                     height: 310px; 
