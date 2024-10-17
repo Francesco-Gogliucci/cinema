@@ -73,18 +73,18 @@
                     String categoria = film.getCategoria().getGenere(); 
                     if(categoria.equalsIgnoreCase("Horror")) {  
             %>
-            <div class="col">
-                <div class="card" 
-                    style="border-color:transparent;
-                    height: 90%; width:200px;
-                    background-color: transparent;
-                    margin-left: 15px;">
-                    <a href="dettagliFilm?id=<%= film.getId() %>">
-                        <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover">
-                    </a>
-                    <h6 class="card-title testo-pargraph"><%= film.getTitolo() %></h6>
-                </div>
-            </div>
+             <div class="col">
+					 <div class="card mb-3" 
+						 style="border-color:transparent;
+							height: 90%; width:200px;
+							background-color: transparent;
+							margin-left: 15px;
+							padding-bottom: 20px;
+							border-radius:20px;">
+					<a href="dettagliFilm?id=<%= film.getId()%>"><img class="card-img-top" src="<%=film.getLocandina()%>"style="border-radius:15px; height: 280px; width:200px; object-fit: cover"></a> 
+	 			<h6 class="card-title testo-pargraph"><%=film.getTitolo()%></h6>
+			 </div>
+	 	 </div>
             <% 
                     } 
                 } 

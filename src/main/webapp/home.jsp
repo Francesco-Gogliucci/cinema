@@ -40,8 +40,9 @@
 							height: 90%; width:200px;
 							background-color: transparent;
 							margin-left: 15px;
-						}">
-					<a href="dettagliFilm?id=<%= film.getId()%>"><img class="card-img-top" src="<%=film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a> 
+							padding-bottom: 20px;
+							border-radius:20px;">
+					<a href="dettagliFilm?id=<%= film.getId()%>"><img class="card-img-top" src="<%=film.getLocandina()%>"style="border-radius:15px; height: 280px; width:200px; object-fit: cover"></a> 
 	 			<h6 class="card-title testo-pargraph"><%=film.getTitolo()%></h6>
 			 </div>
 	 	 </div>
@@ -135,8 +136,9 @@
 				 if(recensioni==null){
 					 %> <p> al momento non ci sono recensioni<% 
 				 }else{
+					 int i= 7;
 					 for(Recensione recensione:recensioni){%>
-				 
+				 		if(i>7) break;
 			
 				<div class ="row row-cols-md-3 g-3">
 				
@@ -150,13 +152,13 @@
 		   			</div>
 		   			<div class="col">
 		   			<a href="dettagliFilm?id=<%= recensione.getFilm().getId()%>">
-		   				<img class="card-img-top" src="<%=recensione.getFilm().getLocandina()%>" style="height:580px ;width : 350px; border-radius:15px; padding-bottom: 100px; margin-top: 50px; margin-left: 40px"></a>
+		   				<img class="card card-img-top mb-5" src="<%=recensione.getFilm().getLocandina()%>" style="height:380px ;width : 240px; border-radius:15px; margin-left: 40px; object-fit: cover"></a>
 		   			</div>
 				</div >
-			<%	}
+			<%	i++;}
 			}
 		%>
-		<div class="row text-center">
+		<div class="row text-center mb-5">
 			<a href="elencoRecensioni"><button class="btn-chiaro"> Scopri altre recensioni</button></a>
 		</div>
 	</div>

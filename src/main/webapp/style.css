@@ -30,7 +30,16 @@
     font-size: 14px;
     border: none;
 }
+.btn-chiaro:hover{
+	transform: scale(1.1);
+}
+.btn-chiaro:hover {
+  background-color: #2980b9;  /* Cambia il colore di sfondo al passaggio del mouse */
+}
 
+.btn-chiaro:active {
+  background-color: #1c5980;  /* Cambia il colore di sfondo quando il bottone è cliccato */
+}
 .custom-bg {
     background-color: rgb(26, 45, 63);
 }

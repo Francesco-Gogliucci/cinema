@@ -48,7 +48,7 @@
 			%>
 	  			 <div class="col">
                     <a href="ricercaPerCategoria?idCategoria=<%= categoria.getId() %>">
-                        <div class="card" 
+                        <div class="lumus card mt-4 " 
                             style="border-color: transparent; 
                             height: 310px; 
                             width: 210px; 
