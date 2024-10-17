@@ -20,19 +20,19 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item" style="padding-top: 20px">
                     <a class="nav-link active" aria-current="page" href="elencoRecensioni">Community</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="padding-top: 20px">
                 <!-- Inserito collegamento a fil.jsp -->
                     <a class="nav-link" href="ricercaFilmPerAnno?anno=2024">Novità</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item" style="padding-top: 20px">
                     <a class="nav-link" href="elencoCategoria">Generi</a>
                 </li>
                  <li class="nav-item">
                     <a class="navbar-brand" href="./halloween.jsp">
-            <img src="./img-ref/paghallo.png" alt="Bootstrap" width="164.36" height="66">
+            <img src="./img-ref/paghallo.png" alt="Bootstrap" width="100" height="70">
         </a>
                 </li>
             </ul>
