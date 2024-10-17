@@ -58,47 +58,60 @@
 		<!-- Categoria, bottoni-->
 
 	<div class="container text-end" style="padding-top: 20px;">
-	<div class ="row row-cols-md-2 g-3">
-	<div class="col" ></div>
-	  <div class="col" style="border-bottom: 4px solid rgb(101, 131, 161); color:rgb(101, 131, 161);">
-	    <h3>Scopri i film tramite le categorie</h3>
-	  </div>  
-	</div>
-	</div>
+    <div class="row row-cols-md-2 g-3">
+        <div class="col"></div>
+        <div class="col" style="border-bottom: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
+            <h3>Scopri i film tramite le categorie</h3>
+        </div>
+    </div>
+</div>
 
-	<div class="container" style="padding-top: 40px">
-	<div class ="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-3">	
-		<div class="col"></div>
-			<% /* List<String> categorie = new ArrayList <String>();
-				categorie.add("Azione");
-				categorie.add("Avventura");
-				categorie.add("Commedia");
-				categorie.add("Horror");
-				categorie.add("Fantascienza");
-				categorie.add("Fantasy");
-				categorie.add("Thriller");
-				categorie.add("Romantico");
-				categorie.add("Animazione");
-				categorie.add("Documentario");
-				categorie.add("Musical");
-				 */
-				 List <Categoria> categorie = (List <Categoria>)request.getAttribute("elencoCategorie");
-				for(Categoria categoria : categorie){%>
-			<div class="col">
-<!-- inserire nell'href una chamata alla sevlet con l'attributo per fare una ricerca per categoria e andare alla pagina tramite la sevlet-->
-			<a href="ricercaPerCategoria?idCategoria<%= categoria.getId()%>"><button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
-				    border-radius: 20px;
-				    color: white;
-				    padding: 5px 20px;
-				    font-size: 14px;
-				    border: none;"><%=categoria.getGenere()%></button></a>
-			</div>
-			<% }
-			%>
-		
-			</div>
-			<div class="col"></div>
-	</div>
+<div class="container" style="padding-top: 50px">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-3">
+        <% 
+        /* List<String> categorie = new ArrayList <String>();
+		categorie.add("Azione");
+		categorie.add("Avventura");
+		categorie.add("Commedia");
+		categorie.add("Horror");
+		categorie.add("Fantascienza");
+		categorie.add("Fantasy");
+		categorie.add("Thriller");
+		categorie.add("Romantico");
+		categorie.add("Animazione");
+		categorie.add("Documentario");
+		categorie.add("Musical");
+		 */
+        List<Categoria> categorie = (List<Categoria>) request.getAttribute("elencoCategorie");
+        for (int i = 0; i < categorie.size(); i++) { 
+            Categoria categoria = categorie.get(i);
+        %>
+            <div class="col d-flex justify-content-center align-items-center"> 
+                <a href="ricercaPerCategoria?idCategoria=<%= categoria.getId() %>">
+                    <button class="btn-chiaro" style="background-color: rgb(101, 131, 161);
+                            border-radius: 20px;
+                            color: white;
+                            padding: 5px 20px;
+                            font-size: 14px;
+                            border: none; 
+                            height: 50px; /* Altezza uniforme */
+                            min-width: 120px; /* Larghezza minima */
+                            ">
+                        <%= categoria.getGenere() %>
+                    </button>
+                </a>
+            </div>
+        <% 
+            if ((i + 1) % 6 == 0 && (i + 1) < categorie.size()) { 
+                %>
+                </div><div class="row row-cols-1 row-cols-sm-2 row-cols-md-6 g-3 mt-4"> 
+                <%
+            }
+        } 
+        %>
+    </div>
+</div>
+
 	
 	<!--  recensioni utente -->
 	<!-- inserire un href per l'utente, che vada tramite la servlet delle recensioni ad aprire uns pagina con le recensioni dell'utente-->
