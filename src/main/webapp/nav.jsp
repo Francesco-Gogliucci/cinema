@@ -33,7 +33,7 @@ background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0
                     <a class="nav-link" href="elencoCategoria">Generi</a>
                 </li>
                  <li class="nav-item">
-                    <a class="navbar-brand" href="ricercaPerCategoria?idCategoria=5">
+                    <a class="navbar-brand" href="HalloweenServlet?idCategoria=5">
             <img src="./img-ref/paghallo.png" alt="Bootstrap" width="100" height="70">
         </a>
                 </li>

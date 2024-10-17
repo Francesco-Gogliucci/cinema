@@ -34,7 +34,7 @@
         </div>
 
         <!-- Sezione dei film --><br>
-	<span style="font-size: 40px; opacity: 0.5; color: white;">FILM</span>
+        <span style="font-size: 40px; opacity: 0.5; color: white;">FILM</span>
         <div class="row" style="padding-top: 50px;">
             <div class="col-md-12">
                 <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
@@ -44,11 +44,11 @@
                     %>
                         <div class="col">
                             <div class="card-locandina card" style="border-color:transparent; height: 100%; width:200px; background-color: transparent;">
-                             
-                           <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover" alt="Poster film">
-                               
-                        
-                                <h6 class="card-title" style="color: white;"><%= film.getTitolo() %></h6>
+                                <!-- Aggiunto il link per le locandine -->
+                                <a href="dettagliFilm?id=<%= film.getId() %>">
+                                    <img class="card-img-top" src="<%= film.getLocandina() %>" style="border-radius:15px; height: 100%; width:200px; object-fit: cover" alt="Poster film">
+                                    <h6 class="card-title" style="color: white;"><%= film.getTitolo() %></h6>
+                                </a>
                             </div>
                         </div>
                     <% 
