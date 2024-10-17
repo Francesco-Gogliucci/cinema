@@ -59,7 +59,7 @@ background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0
 </style>
 
 
-           <form class="d-flex align-items-center" action="ricercaFilmEAttoreServlet" method="get" role="search" style="margin-bottom: 0; padding-left: 300px;">
+           <form class="d-flex align-items-center" action="ricercaFilmEAttoreServlet" method="get" role="search" style="margin-bottom: 0; padding-left: 20px;">
                  <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search" name="ricerca" style="border-radius: 20px; height: 38px;">
                  <button class="btn btn-sm btn-giallo" type="submit" style="height: 38px; margin-left: 5px;">Cerca</button>
               </form>
