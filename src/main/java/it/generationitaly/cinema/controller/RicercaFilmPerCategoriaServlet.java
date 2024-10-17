@@ -21,6 +21,7 @@ public class RicercaFilmPerCategoriaServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+	
 		long idCategoria = Long.parseLong(request.getParameter("idCategoria"));
 		List<Film> filmCategoria = filmRepository.findFilmByCategoriaId(idCategoria);
 		request.setAttribute("filmCategoria", filmCategoria);
