@@ -29,31 +29,34 @@
   <!-- carosello coming soon -->
   <div class="row justify-content-evenly" style="padding-top: 50px">
   <div class="col-11" >
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); border-radius: 10px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
+    <div class="carousel-item active" style="position: relative;" >
       <a href="dettagliFilm?id=61"><img src="carosello1.jpg" class="d-block w-100"  alt="..."></a>
+      <div class="gradient-overlay"></div>
       <div class="carousel-caption d-none d-md-block">
-        <h3 style="text-transform: uppercase;">Coming soon</h3>
+        <h2 class="testo-titoli" style="text-transform: uppercase; font-weight: bold;">Coming soon</h2>
         <h1 style="text-transform: uppercase;">Terrifier 3:<span style="text-transform: lowercase;"> il nuovo violentissimo slasher con Art il Clown</span></h1>
       </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" style="position: relative;">
       <a href="dettagliFilm?id=62"><img src="carosello2.png" class="d-block w-100" alt="..."></a>
+      <div class="gradient-overlay"></div>
       <div class="carousel-caption d-none d-md-block">
-        <h3 style="text-transform: uppercase;">Coming soon</h3>
+        <h2 class="testo-titoli" style="text-transform: uppercase; font-weight: bold;">Coming soon</h2>
         <h1 style="text-transform: uppercase;">Wicked:<span style="text-transform: lowercase;"> scopri la vera storia mai raccontata delle streghe di Oz nel più grande successo di Broadway</span></h1>
       </div>
     </div>
-    <div class="carousel-item">
+    <div class="carousel-item" style="position: relative;">
       <a href="dettagliFilm?id=63"><img src="carosello3.png" class="d-block w-100" alt="..."></a>
+      <div class="gradient-overlay"></div>
       <div class="carousel-caption d-none d-md-block">
-       <h3 style="text-transform: uppercase;">Coming soon</h3>
+       <h2 class="testo-titoli" style="text-transform: uppercase; font-weight: bold;">Coming soon</h2>
         <h1 style="text-transform: uppercase;">Nosferatu: <span style="text-transform: lowercase;">Un racconto gotico sull'ossessione tra una giovane donna tormentata e il terrificante vampiro che si è infatuato di lei, provocando un indicibile orrore.</span></h1>
       </div>
     </div>
@@ -69,9 +72,10 @@
 </div>
 </div>
 </div>
+<h1 class="testo-titoli" style="text-transform: uppercase; font-weight: bold; margin-left: 800px; padding-top: 50px">Ultime uscite</h1>
 	<!-- Novità card film --> 
 <div class="album py-5">
-    <div class="container" style="padding-top: 20px">
+    <div class="container" style="padding-top: 20px; margin-right: 260px">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 
             <%
