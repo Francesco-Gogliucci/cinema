@@ -2,51 +2,27 @@
     pageEncoding="UTF-8"%>
     
 	    
-	<footer class="container-fluid" style="background:rgb(101, 131, 161)">
+	<footer class="container-fluid text-end" style="background-image: url('./img-ref/footer.png'); background-size: cover; background-position: center; padding: 50px 0; color: white;">
 	  <div class="row">
-	    <div class="col-12 col-md">
-	      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"></circle><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path></svg>
-	      <small class="d-block mb-3 text-body-secondary">© 2024 cinema</small>
+	    <div class="col-7 ">
+	      <img src="./img-ref/logo-senzapop.png">
+	      <br>
+	      <br>
+	      <small class="d-block mb-3 text-body-secondary">© 2024 Cinema 4 Generation Italy</small>
 	    </div>
-	    <div class="col-6 col-md">
-	      <h5>Features</h5>
-	      <ul class="list-unstyled text-small">
-	        <li><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
-	      </ul>
-	    </div>
-	    <div class="col-6 col-md">
-	      <h5>Resources</h5>
-	      <ul class="list-unstyled text-small">
-	        <li><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
-	      </ul>
-	    </div>
-	    <div class="col-6 col-md">
-	      <h5>Resources</h5>
-	      <ul class="list-unstyled text-small">
-	        <li><a class="link-secondary text-decoration-none" href="#">Business</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Education</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Government</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Gaming</a></li>
-	      </ul>
-	    </div>
-	    <div class="col-6 col-md">
+	    <div class="col-4 col-md mr-5">
 	      <h5>Team</h5>
 	      <ul class="list-unstyled text-small">
-	        <li><a class="link-secondary text-decoration-none" href="#">Angelo</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Francesco</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Giulia</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Laura</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Lorena</a></li>
-	        <li><a class="link-secondary text-decoration-none" href="#">Sara</a></li>
+	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Angelo Mura</p></li>
+	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Giulia Gargiulo</p></li>
+	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Lura Trocchia</p></li>
+	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Lorena Sciacca</p></li>
+	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Francesco Gogliucci</p></li>
+	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Sara Colella</p></li>
 	      </ul>
 	    </div>
+	     <div class="col-1 mg-5">
+	     </div>
 	  </div>
+	  
 	</footer>
