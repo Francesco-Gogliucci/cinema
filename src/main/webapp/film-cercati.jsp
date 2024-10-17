@@ -10,7 +10,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
+
 <body class="custom-bg">
 <%@ include file="nav.jsp"%>
 
@@ -55,7 +58,8 @@
 						 style="border-color:transparent;
 							height: 90%; width:200px;
 							background-color: transparent;
-							margin-left: 15px;">
+							margin-left: 15px;
+							padding: 20">
 					 <a href="dettagliFilm?id=<%= film.getId()%>"><img class="card-img-top" src="<%= film.getLocandina()%>"style="border-radius:15px; height: 100%; width:200px; object-fit: cover"></a>
 	 			<h6 class="card-title testo-pargraph"><%= film.getTitolo()%></h6>
 			 </div>
@@ -64,18 +68,20 @@
 			 <%}
 			}
 			if(request.getAttribute("attori")!=null){	%>
-	<div class="row">
+			</div>
+	<div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 ml-5 g-3">
 	
 	<% List<Attore> attoreRicerca = (List<Attore>)request.getAttribute("attori");
 			 	for(Attore attore : attoreRicerca){%>
-      <div class="col-lg-4">
-        <img src="<%= attore.getFoto() %>" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"><%= attore.getNome() %> <%= attore.getCognome() %>">
+      <div class="col ml-5">
+        <a href="dettagliAttore?id=<%= attore.getId()%>"><img src="<%= attore.getFoto() %>" class="rounded-circle mb-1 hover-shadow" style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></a>
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
-        <p><a class="btn btn-giallo" href="dettagliAttore?id=<%= attore.getId()%>">Vedi attore</a></p>
       </div>
   <% 
 		}
-      } 
+      }else{
+    	  %> </div><% 
+      }
 		 if((request.getAttribute("attori")==null)&&(request.getAttribute("filmTitolo")==null)&&(request.getAttribute("filmCategoria")==null)){%>
 			<div class="container text-center">
 				<h2 style="color:white">La tua ricerca non ha risultati</h2>
@@ -84,7 +90,7 @@
 			<% 
 		}
   %>
-</div>
+
 			
 	 	</div>
 	 </div>

@@ -8,7 +8,8 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
+	<title>I risultati della tua ricerca</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body class="custom-bg">
 	<%@ include file="nav.jsp"%>
