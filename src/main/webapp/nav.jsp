@@ -11,16 +11,17 @@
           crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<nav class="navbar fixed-top navbar-expand-lg mb-5" style="background-color: rgb(101, 131, 161); box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+<nav class="navbar fixed-top navbar-expand-lg mb-5" style="
+background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0, 0) 100%), rgba(26,45,63,0.8) ; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
     <div class="container-fluid">
         <a class="navbar-brand" href="homeServlet">
-            <img src="./img-ref/logo-popcorn.png" alt="Bootstrap" width="164.36" height="66">
+            <img src="./img-ref/logo-navbar.png" alt="Bootstrap" width="141" height="60">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-1 mb-lg-0">
                 <li class="nav-item" style="padding-top: 20px">
                     <a class="nav-link active" aria-current="page" href="elencoRecensioni">Community</a>
                 </li>

@@ -70,9 +70,10 @@
       for (Attore attore : elencoAttori) { 
   %>
       <div class="col-lg-4">
-        <img src="<%= attore.getFoto() %>" class="bd-placeholder-img rounded-circle" width="140" height="140" style="background-size: cover; overflow: hidden;"alt="<%= attore.getNome() %> <%= attore.getCognome() %>">
+        <img class="rounded-circle" 
+     src="<%=attore.getFoto()%>" 
+     style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);">
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
-        <p style="font-size: 15px; opacity: 0.5; color: white">Ruolo principale</p>
         <p><a class="btn btn-giallo" href="dettagliAttore?id=<%= attore.getId()%>">Vedi attore</a></p>
       </div>
   <% 

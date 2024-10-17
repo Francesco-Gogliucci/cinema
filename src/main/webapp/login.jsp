@@ -131,12 +131,16 @@
 </head>
 <body class="login-background">
 <%@ include file="nav.jsp"%>
-
+<div class="container mt-5 mb-5" style="color:rgba(0,0,0,0)">navbar</div>
 <main class="form-signin w-100 w-sm-75 w-md-50 m-auto mt-5 mb-5"> 
-<div class="form-aspect mt-4">
-  <form action="login" method="post"class="col-12 col-md-4 m-auto">
-	<!--modificarealtezza elarghezza logo-->
-    <img class="mb-4" src="./logo-pop corn.png" alt="" width="72" height="57" >
+
+  <form action="login" method="post"class="col-12 col-md-5 m-auto mt-5">
+  <div class="form-aspect text-centered">
+	
+	<!--  immagine logo -->
+	
+    <img src="./img-ref/logo-login-registrazione.png"class="img-fluid" >
+  	
     <h1 class="h4 mb-3 fw-normal" style="color: white">Login</h1> 
 
 	<!--manda nome servlet-->
@@ -160,16 +164,20 @@
 
     </div>
    <button class="btn" style="background-color: rgb(238, 226, 58); border-radius: 20px;" type="submit">Login</button>
+ 	</div>
  	</form>
- </div>
+ 
    <% if (request.getParameter("erroreCredenziali") != null) { %>
     <br>
     <br>
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-danger ml-5 mr-5" role="alert">
 		Credenziali errate!
 	</div>
 	<% } %>
 
+	<br>
+	<br>
+	<br>
 </main>
 
 <%@ include file="footer.jsp"%>
