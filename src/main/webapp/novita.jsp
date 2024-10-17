@@ -28,7 +28,7 @@
   </section>
   <!-- carosello coming soon -->
   <div class="row justify-content-evenly" style="padding-top: 50px">
-  <div class="col-11" >
+  <div class="col-10" >
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); border-radius: 10px;">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -70,12 +70,13 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+<h1 class="testo-titoli" style="text-transform: uppercase; font-weight: bold; padding-top: 50px">Ultime uscite</h1>
 </div>
 </div>
-<h1 class="testo-titoli" style="text-transform: uppercase; font-weight: bold; margin-left: 800px; padding-top: 50px">Ultime uscite</h1>
+
 	<!-- Novità card film --> 
 <div class="album py-5">
-    <div class="container" style="padding-top: 20px; margin-right: 260px">
+    <div class="container" style="padding-top: 20px;">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 
             <%
