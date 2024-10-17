@@ -20,27 +20,19 @@ public class ElencoRecensioniServlet extends HttpServlet {
 
 	private RecensioneRepositoryImpl recensioneRepository = new RecensioneRepositoryImpl();
 	private UtenteRepositoryImpl utenteRepository = new UtenteRepositoryImpl();
-	
+
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("Start ELENCO RECENSIONI");
 		List<Recensione> elencoRecensioni = recensioneRepository.findAll();
-		List<Utente> utenti= utenteRepository.findAll();
-		
-		Boolean home = (Boolean) request.getAttribute("home");
+		List<Utente> utenti = utenteRepository.findAll();
 
 		request.setAttribute("elencoRecensioni", elencoRecensioni);
-		
-		if (home != null && home) {
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("home.jsp");
-			System.out.println("FORWARD");
-			requestDispatcher.forward(request, response);
-		} else {
-			request.setAttribute("elencoUtenti", utenti);
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("community.jsp");
-			requestDispatcher.forward(request, response);
-		}
+
+		request.setAttribute("elencoUtenti", utenti);
+		RequestDispatcher requestDispatcher = request.getRequestDispatcher("community.jsp");
+		requestDispatcher.forward(request, response);
 	}
 
 	@Override
