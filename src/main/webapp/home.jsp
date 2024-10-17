@@ -93,10 +93,10 @@
                             border-radius: 20px;
                             color: white;
                             padding: 5px 20px;
-                            font-size: 14px;
+                            font-size: 16px;
                             border: none; 
-                            height: 50px; /* Altezza uniforme */
-                            min-width: 120px; /* Larghezza minima */
+                            height: 50px; 
+                            min-width: 120px; 
                             ">
                         <%= categoria.getGenere() %>
                     </button>
