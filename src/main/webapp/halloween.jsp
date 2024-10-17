@@ -25,6 +25,45 @@
     </div>
   </div>
     </div>
+    <div class="row justify-content-evenly" style="padding-top: 50px">
+  <div class="col-11" >
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <a href="dettagliFilm?id=61"><img src="carrosellohalloween1.png" class="d-block w-100"  alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="text-transform: uppercase;">Terrifier 3:<span style="text-transform: lowercase;"> il nuovo violentissimo slasher con Art il Clown</span></h1>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="dettagliFilm?id=62"><img src="carosellohalloween2.png" class="d-block w-100" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="text-transform: uppercase;">It:<span style="text-transform: lowercase;"> L'adattamento dell'omonimo romanzo di Stephen King</span></h1>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <a href="dettagliFilm?id=63"><img src="carosellohalloween3.png" class="d-block w-100" alt="..."></a>
+      <div class="carousel-caption d-none d-md-block">
+        <h1 style="text-transform: uppercase;">The nun: <span style="text-transform: lowercase;">Una giovane suora e un prete partono alla volta della Romania per scoprire i segreti di un luogo sacro infestato da uno spirito maligno.</span></h1>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+</div>
     <div class="album py-5">
     <div class="container mt-5" style="padding-top: 20px">
         <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
