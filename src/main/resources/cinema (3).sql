@@ -317,6 +317,7 @@ Successivamente, Taissa ha recitato in film come "The Bling Ring" e "The Nun", d
 
 INSERT INTO attore VALUES ('28','Bonnie', 'Aarons','1960-09-09','https://m.media-amazon.com/images/M/MV5BODVmMTUwOGUtNWRjOC00NzgzLTg1MDctZDc4NjEwNDkzMGYwXkEyXkFqcGc@._V1_.jpg','Bonnie Aarons è un''attrice e produttrice americana, nota soprattutto per il suo lavoro nel genere horror. Nata a Los Angeles, ha una carriera che si estende per diversi decenni, con ruoli memorabili sia al cinema che in televisione. Uno dei suoi ruoli più celebri è quello della demoniaca suora Valak nel film ""The Conjuring 2"" e nel successivo spin-off ""The Nun"". La sua interpretazione ha ricevuto ampi consensi e ha contribuito a rendere Valak una figura iconica nel franchise horror. Bonnie ha anche lavorato in altri film e serie TV, apparendo in produzioni come ""The Princess Diaries"" e "Mulholland Drive"". Famosa per il suo aspetto distintivo e la sua presenza scenica, ha dimostrato di essere un''attrice versatile, in grado di interpretare ruoli sia comici che drammatici');
 
+INSERT INTO attore VALUES ('29','Jonas', 'Bloquet','1992-07-10','https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/547328_v9_bb.jpg','Jonas Bloquet è un attore e regista belga, noto per il suo ruolo nel film horror "The Nun" e nel suo sequel "The Nun II", dove ha interpretato il personaggio di Maurice, conosciuto anche come "Frenchie". Questo ruolo ha contribuito a far crescere la sua fama internazionale all''interno del genere horror, poiché il film fa parte del popolare "The Conjuring Universe". La carriera di Bloquet è iniziata con film e serie in Belgio e Francia, ma ha poi ottenuto visibilità globale grazie alle sue interpretazioni in produzioni di Hollywood.');
 
 
 // inserimento recensioni
@@ -485,8 +486,9 @@ INSERT INTO  film_attore VALUES('15','61','25');
 INSERT INTO film_attore VALUES ('16','63','26');
 INSERT INTO film_attore VALUES ('17','68','27');
 INSERT INTO film_attore VALUES ('18','68','28');
+INSERT INTO film_attore VALUES ('19', '68','29');
 
-INSERT INTO film_attore VALUES('19','53','5');
+
 INSERT INTO film_attore VALUES('20','12','6');
 INSERT INTO film_attore VALUES('21','15','6');
 INSERT INTO film_attore VALUES('22','30','6');
