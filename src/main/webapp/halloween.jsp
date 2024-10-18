@@ -3,6 +3,8 @@
      <%@ page import="java.util.List"
 		import="java.util.HashMap"
 		import="java.util.ArrayList"
+		import="java.util.Set"
+		import="java.util.stream.Collectors"
 		import="it.generationitaly.cinema.entity.*"
  %>
 <!DOCTYPE html>
@@ -136,30 +138,30 @@
     <span style="font-size: 40px; opacity: 0.5; color: white;">ATTORI DA BRIVIDI...</span>
 </div>
 <br><br><br>
+<div class="container  mr-5 ml-5">
+
 <div class="row">
     <% 
     if(request.getAttribute("filmCategoria") != null) {
         List<Film> filmCategoria = (List<Film>) request.getAttribute("filmCategoria");
-        for(Film film : filmCategoria) {
-            String categoria = film.getCategoria().getGenere(); 
-            if(categoria.equalsIgnoreCase("Horror")) {  
-                List<Attore> elencoAttori = film.getAttori();
-                if (elencoAttori != null) {
-                    for (Attore attore : elencoAttori) { 
+        Set <Attore> attori = filmCategoria.stream()
+        		.flatMap(film -> film.getAttori().stream())  
+				.collect(Collectors.toSet());
+        								
+        								
+        for(Attore attore: attori){
     %>
-      <div class="col-lg-4 offset-lg-1" style="margin-bottom: 30px;"> 
+      <div class="col-lg-3" style="margin-bottom: 30px;"> 
         <a href="dettagliAttore?id=<%= attore.getId()%>"><img class="rounded-circle" 
      src="<%=attore.getFoto()%>" 
      style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></a>
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
       </div>
     <% 
-                    } 
-                }
-            } 
-        } 
-    } 
+                    }  
+    }
     %>
+</div>
 </div>
                  
    
