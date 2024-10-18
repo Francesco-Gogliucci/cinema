@@ -320,7 +320,7 @@ INSERT INTO attore VALUES ('28','Bonnie', 'Aarons','1960-09-09','https://m.media
 
 
 // inserimento recensioni
-
+//
 INSERT INTO recensione VALUES('1','Questo film va visto... a qualunque costo. A mio parere il migliore dei 23 del Marvel Cinematic Universe. Battere Avengers: Infinity War era un impresa più che ardua, ma Avengers: Endgame ci è riuscito.
 Interpretazione indimenticabile (in particolare nel caso di Robert Downey Jr colonna sonora fantastica, missione epica, e naturalmente la più grande battagliona finalona della storia, rendono questo film una specie di capolavoro, facendo provare allo spettatore (soprattutto ai fan del MCU) una emozione e una carica incredibili. Personalmente, non ho mai provato una tale emozione e una tale carica in nessun film che io abbia già visto. E quando lo vedi in sala... SPETTACOLARE. Assolutamente spettacolare. 
 Non si era mai visto un capitolo conclusivo tanto spettacolare, tanto amato, tanto proficuo e, soprattutto, tanto mastodontico, essendo la fine dei giochi di una saga composta da 21 film, prima di esso. Ci ha fatto ridere, piangere, commuovere, emozionare. L''ultima battaglia, un ultimo sacrificio, un ultima missione. Un ultimo ''Io sono Iron Man''. 
