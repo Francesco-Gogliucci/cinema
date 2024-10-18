@@ -132,7 +132,7 @@
         </div>
     </div>
 </div>
-<div class="text-center"> 
+<div class="text-center"> <!-- Centra il testo -->
     <span style="font-size: 40px; opacity: 0.5; color: white;">ATTORI DA BRIVIDI...</span>
 </div>
 <br><br><br>
@@ -151,7 +151,9 @@
         <a href="dettagliAttore?id=<%= attore.getId()%>"><img class="rounded-circle" 
      src="<%=attore.getFoto()%>" 
      style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></a>
-        <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
+        <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white; margin-top: 10px;"> 
+            <%= attore.getNome() %> <%= attore.getCognome() %>
+        </h2>
       </div>
     <% 
                     } 
