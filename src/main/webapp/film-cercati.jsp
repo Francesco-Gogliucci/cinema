@@ -16,7 +16,15 @@
 
 <body class="custom-bg">
 <%@ include file="nav.jsp"%>
-
+<!-- head novità -->
+<section class="py-5 text-center container-fluid headline-background">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="testo-titoli">COMMUNITY</h1>
+        <p class="testo-pargraph">Resta sempre aggiornato sulle ultime uscite e scopri sempre nuovi titoli grazie alla nostra community</p>
+      </div>
+    </div>
+  </section>
 	 
 	<!-- Poster dei film --> 
 <div class="album py-5">
