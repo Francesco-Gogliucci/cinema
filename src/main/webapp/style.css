@@ -66,6 +66,15 @@
 	background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0, 0) 100%), url(./img-ref/kubrick-2001-fotoXK.jpg);
 
 }
+.headline-casual {
+  
+  	background-size: cover; 
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 160px;
+}
+
 
 .headline-background2 {
     background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0, 0) 100%), url(./img-ref/halloween.jpg);

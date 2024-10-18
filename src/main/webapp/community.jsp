@@ -3,7 +3,8 @@
 <%@ page import="it.generationitaly.cinema.entity.*"%>
 <%@ page import="java.util.List" import="java.util.HashMap"
 	import="java.util.ArrayList" import="java.util.Set"
-	import="java.util.stream.Collectors"%>
+	import="java.util.stream.Collectors"
+	import="java.util.Random"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +14,12 @@
 </head>
 <body class="custom-bg">
 	<%@ include file="nav.jsp"%>
-	<!-- head novità -->
-<section class="py-5 text-center container-fluid headline-background">
+	<!-- inizializzazione di un numero random, ricordare le import della classe random-->
+	<% Random random = new Random(); 
+		int x = random.nextInt(7);%>
+	<!-- head chiamare la classe css headline-casuale-->
+<section class="py-5 text-center container-fluid headline-casual"
+		style="background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0, 0) 100%), url(./img-ref/<%= x%>.png);"><!-- url con numero random -->
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="testo-titoli">COMMUNITY</h1>
