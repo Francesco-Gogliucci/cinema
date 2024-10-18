@@ -154,16 +154,16 @@
                     <h5 style="color:white">Aggiungi ai preferiti</h5>
                     <br>
                     <button type="submit" style="box-shadow:rgb(101, 131, 161)" class="btn btn-giallo mt-2">
-                        <img height="100" width="100" alt="film da aggiungere ai preferiti" src="cuorepreferiti.png" style="width:100px">
+                        <img height="100" width="100" alt="film da aggiungere ai preferiti" src="aggiungi preferiti.png" style="width:100px">
                     </button>
                     </form>
                 <% } else { %>
-                    <h5 style="color:white">Film già nei preferiti</h5>
+                    <h5 style="color:white">Rimuovi film dai preferiti</h5>
                     <form action="rimuoviPreferito" method="post">
                         <input type="hidden" name="utenteId" value="<%= utente.getId() %>">
                         <input type="hidden" name="filmId" value="<%= film.getId() %>">
                         <button type="submit" style="box-shadow:rgb(101, 131, 161)" class="btn btn-giallo mt-2">
-                            <img alt="film già nei preferiti" src="star.png" style="width:100px">
+                            <img alt="film già nei preferiti" src="rimuovipreferiti.png" style="width:100px">
                         </button>
                     </form>
                 <% } %>
