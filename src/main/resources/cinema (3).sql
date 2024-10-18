@@ -304,7 +304,19 @@ INSERT INTO attore VALUES ('23','Keira', 'Knightley','1985-03-26','https://compa
 
 INSERT INTO attore VALUES ('24','Viggo','Mortensen','1958-10-20','https://cdn.britannica.com/36/221836-050-E37532D9/Danish-American-actor-author-Viggo-Mortensen-2018.jpg','Viggo Mortensen è un attore, produttore e fotografo statunitense, noto per la sua versatilità e la sua intensità nelle interpretazioni. È cresciuto tra il Venezuela, gli Stati Uniti e la Danimarca, sviluppando una passione per le arti sin da giovane. Ha guadagnato notorietà mondiale grazie al suo ruolo di Aragorn nella trilogia de "Il Signore degli Anelli", diretta da Peter Jackson, che ha segnato un punto di svolta nella sua carriera. Mortensen ha recitato in una vasta gamma di film, tra cui "A History of Violence" (2005), "Eastern Promises" (2007) e "Captain Fantastic" (2016), dimostrando la sua capacità di interpretare personaggi complessi e sfumati. Oltre alla recitazione, è anche un artista e un fotografo, con mostre delle sue opere in tutto il mondo. Mortensen è noto per il suo impegno politico e sociale, affrontando temi importanti sia nei suoi film che nelle sue dichiarazioni pubbliche. Con una carriera che abbraccia oltre tre decenni, è considerato uno degli attori più rispettati di Hollywood.');
 
-   
+   INSERT INTO attore VALUES ('25','David Howard ','Thornton','1979-11-30','https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/David_Howard_Thornton_by_Gage_Skidmore.jpg/1200px-David_Howard_Thornton_by_Gage_Skidmore.jpg','David Howard Thornton è un attore e doppiatore americano, noto soprattutto per il suo ruolo di Art the Clown nel film horror "Terrifier" e nel suo seguito "Terrifier 2". È diventato un''icona nel genere horror grazie alla sua interpretazione inquietante e alla sua abilità nel creare un personaggio che combina umorismo macabro e terrore.
+Oltre al suo lavoro nel cinema, Thornton ha una formazione teatrale e ha recitato in numerosi spettacoli e produzioni. È anche noto per il suo lavoro nel doppiaggio, in particolare in progetti legati ai videogiochi e ai cartoni animati. La sua carriera è caratterizzata da una passione per il genere horror, e ha guadagnato un seguito di fan grazie alla sua versatilità e alla sua presenza scenica.
+David è anche attivo sui social media, dove interagisce con i fan e condivide aggiornamenti sulla sua carriera. La sua dedizione alla recitazione e la sua capacità di incarnare personaggi complessi lo hanno reso una figura rispettata e ammirata nel panorama dell''intrattenimento horror.');
+
+INSERT INTO attore VALUES ('26','Bill', 'Skarsgård','1990-08-09','https://m.media-amazon.com/images/M/MV5BMmNhMDQ1YjktYTg1Ny00Mjg0LWFmZTgtMmE0OTkxYmQzYzVlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg','Bill Skarsgård è un attore svedese famoso per il suo ruolo di Pennywise nel remake di "It" e nel suo seguito, "It Chapter Two". Nato in una famiglia di attori, è il figlio di Stellan Skarsgård e ha diversi fratelli, tra cui Alexander e Gustaf, anch''essi attori.
+Ha iniziato la sua carriera in produzioni televisive svedesi, guadagnando attenzione con la serie "Hemlock Grove", dove interpretava Roman Godfrey, un vampiro tormentato. La sua interpretazione di Pennywise ha catturato l''attenzione del pubblico e della critica, rendendolo un’icona del genere horror.
+Skarsgård ha dimostrato la sua versatilità recitando in film come "The Devil All the Time" e "Dunkirk", oltre alla serie "Castle Rock", basata sulle opere di Stephen King. La sua carriera continua a crescere, facendone uno degli attori più promettenti della sua generazione.');
+
+INSERT INTO attore VALUES ('27','Taissa', 'Farmiga','1994-08-17','https://images.mubicdn.net/images/cast_member/377870/cache-86262-1380990207/image-w856.jpg', 'Taissa Farmiga è un''attrice americana, originaria del New Jersey. È la sorella minore dell''attrice Vera Farmiga, nota per i suoi ruoli in film come "The Others" e "The Conjuring". Di origini ucraine, ha iniziato la sua carriera nel mondo dello spettacolo con la serie "American Horror Story", dove ha interpretato il ruolo di Violet Harmon nella prima stagione, "Murder House". Questa interpretazione le ha conferito notorietà e l''ha portata a diventare un volto conosciuto nel genere horror.
+Successivamente, Taissa ha recitato in film come "The Bling Ring" e "The Nun", dove ha interpretato la suora Irene. Le sue performance sono state apprezzate dalla critica, dimostrando la sua versatilità in una varietà di generi, dal thriller psicologico alla commedia drammatica. Oltre alla recitazione, Taissa ha anche partecipato a produzioni teatrali e cortometraggi. È conosciuta per il suo carattere riservato e per mantenere la vita privata lontano dai riflettori. Ha studiato psicologia presso l''Università di Montclair, unendo la sua passione per la recitazione con un interesse accademico.');
+
+INSERT INTO attore VALUES ('28','Bonnie', 'Aarons','1960-09-09','https://m.media-amazon.com/images/M/MV5BODVmMTUwOGUtNWRjOC00NzgzLTg1MDctZDc4NjEwNDkzMGYwXkEyXkFqcGc@._V1_.jpg','Bonnie Aarons è un''attrice e produttrice americana, nota soprattutto per il suo lavoro nel genere horror. Nata a Los Angeles, ha una carriera che si estende per diversi decenni, con ruoli memorabili sia al cinema che in televisione. Uno dei suoi ruoli più celebri è quello della demoniaca suora Valak nel film ""The Conjuring 2"" e nel successivo spin-off ""The Nun"". La sua interpretazione ha ricevuto ampi consensi e ha contribuito a rendere Valak una figura iconica nel franchise horror. Bonnie ha anche lavorato in altri film e serie TV, apparendo in produzioni come ""The Princess Diaries"" e "Mulholland Drive"". Famosa per il suo aspetto distintivo e la sua presenza scenica, ha dimostrato di essere un''attrice versatile, in grado di interpretare ruoli sia comici che drammatici');
+
 
 
 // inserimento recensioni
@@ -468,10 +480,12 @@ INSERT INTO film_attore VALUES('11','9','3');
 INSERT INTO film_attore VALUES('12','1','4');
 INSERT INTO film_attore VALUES('13','5','4');
 INSERT INTO film_attore VALUES('14','28','2'); 
-INSERT INTO film_attore VALUES('15','28','2'); 
-INSERT INTO film_attore VALUES('16','40','4');
-INSERT INTO film_attore VALUES('17','41','4');
-INSERT INTO film_attore VALUES('18','11','5');
+
+INSERT INTO  film_attore VALUES('15','61','25');
+INSERT INTO film_attore VALUES ('16','63','26');
+INSERT INTO film_attore VALUES ('17','68','27');
+INSERT INTO film_attore VALUES ('18','68','28');
+
 INSERT INTO film_attore VALUES('19','53','5');
 INSERT INTO film_attore VALUES('20','12','6');
 INSERT INTO film_attore VALUES('21','15','6');
