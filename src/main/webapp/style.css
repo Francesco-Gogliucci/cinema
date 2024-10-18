@@ -13,15 +13,31 @@
     border: none;
 }
 
+.btn-giallo:hover{
+	transform: scale(1.1);
+}
+.btn-giallo:hover {
+  background-color: #2980b9;  /* Cambia il colore di sfondo al passaggio del mouse */
+  box-shadow: 0px 4px 8px rgba(255, 255,255, 255);
+}
 
 .btn-nero {
-    background-color: rgb(70, 70, 70);
+    background-color: rgb(101, 131, 161);
     border-radius: 20px;
     color: white;
     padding: 5px 20px;
     font-size: 14px;
     border: none;
 }
+
+.btn-nero:hover{
+	transform: scale(1.1);
+}
+.btn-nero:hover {
+  background-color: rgb(238, 226, 58);  /* Cambia il colore di sfondo al passaggio del mouse */
+  box-shadow: 0px 4px 8px rgba(255, 255,255, 255);
+}
+
 .btn-chiaro{
 	 background-color: rgb(101, 131, 161);
     border-radius: 20px;
