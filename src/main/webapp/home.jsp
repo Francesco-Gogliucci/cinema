@@ -139,7 +139,7 @@
 		   			</div>
 		   			<div class="col">
 		   			<a href="dettagliFilm?id=<%= recensione.getFilm().getId()%>">
-		   				<img class="card card-img-top mb-5" src="<%=recensione.getFilm().getLocandina()%>" style="height:380px ;width : 240px; border-radius:15px; margin-left: 40px; object-fit: cover; margin-top: 50px"></a>
+		   				<img class="card card-img-top mb-5" src="<%=recensione.getFilm().getLocandina()%>" style="height:450px ;width : 300px; border-radius:15px; margin-left: 40px; object-fit: cover; margin-top: 40px"></a>
 		   			</div>
 				</div >
 			<%	i++;}
