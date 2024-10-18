@@ -15,7 +15,7 @@
 	      <ul class="list-unstyled text-small">
 	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Angelo Mura</p></li>
 	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Giulia Gargiulo</p></li>
-	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Lura Trocchia</p></li>
+	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Laura Trocchia</p></li>
 	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Lorena Sciacca</p></li>
 	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Francesco Gogliucci</p></li>
 	        <li><p style="color:white; font-size: 10;font-weight:50; color:#BDD3E9" >Sara Colella</p></li>
