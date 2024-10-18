@@ -4,6 +4,7 @@
 		import="java.util.HashMap"
 		import="java.util.ArrayList"
 		import="it.generationitaly.cinema.entity.*"
+		import="java.util.Random"
  %>
 <!DOCTYPE html>
 <html>
@@ -16,24 +17,70 @@
 
 <body class="custom-bg">
 <%@ include file="nav.jsp"%>
-<!-- head novità -->
 <section class="py-5 text-center container-fluid headline-background">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="testo-titoli">COMMUNITY</h1>
-        <p class="testo-pargraph">Resta sempre aggiornato sulle ultime uscite e scopri sempre nuovi titoli grazie alla nostra community</p>
-      </div>
+  <div class="row py-lg-5">
+    <div class="col-lg-6 col-md-8 mx-auto">
+      <% 
+        List<Film> filmCategoria = (List<Film>) request.getAttribute("filmCategoria");
+        if (filmCategoria != null && !filmCategoria.isEmpty()) {
+          Film film = filmCategoria.get(0);  
+          Categoria categoria = film.getCategoria(); 
+          
+          if (categoria.getId() == 1L) { %>
+            <h1 class="testo-titoli">Azione</h1>
+            <p class="testo-pargraph">Resta sempre aggiornato sulle ultime uscite e scopri nuovi titoli grazie alla nostra community</p>
+          <% } else if (categoria.getId() == 2L) { %>
+            <h1 class="testo-titoli">Avventura</h1>
+            <p class="testo-pargraph">Scopri le migliori avventure cinematografiche e resta aggiornato con noi.</p>
+          <% } else if (categoria.getId() == 3L) { %>
+            <h1 class="testo-titoli">Drammatico</h1>
+            <p class="testo-pargraph">Esplora storie toccanti e intense nel mondo del dramma cinematografico.</p>
+          <% } else if (categoria.getId() == 4L) { %>
+            <h1 class="testo-titoli">Commedia</h1>
+            <p class="testo-pargraph">Scopri le migliori commedie che ti faranno ridere e divertire.</p>
+          <% } else if (categoria.getId() == 5L) { %>
+            <h1 class="testo-titoli">Horror</h1>
+            <p class="testo-pargraph">Resta sveglio con i film horror che ti faranno saltare dalla sedia!</p>
+          <% } else if (categoria.getId() == 6L) { %>
+            <h1 class="testo-titoli">Fantascienza</h1>
+            <p class="testo-pargraph">Esplora mondi futuristici e avventure straordinarie nella fantascienza.</p>
+          <% } else if (categoria.getId() == 7L) { %>
+            <h1 class="testo-titoli">Fantasy</h1>
+            <p class="testo-pargraph">Immergiti in storie di magia e mondi incantati con i film fantasy.</p>
+          <% } else if (categoria.getId() == 8L) { %>
+            <h1 class="testo-titoli">Thriller</h1>
+            <p class="testo-pargraph">Preparati a tensione e colpi di scena nei migliori thriller cinematografici.</p>
+          <% } else if (categoria.getId() == 9L) { %>
+            <h1 class="testo-titoli">Romantico</h1>
+            <p class="testo-pargraph">Scopri le storie d'amore più belle e commoventi del cinema.</p>
+          <% } else if (categoria.getId() == 10L) { %>
+            <h1 class="testo-titoli">Animazione</h1>
+            <p class="testo-pargraph">Goditi film d'animazione che piacciono a tutte le età e che raccontano storie indimenticabili.</p>
+          <% } else if (categoria.getId() == 11L) { %>
+            <h1 class="testo-titoli">Documentario</h1>
+            <p class="testo-pargraph">Esplora il mondo attraverso documentari che informano e ispirano.</p>
+          <% } else if (categoria.getId() == 12L) { %>
+            <h1 class="testo-titoli">Musical</h1>
+            <p class="testo-pargraph">Lasciati trasportare dalla musica e dalle emozioni dei musical.</p>
+          <% } else { %>
+            <h1 class="testo-titoli">CINEMA</h1>
+            <p class="testo-pargraph">Resta sempre aggiornato sulle ultime uscite e scopri nuovi titoli grazie alla nostra community</p>
+          <% } 
+        } else { %>
+          <h1 class="testo-titoli">CINEMA</h1>
+          <p class="testo-pargraph">Resta sempre aggiornato sulle ultime uscite e scopri nuovi titoli grazie alla nostra community</p>
+        <% } %>
     </div>
-  </section>
-	 
-	<!-- Poster dei film --> 
+  </div>
+</section>
+	 <!-- Poster dei film --> 
 <div class="album py-5">
 	 <div class="container mt-5" style="padding-top: 20px">
 		 <div class ="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
 		 <!-- se i film vengono dalla richiesta per categorie -->
 		 <%if(request.getAttribute("filmCategoria")!=null){
 		 
-		 List<Film> filmCategoria = (List<Film>) request.getAttribute("filmCategoria");
+		 filmCategoria = (List<Film>) request.getAttribute("filmCategoria");
 			 	for(Film film : filmCategoria){
 			 	
 			 %>
