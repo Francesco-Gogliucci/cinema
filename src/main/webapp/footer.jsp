@@ -15,6 +15,7 @@
 	      <small class="d-block mb-3 text-body-secondary">© 2024 Cinema per Generation Italy</small>
 	   </div>
 	    </div>
+
 	    <div class="col-4 col-md mr-5 text-end" style="padding:10px">
 	     
 	        <pre style="color:white; font-family: Arial; font-size: 10;font-weight:50; color:#BDD3E9; padding:10px" > Il nostro Team:
