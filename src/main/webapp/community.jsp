@@ -13,7 +13,15 @@
 </head>
 <body class="custom-bg">
 	<%@ include file="nav.jsp"%>
-
+	<!-- head novità -->
+<section class="py-5 text-center container-fluid headline-background">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="testo-titoli">COMMUNITY</h1>
+        <p class="testo-pargraph">Resta sempre aggiornato sulle ultime uscite e scopri sempre nuovi titoli grazie alla nostra community</p>
+      </div>
+    </div>
+  </section>
 	<div class="container mt-5" style="padding-top: 40px;">
 		<div class="row g-3">
 			<div class="col text-start" style="border-bottom: 4px solid rgb(101, 131, 161); color: rgb(101, 131, 161);">
