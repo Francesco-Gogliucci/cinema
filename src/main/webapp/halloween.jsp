@@ -132,7 +132,9 @@
         </div>
     </div>
 </div>
-<span style="font-size: 40px; opacity: 0.5; color: white;">ATTORI DA BRIVIDI...</span>
+<div class="text-center"> 
+    <span style="font-size: 40px; opacity: 0.5; color: white;">ATTORI DA BRIVIDI...</span>
+</div>
 <br><br><br>
 <div class="row">
     <% 
@@ -145,8 +147,8 @@
                 if (elencoAttori != null) {
                     for (Attore attore : elencoAttori) { 
     %>
-      <div class="col-lg-4" style="margin-bottom: 30px;"> <!-- Aggiunto margine inferiore -->
-        <a href="dettagliAttore?id=<%= attore.getId()%>" ><img class="rounded-circle" 
+      <div class="col-lg-4 offset-lg-1" style="margin-bottom: 30px;"> 
+        <a href="dettagliAttore?id=<%= attore.getId()%>"><img class="rounded-circle" 
      src="<%=attore.getFoto()%>" 
      style="width: 150px; height: 150px; object-fit: cover; border-radius: 50%; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);"></a>
         <h2 class="fw-normal" style="font-size: 20px; opacity: 0.5; color: white"><%= attore.getNome() %> <%= attore.getCognome() %></h2>
