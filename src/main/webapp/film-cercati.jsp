@@ -29,27 +29,27 @@
         if (categoria.getId() == 1L) {
             imagePath = "./img-ref/6.png"; // Azione
         } else if (categoria.getId() == 2L) {
-            imagePath = "./img-ref/avv1.png"; // Avventura
+            imagePath = "./img-ref/7.png"; // Avventura
         } else if (categoria.getId() == 3L) {
             imagePath = "./img-ref/0.png"; // Drammatico
         } else if (categoria.getId() == 4L) {
-            imagePath = "./img-ref/commedia.png"; // Commedia
+            imagePath = "./img-ref/8.png"; // Commedia
         } else if (categoria.getId() == 5L) {
-            imagePath = "./img-ref/horror.png"; // Horror
+            imagePath = "./img-ref/9.png"; // Horror
         } else if (categoria.getId() == 6L) {
             imagePath = "./img-ref/4.png"; // Fantascienza
         } else if (categoria.getId() == 7L) {
             imagePath = "./img-ref/1.png"; // Fantasy
         } else if (categoria.getId() == 8L) {
-            imagePath = "./img-ref/thriller.png"; // Thriller
+            imagePath = "./img-ref/10.png"; // Thriller
         } else if (categoria.getId() == 9L) {
             imagePath = "./img-ref/3.png"; // Romantico
         } else if (categoria.getId() == 10L) {
-            imagePath = "./img-ref/animazione.png"; // Animazione
+            imagePath = "./img-ref/11.png"; // Animazione
         } else if (categoria.getId() == 11L) {
-            imagePath = "./img-ref/documentario.png"; // Documentario
+            imagePath = "./img-ref/5.png"; // Documentario
         } else if (categoria.getId() == 12L) {
-            imagePath = "./img-ref/musical.png"; // Musical
+            imagePath = "./img-ref/12.png"; // Musical
         }
     } 
     out.print(imagePath);
