@@ -229,6 +229,14 @@ INSERT INTO film VALUES('67','IT','Adattamento dell''omonimo romanzo di Stephen 
 INSERT INTO film VALUES('68','The Nun - La vocazione del Male','The Nun - La vocazione del Male, è un film horror del 2018, diretto da Corin Hardy. I fatti del film si svolgono in Romania nel 1952, nel monastero cattolico di Cârţa, quando due suore vengono attaccate da un''entità oscura, dopo aver tentato il recupero di una reliquia cristiana. L''unica sopravvissuta è Suor Victoria (Charlotte Hope) che poco dopo, si impicca fuori da una finestra. Frenchie (Jonas Bloquet), il garzone che porta le provviste al monastero, denuncia l''accaduto. Il Vaticano decide così di inviare in Romania Padre Burke (Demiàn Bichìr) e la novizia Suor Irene (Taissa Farmiga) per indagare sul suicidio.
 Accompagnati da Frenchie, seppelliscono la suora e dopo aver incontrato la Badessa, scoprono che le altre suore sono costantemente in preghiera per tenere a bada un antico spirito malvagio, evocato da un duca il cui castello sorgeva sul terreno del monastero.
 Lo scopo del demone è prendere possesso di un corpo per soddisfare la sua sete di sangue e male. Irene e Burke dovranno così affrontare l''entità determinata a prendere il sopravvento, verranno a conoscenza del reciproco passato e lavoreranno insieme per scoprire le terribili verità che si nascondono all''interno dell''abbazia.','https://a.ltrbxd.com/resized/film-poster/3/7/1/8/4/2/371842-the-nun-0-1000-0-1500-crop.jpg?v=f5b4ea0e76','2018-09-20','96','Atomic Monster, New Line Cinema','22','5');
+INSERT INTO film VALUES('69','Harry Potter e la pietra filosofale','Harry Potter ha vissuto sotto le scale a casa dei suoi zii per tutta la vita. Ma al suo undicesimo compleanno, scopre di essere un mago potente, con un posto che lo aspetta alla Scuola di Magia e Stregoneria di Hogwarts. Mentre impara a sfruttare i suoi nuovi poteri con laiuto del gentile preside della scuola, Harry scopre la verità sulla morte dei suoi genitori e sul cattivo che è il colpevole.','https://a.ltrbxd.com/resized/sm/upload/5t/cj/6w/6e/harrypotter2-0-1000-0-1500-crop.jpg?v=0053b4ed93','2001-12-06','125','warner Bros.','125','7');
+INSERT INTO film VALUES('70','Harry Potter e la camera dei segreti','Le auto volano, gli alberi reagiscono e un misterioso elfo domestico viene ad avvertire Harry Potter all''inizio del suo secondo anno a Hogwarts. Avventure e pericoli attendono quando una scritta insanguinata su un muro annuncia: La Camera dei Segreti è stata aperta. Per salvare Hogwarts serviranno tutte le abilità magiche e il coraggio di Harry, Ron e Hermione.','https://a.ltrbxd.com/resized/sm/upload/rj/yc/zl/ex/g8IQhqYYLERU0UxjVaySP46PFEZ-0-1000-0-1500-crop.jpg?v=d867145245','2002-12-06','238','warner Bros.','100','7');
+INSERT INTO film VALUES('71','Harry Potter  e il prigioniero di Azkaban' ,'Il terzo anno a Hogwarts significa nuovo divertimento e nuove sfide mentre Harry impara la delicata arte di avvicinare un Ippogrifo, trasformando i Boggart mutaforma in ilarità e persino tornando indietro nel tempo. Ma il termine porta anche pericoli: Dissennatori succhia-anime aleggiano sulla scuola, un alleato del maledetto Colui-Che-Non-Può-Essere-Nominato si nasconde tra le mura del castello e il temibile mago Sirius Black fugge da Azkaban. E Harry li affronterà tutti.','https://a.ltrbxd.com/resized/sm/upload/a3/0q/kf/h8/jUFjMoLh8T2CWzHUSjKCojI5SHu-0-1000-0-1500-crop.jpg?v=6285ee260e','2004-06-04','222','warner Bros.','100','7');
+INSERT INTO film VALUES('72','Harry Potter e il calice di fuoco','Quando il nome di Harry Potter emerge dal Calice di Fuoco, diventa un concorrente in una lotta estenuante per la gloria tra tre scuole di magia: il Torneo Tremaghi. Ma poiché Harry non ha mai presentato il suo nome per il Torneo, chi lo ha fatto? Ora Harry deve affrontare un drago mortale, feroci demoni dell''acqua e un labirinto incantato solo per ritrovarsi nella crudele morsa di Colui-Che-Non-Deve-Essere-Nominato.','https://a.ltrbxd.com/resized/film-poster/5/1/4/5/0/51450-harry-potter-and-the-goblet-of-fire-0-1000-0-1500-crop.jpg?v=6b5c9896c9','2005-11-25','237','warner Bros.','150','7');
+INSERT INTO film VALUES('73','Harry Potter e l''ordine della fenice','Ritornato per il suo quinto anno di studio a Hogwarts, Harry è sbalordito nello scoprire che i suoi avvertimenti sul ritorno di Lord Voldemort sono stati ignorati. Non avendo altra scelta, Harry prende in mano la situazione, addestrando un piccolo gruppo di studenti a difendersi dalle arti oscure.','https://a.ltrbxd.com/resized/sm/upload/wd/w4/n0/yj/g6n8G0xPnBVUIKKK41sNmbZB5h4-0-1000-0-1500-crop.jpg?v=57af08b652', '2007-07-11','218','warner Bros.','150','7');
+INSERT INTO film VALUES('74','Harry Potter e il principe mezzosangue','Mentre Lord Voldemort stringe la sua presa sia sul mondo babbano che su quello magico, Hogwarts non è più un rifugio sicuro. Harry sospetta che i pericoli possano nascondersi anche all''interno del castello, ma Silente è più intenzionato a prepararlo per la battaglia finale che si avvicina rapidamente. Insieme lavorano per trovare la chiave per sbloccare le difese di Voldemort e a questo scopo, Silente recluta il suo vecchio amico e collega Horace Lumacorno, che ritiene detenga informazioni cruciali.','https://a.ltrbxd.com/resized/film-poster/5/1/3/8/5/51385-harry-potter-and-the-half-blood-prince-0-1000-0-1500-crop.jpg?v=789e7859c8','2009-11-15','233','warner Bros.','250','7');
+INSERT INTO film VALUES('75','Harry Potter e i doni della morte parte 1','Harry, Ron e Hermione lasciano il loro ultimo anno a Hogwarts per trovare e distruggere gli Horcrux rimanenti, ponendo fine al tentativo di Voldemort di ottenere l''immortalità. Ma con l''amato Silente di Harry morto e i Mangiamorte senza scrupoli di Voldemort a piede libero, il mondo è più pericoloso che mai.','https://a.ltrbxd.com/resized/sm/upload/u8/tj/88/3v/harry-potter-and-the-deathly-hallows-part-i-original-0-1000-0-1500-crop.jpg?v=a31050208d','2010-11-19','226','warner Bros.','250','7');
+INSERT INTO film VALUES('76','Harry Potter e i doni della morte parte 2','Harry, Ron e Hermione continuano la loro ricerca per sconfiggere il malvagio Voldemort una volta per tutte. Proprio quando le cose cominciano a sembrare senza speranza per i giovani maghi, Harry scopre un trio di oggetti magici che gli conferiscono poteri che rivaleggiano con le formidabili abilità di Voldemort.','https://a.ltrbxd.com/resized/film-poster/4/4/5/8/0/44580-harry-potter-and-the-deathly-hallows-part-2-0-1000-0-1500-crop.jpg?v=66f3769773','2011-11-13','130','warner Bros.','250','7');
 
 //inserimento di Attori
 
@@ -318,7 +326,24 @@ Successivamente, Taissa ha recitato in film come "The Bling Ring" e "The Nun", d
 INSERT INTO attore VALUES ('28','Bonnie', 'Aarons','1960-09-09','https://m.media-amazon.com/images/M/MV5BODVmMTUwOGUtNWRjOC00NzgzLTg1MDctZDc4NjEwNDkzMGYwXkEyXkFqcGc@._V1_.jpg','Bonnie Aarons è un''attrice e produttrice americana, nota soprattutto per il suo lavoro nel genere horror. Nata a Los Angeles, ha una carriera che si estende per diversi decenni, con ruoli memorabili sia al cinema che in televisione. Uno dei suoi ruoli più celebri è quello della demoniaca suora Valak nel film ""The Conjuring 2"" e nel successivo spin-off ""The Nun"". La sua interpretazione ha ricevuto ampi consensi e ha contribuito a rendere Valak una figura iconica nel franchise horror. Bonnie ha anche lavorato in altri film e serie TV, apparendo in produzioni come ""The Princess Diaries"" e "Mulholland Drive"". Famosa per il suo aspetto distintivo e la sua presenza scenica, ha dimostrato di essere un''attrice versatile, in grado di interpretare ruoli sia comici che drammatici');
 
 INSERT INTO attore VALUES ('29','Jonas', 'Bloquet','1992-07-10','https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/547328_v9_bb.jpg','Jonas Bloquet è un attore e regista belga, noto per il suo ruolo nel film horror "The Nun" e nel suo sequel "The Nun II", dove ha interpretato il personaggio di Maurice, conosciuto anche come "Frenchie". Questo ruolo ha contribuito a far crescere la sua fama internazionale all''interno del genere horror, poiché il film fa parte del popolare "The Conjuring Universe". La carriera di Bloquet è iniziata con film e serie in Belgio e Francia, ma ha poi ottenuto visibilità globale grazie alle sue interpretazioni in produzioni di Hollywood.');
-
+INSERT INTO attore VALUES ('25','Daniel', 'Radcliffe','1989-07-23','https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS0JYQELhG9I7rNh06EijIjyKBArF0aei3wNeSHnqbxAMXmKi91','Daniel Radcliffe è nato a Londra, Inghilterra. È l''unico figlio di Alan George Radcliffe e sua moglie Marcia Jeannine Gresham. Sua madre è ebrea, nata in Sudafrica e cresciuta a Westcliff-on-Sea, nell''Essex. Suo padre è cresciuto a Banbridge, nella contea di Down, nell''Irlanda del Nord, in una famiglia protestante. Gli antenati materni di Radcliffe erano immigranti ebrei dalla Polonia e dalla Russia. I genitori di Daniel avevano entrambi recitato da bambini. Suo padre è un agente letterario. Sua madre è un''agente di casting ed è stata coinvolta in diversi film per la BBC, tra cui The Inspector Lynley Mysteries e Walk Away and I Stumble.');
+INSERT INTO attore VALUES ('26','Emma', 'Watson','1990-04-15','https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Emma_Watson_2013.jpg/220px-Emma_Watson_2013.jpg','Emma Watson è nata a Parigi il 15 aprile 1990, dagli avvocati britannici Chris Watson e Jacqueline Luesby. Ha vissuto a Maisons-Laffitte, vicino a Parigi, fino all''età di cinque anni. Da bambina era iperattiva e all''età di cinque anni le è stato diagnosticato l''ADHD, per cui assume Ritalin da allora. I suoi genitori divorziarono quando era ancora giovane e si trasferì in Inghilterra per vivere con la madre nell''Oxfordshire, mentre trascorreva i fine settimana a casa del padre a Londra.[7] Ha dichiarato che parla un po'' di francese, anche se "non bene" come una volta.Dopo essersi trasferita a Oxford con la madre e il fratello, ha frequentato la Dragon School, rimanendovi fino al 2003. All''età di sei anni nasce il suo desiderio di diventare attrice: Emma si forma presso la sede di Oxford della Stagecoach Theatre Arts, una scuola di teatro part-time dove studia canto, danza e recitazione.
+Dopo aver terminato la scuola superiore, Watson si è presa un anno sabbatico per girare Harry Potter e i Doni della Morte – Parti 1 e 2 a partire da febbraio 2009, e in seguito ha confermato che avrebbe scelto l''Università Brown di Rhode Island.');
+INSERT INTO attore VALUES ('27','Rupert', 'Grint','1988-08-24','https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/RupertGrint2018.jpg/220px-RupertGrint2018.jpg','Rupert Grint è di origini irlandesi ed è il più grande dei cinque figli di Nigel Grint e Jo Parsone[1]. Ha un fratello e tre sorelle: James (nato nel 1990), Georgina (nata nel 1993), Samantha (1996) e Charlotte (1998). Ha frequentato la scuola elementare di St Josephs a Hertford, e successivamente la Top Hat Stage School. All''età di 16 anni lasciò la scuola. Il suo primo ruolo fu quello di Ronald Weasley nella saga di Harry Potter.');
+INSERT INTO attore VALUES ('28','Matthew','Lewis', '1989-06-27','https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Matthew_Lewis_80301200042_%2849735826981%29_%28cropped%29.jpg/220px-Matthew_Lewis_80301200042_%2849735826981%29_%28cropped%29.jpg','Lewis è nato a Horsforth, Leeds, West Yorkshire, nel Regno Unito, figlio di Lynda e Adrian Lewis. Ha due fratelli: Anthony (attore) e Chris (montatore). Incominciò a recitare dall''età di cinque anni, debuttando nel film Some Kind of Life di Julian Jarrold. In seguito ha interpretato parti minori in diverse serie televisive. Il 24 luglio 2012 è stato insignito di una Laurea ad Honorem presso l''università di Leeds, per il suo significativo contributo alle arti e alle opere di carità.
+Dal 2001 al 2011 ha interpretato Neville Paciock negli otto film della serie cinematografica di Harry Potter. Nei contenuti extra del dvd di Harry Potter e il prigioniero di Azkaban, Lewis ha rivelato che per il ruolo di Neville Paciock ha indossato scarpe di due taglie più grandi, delle punte di plastica sulle orecchie per renderle più attaccate alla testa e dei denti finti, anche se in realtà la sua dentatura è rimasta invariata, sia fuori che dentro la scena, fino al 2011');
+INSERT INTO attore VALUES ('29','Tom','Felton','1987-09-22','https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Tom_Felton%2C_2011_cropped.jpg/220px-Tom_Felton%2C_2011_cropped.jpg','Tom Felton è nato a Epsom nel Surrey, Inghilterra, il 22 settembre del 1987, da Peter Felton e Sharon Anstey. Ha frequentato la West Horsley''s Cranmore School fino all''età di 13 anni e in seguito la Howard of Effingham, una scuola secondaria nel Surrey. Ha tre fratelli maggiori: Ashley, Jonathan e Chris Felton.
+I suoi genitori hanno divorziato quando era adolescente[2]. Suo nonno materno è il geofisico Nigel Anstey[3]. Felton ha sviluppato un interesse per il canto durante l''infanzia e successivamente si è unito ai cori scolastici; gli è stato offerto un posto nel coro della cattedrale di Guildford.');
+INSERT INTO attore VALUES ('30','Alan', 'Rickman','1946-02-21','https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Alan_Rickman_after_Seminar_%283%29.jpg/220px-Alan_Rickman_after_Seminar_%283%29.jpg','Alan Sidney Patrick Rickman (Londra, 21 febbraio 1946 – Londra, 14 gennaio 2016) è stato un attore britannico, vincitore di un BAFTA, un Golden Globe, un Premio Emmy e uno Screen Actors Guild Award. È stato inoltre candidato due volte al Tony Award come miglior attore nel 1987 per Les Liaisons Dangereuses e nel 2002 per Private Lives. Viene ricordato, in particolare, per i numerosi ruoli da antagonista ricoperti nella sua carriera, ma soprattutto per aver interpretato Severus Piton nella saga di Harry Potter e Hans Gruber in Die Hard - Trappola di cristallo.');
+INSERT INTO attore VALUES ('31','Bonnie','Wright', '1991-02-17','https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Bonnie_Wright_by_Gage_Skidmore.jpg/220px-Bonnie_Wright_by_Gage_Skidmore.jpg','Bonnie Francesca Wright è figlia di Sheila Teague e Gary Wright, proprietari della società di gioiellieri Wright & Teague. Durante le riprese della saga di Harry Potter, Wright ha cominciato a frequentare la University of the Arts di Londra (London College of Communication), per studiare Film and Television Production Manager, dove si è laureata il 19 luglio 2012.');
+INSERT INTO attore VALUES ('32','Maggie','Smith','1934-12-28','https://www.quotidiano.net/image-service/view/acePublic/alias/contentid/MmJiYTdmMDgtOTIwNS00/1/maggie-smith-e-morta-all-eta-di-89-anni.webp?f=3%3A2&q=1&w=1560','Dame Margaret Natalie Smith (Ilford, 28 dicembre 1934 – Londra, 27 settembre 2024) è stata un''attrice britannica.
+Tra le più apprezzate attrici cinematografiche britanniche, nel corso di una carriera durata per sette decenni ha accumulato numerosi riconoscimenti tra cui due Premi Oscar, tre Golden Globe (su dodici candidature), cinque BAFTA, cinque Screen Actors Guild Award, quattro Emmy Award e un Tony Award.Nel 1970 ha vinto l''Oscar alla miglior attrice per la sua interpretazione ne La strana voglia di Jean, mentre nel 1979 ha vinto il medesimo premio come miglior attrice non protagonista per California Suite. I suoi altri ruoli per cui è stata candidata agli Oscar sono nei film Otello (1965), In viaggio con la zia (1972), Camera con vista (1986) e Gosford Park (2001).');
+INSERT INTO attore VALUES ('33','Robbie','Coltrane','1950-03-30','https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Robbiecoltrane_%28cropped%29.jpg/220px-Robbiecoltrane_%28cropped%29.jpg','Robbie Coltrane, pseudonimo di Anthony Robert McMillan (Rutherglen, 30 marzo 1950 – Larbert, 14 ottobre 2022), è stato un attore e comico britannico.
+Noto al grande pubblico principalmente per aver interpretato il ruolo di Rubeus Hagrid nella saga cinematografica di Harry Potter, per cui ha ricevuto candidature BAFTA e ai Saturn Award, Coltrane ha altresì vestito i panni del personaggio di Valentin Zukovsky in due film della saga di James Bond (Goldeneye e Il mondo non basta). Inoltre, ha vinto tre British Academy Television Awards grazie alla serie televisiva Cracker (1993-1996).');
+INSERT INTO attore VALUES ('34','Ralph','Fiennes','1962-12-22','https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg/220px-Ralph_Fiennes_from_%22The_White_Crow%22_at_Opening_Ceremony_of_the_Tokyo_International_Film_Festival_2018_%2831747095048%29.jpg','Ralph Fiennes, all''anagrafe Ralph Nathaniel Twisleton-Wykeham-Fiennes, è un attore, regista e produttore cinematografico britannico.
+Interprete di Shakespeare, Fiennes eccelleva sul palcoscenico del Royal National Theatre prima di ottenere ulteriori successi alla Royal Shakespeare Company. Ha ricevuto vari riconoscimenti, tra cui un Premio BAFTA e un Tony Award, oltre a candidature per due Premi Oscar, sei Golden Globe, quattro Screen Actors Guild Awards e un Premio Emmy. Dal 1999 Fiennes serve come ambasciatore per l''UNICEF, e nel settembre 2017 ha ottenuto la cittadinanza onoraria serba.
+Ha debuttato sul grande schermo con il film Cime tempestose (1992), continuando a recitare in numerosi film di successo, tra cui Quiz Show (1994), Fine di una storia (1999), The Constant Gardener - La cospirazione (2005), In Bruges - La coscienza dell''assassino (2008), The Hurt Locker (2008), The Reader - A voce alta (2008), con il ruolo di Lord Voldemort nella serie cinematografica di Harry Potter (2005-2011),');
+INSERT INTO attore VALUES ('35','Helena','Bonham Carter','1966-05-26','https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Helena_Bonham_Carter_%28Berlin_Film_Festival_2011%29_3_%28cropped%29.jpg/220px-Helena_Bonham_Carter_%28Berlin_Film_Festival_2011%29_3_%28cropped%29.jpg','È nata nel 1966 a Golders Green, un quartiere di Londra, da Raymond Bonham Carter (banchiere inglese, figlio del politico liberale Sir Maurice Bonham Carter e della scrittrice Violet Bonham Carter a sua volta figlia del primo ministro Herbert Henry Asquith) e da Elena Propper de Callejón; quest''ultima è una psicoterapeuta inglese, figlia della pittrice Hélène Fould-Springer (ebrea di origini austriache e francesi) e del diplomatico spagnolo Eduardo Propper de Callejón[3] (figlio a sua volta di un ebreo boemo e di una spagnola di religione cattolica), che durante la seconda guerra mondiale si mobilitò per salvare la vita di migliaia di ebrei dalle persecuzioni naziste, atto per cui è stato riconosciuto Giusto tra le nazioni.');
 
 // inserimento recensioni
 //
@@ -537,5 +562,100 @@ INSERT INTO film_attore VALUES('64','45','24');
 INSERT INTO film_attore VALUES('65','46','24');
 INSERT INTO film_attore VALUES('66','32','8');
 INSERT INTO film_attore VALUES('67','33','8');
+INSERT INTO film_attore VALUES('68','69','25');
+INSERT INTO film_attore VALUES('69','69','26');
+INSERT INTO film_attore VALUES('70','69','27');
+INSERT INTO film_attore VALUES('71','69','28');
+INSERT INTO film_attore VALUES('72','69','29');
+INSERT INTO film_attore VALUES('73','69','30');
+INSERT INTO film_attore VALUES('74','69','31');
+INSERT INTO film_attore VALUES('75','69','32');
+INSERT INTO film_attore VALUES('76','69','33');
+INSERT INTO film_attore VALUES('77','69','34');
+INSERT INTO film_attore VALUES('78','69','35');
+
+INSERT INTO film_attore VALUES('79','70','25');
+INSERT INTO film_attore VALUES('80','70','26');
+INSERT INTO film_attore VALUES('81','70','27');
+INSERT INTO film_attore VALUES('82','70','28');
+INSERT INTO film_attore VALUES('83','70','29');
+INSERT INTO film_attore VALUES('84','70','30');
+INSERT INTO film_attore VALUES('85','70','31');
+INSERT INTO film_attore VALUES('86','70','32');
+INSERT INTO film_attore VALUES('87','70','33');
+INSERT INTO film_attore VALUES('88','70','34');
+INSERT INTO film_attore VALUES('89','70','35');
+
+INSERT INTO film_attore VALUES('90','71','25');
+INSERT INTO film_attore VALUES('91','71','26');
+INSERT INTO film_attore VALUES('92','71','27');
+INSERT INTO film_attore VALUES('93','71','28');
+INSERT INTO film_attore VALUES('94','71','29');
+INSERT INTO film_attore VALUES('95','71','30');
+INSERT INTO film_attore VALUES('96','71','31');
+INSERT INTO film_attore VALUES('97','71','32');
+INSERT INTO film_attore VALUES('98','71','33');
+INSERT INTO film_attore VALUES('99','71','34');
+INSERT INTO film_attore VALUES('100','71','35');
+
+INSERT INTO film_attore VALUES('101','72','25');
+INSERT INTO film_attore VALUES('102','72','26');
+INSERT INTO film_attore VALUES('103','72','27');
+INSERT INTO film_attore VALUES('104','72','28');
+INSERT INTO film_attore VALUES('105','72','29');
+INSERT INTO film_attore VALUES('106','72','30');
+INSERT INTO film_attore VALUES('107','72','31');
+INSERT INTO film_attore VALUES('108','72','32');
+INSERT INTO film_attore VALUES('109','72','33');
+INSERT INTO film_attore VALUES('110','72','34');
+INSERT INTO film_attore VALUES('111','72','35');
+
+INSERT INTO film_attore VALUES('112','73','25');
+INSERT INTO film_attore VALUES('113','73','26');
+INSERT INTO film_attore VALUES('114','73','27');
+INSERT INTO film_attore VALUES('115','73','28');
+INSERT INTO film_attore VALUES('116','73','29');
+INSERT INTO film_attore VALUES('117','73','30');
+INSERT INTO film_attore VALUES('118','73','31');
+INSERT INTO film_attore VALUES('119','73','32');
+INSERT INTO film_attore VALUES('120','73','33');
+INSERT INTO film_attore VALUES('121','73','34');
+INSERT INTO film_attore VALUES('122','73','35');
+
+INSERT INTO film_attore VALUES('123','74','25');
+INSERT INTO film_attore VALUES('124','74','26');
+INSERT INTO film_attore VALUES('125','74','27');
+INSERT INTO film_attore VALUES('126','74','28');
+INSERT INTO film_attore VALUES('127','74','29');
+INSERT INTO film_attore VALUES('128','74','30');
+INSERT INTO film_attore VALUES('129','74','31');
+INSERT INTO film_attore VALUES('130','74','32');
+INSERT INTO film_attore VALUES('131','74','33');
+INSERT INTO film_attore VALUES('132','74','34');
+INSERT INTO film_attore VALUES('133','74','35');
+
+INSERT INTO film_attore VALUES('134','75','25');
+INSERT INTO film_attore VALUES('135','75','26');
+INSERT INTO film_attore VALUES('136','75','27');
+INSERT INTO film_attore VALUES('137','75','28');
+INSERT INTO film_attore VALUES('138','75','29');
+INSERT INTO film_attore VALUES('139','75','30');
+INSERT INTO film_attore VALUES('140','75','31');
+INSERT INTO film_attore VALUES('141','75','32');
+INSERT INTO film_attore VALUES('142','75','33');
+INSERT INTO film_attore VALUES('143','75','34');
+INSERT INTO film_attore VALUES('144','75','35');
+
+INSERT INTO film_attore VALUES('145','76','25');
+INSERT INTO film_attore VALUES('146','76','26');
+INSERT INTO film_attore VALUES('147','76','27');
+INSERT INTO film_attore VALUES('148','76','28');
+INSERT INTO film_attore VALUES('149','76','29');
+INSERT INTO film_attore VALUES('150','76','30');
+INSERT INTO film_attore VALUES('151','76','31');
+INSERT INTO film_attore VALUES('152','76','32');
+INSERT INTO film_attore VALUES('153','76','33');
+INSERT INTO film_attore VALUES('154','76','34');
+INSERT INTO film_attore VALUES('155','76','35');
 
 
