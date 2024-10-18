@@ -49,7 +49,7 @@ background: linear-gradient(180deg, rgba(101, 131, 161, 0.4094) 0%, rgba(0, 0, 0
     
     .nav-link {
         transition: transform 0.3s ease, color 0.3s ease; 
-        color: black;
+        color:  #2980b9;
     }
 
     .nav-link:hover {
