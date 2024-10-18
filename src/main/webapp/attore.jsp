@@ -20,7 +20,7 @@
             <div class="col-md-4">
                 <div class="card card-attore" style="border-color:transparent; background-color: transparent; padding-top: 100px;">
                     <% Attore attore = (Attore) request.getAttribute("attore"); %>
-                    <img src="<%= attore.getFoto() %>" height="550" width="358" style="border-radius:15px" class="card-img-top" alt="Foto attore">
+                    <img src="<%= attore.getFoto() %>"height="100%"  width="358"style="border-radius:15px" class="card-img-top" alt="Foto attore">
                 </div>
             </div>
 
