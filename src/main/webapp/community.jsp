@@ -137,6 +137,8 @@
 				<h3>I preferiti di</h3>
 				<h4 style="color:white;font-style: italic"><%= utente.getUsername()%></h4>
 			</div>
+			<div class="container">
+				<div class="row">
 
 			<% 
 			List<Preferiti> utentiFilm = utente.getPreferiti();
@@ -146,7 +148,8 @@
 			
 			for(Film preferiti : filmPreferiti){
 			%>
-				<div class="col card mb-3 mt-5" 
+				<div class="col-lg-3 col-md-4 col-sm-6 mb-3" 
+				
 					style="border-color:transparent;
 					height: 90%; width:100px;
 					background-color: transparent;
@@ -161,7 +164,8 @@
 			i++;}%>
 		</div>	
 	</div>	
-
+</div>	
+	</div>
 	
 </body>
 </html>

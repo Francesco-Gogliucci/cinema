@@ -48,13 +48,76 @@
 	    setInterval(createGhost, 1500); // Ogni 2 secondi appare un fantasma
 	    setInterval(createBat, 1500);   // Ogni 1.5 secondi appare un pipistrello
 	});
+	
+	
+
 </script>
+<style type="text/css">
+section:before{
+	content:'';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+
+	z-index:10000;
+}
+section:after{
+	content:'';
+	position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+
+	z-index:10000;
+}
+
+</style>
 <link rel="icon" type="image/x-icon" href="popcorn.png">
 </head>
-<body class="halloween-background">
+<body style="background: rgb(10, 3, 40);">
 <%@ include file="nav.jsp"%>
-<section class="container-fluid headline-background2">
-  </section>
+
+<section style="position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;">
+	
+	<img alt="" src="./img-ref/cielo-halloween.png" id="cielo" style="position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	pointer-events: none;">
+	
+	<img alt="" src="./img-ref/sfondo-halloween.png" id="sfondo" style="position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	pointer-events: none;">
+	
+	<img alt="" src="./img-ref/scritta-Halloween.png" id="scritta" style="position: absolute;
+	top: 0;
+	pointer-events: none;">
+	
+	<img alt="" src="./img-ref/casa3.png" id="casa" style="position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	pointer-events: none;">
+	
+</section>
+
 <div class="container mt-5" style="padding-top: 40px;">
   <div class="row g-3">
     </div>
@@ -165,15 +228,39 @@
     %>
 </div>
 </div>
-                 
-   
-
-
+      <div class="ghost-container" ></div>
+    <div class="bat-container" ></div>  
     
-    <%@ include file="footer.jsp"%>
+             
+<footer>
+  <div class="container-fluid fixed-bottom px-0">
+    <div class="row d-flex justify-content-between">
+      <div class="col-5 d-flex justify-content-start">
+        <img alt="" src="./img-ref/zucca-calderone.png" class="img-fluid" style="width: 70%;">
+      </div>
+      <div class="col-6 d-flex justify-content-end">
+        <img alt="" src="./img-ref/zucca-gatto.png" class="img-fluid" style="width: 50%;">
+      </div>
+    </div>
+  </div>
+</footer>
+
     <script src="https://getbootstrap.com/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-   
-    <div class="ghost-container" ></div>
-    <div class="bat-container" ></div>
+   <%@ include file="footer.jsp"%>
+    <script>
+    let cielo = document.getElementById("cielo");
+    let sfondo = document.getElementById("sfondo");
+    let scritta = document.getElementById("scritta");
+    let casa = document.getElementById("casa");
+
+    window.addEventListener('scroll', function() {
+        var value = window.scrollY;
+        cielo.style.top = value * 0.4 + 'px';
+        sfondo.style.top = value * 0.5+ 'px';
+        scritta.style.top = value * 0.3+ 'px';
+        casa.style.top = value * 0.05 + 'px';
+    });
+</script>
+    
 </body>
 </html>
